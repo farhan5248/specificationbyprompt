@@ -8,7 +8,8 @@ Why Sheep Dog? I'm a dog person and when I heard [Ryan Tierney (Lean Made Simple
 
 These are the list of stories by categories. 
 
-1. QA testers running their tests before the COBOL code is delivered to prevent defects
+1. QA testers create test automation themselves to make defect inspection in QA go faster
+    1. Why the Ubiquitous language?
+2. QA testers running their tests before the COBOL code is delivered to prevent defects
     1. Does running the QA team tests during coding slow developers down?
     2. Does it matter if the tests actually drive the development?
-2. QA testers create test automation themselves to make defect inspection in QA go faster
