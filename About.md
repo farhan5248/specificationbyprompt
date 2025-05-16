@@ -2,10 +2,38 @@
 
 ## My background
 
-I'm a Java developer and former dev team lead and manager. I've only worked on enterprise systems and spent most of my time on architecture, design and automated deployments.
+I've been a Java developer for 15 years primarily working on the architecture, design and deployments or large enterprise systems. 
+Over the past 10 years, I've led a development team (~20 people) and a QA team (~40 people). 
+I spent most of my time on architecture, design and automated deployments.I've worked on really large integration projects (20 environments with a single environment having 20, 50 or 200 VM). 
+I've gone from doubting to loving TDD/BDD and supporting other developers and testers in adopting it. 
+
+## Why I've made this and is it for you?
+
 During that time I found that QA took weeks to months to complete their test execution phase and in most cases didn't think CICD or DevOps applied to them.
-Eventually I decided to lead a large QA team to figure out why and help them evolve. 
-That one QA team initially had 4 QA teams of almost 50-60 individuals but was reduced to 2 with around 20-30 folks.
+When I went looking for information, I never read about how anyone got their traditional QA teams to change.
+There's information on how to use Cucumber to automate your tests but not how you get a large QA team to do so with legacy technology like COBOL or unpopular stuff like PL/SQL or how to have the tests run earlier without adding more resources or delays.
+Eventually when the opportunity presented itself, I decided to lead a large QA team to figure out how to help them evolve. 
+That one QA team initially had 4 QA teams of almost 50-60 individuals.
+
+Though I first started with automating deployments, in hindsight we should have started with changing the way we did QA.
+I'd say it's for similar reasons as described in [this episode of Small Batches](https://smallbatches.fm/107). 
+Just as TDD is skill zero, helping the QA teams evolve should be one of the first priorities.
+So if you've read some of these books that I've read or listened to these podcasts and you're interested in reading about examples of how they were applied when leading a QA team down this path then perhaps this helps you.
+
+1. Continuous Delivery
+2. The DevOps Handbook
+3. Leading Lean Software Delivery
+4. The High Velocity Edge
+5. Toyota Kata
+6. Sooner Safer Happier
+7. Team of Teams
+8. Deming's Journey of Profound Knowledge
+9. Lean Made Simple
+10. Chain of Learning
+11. Profound
+12. The Ideal Cast
+13. Small Batches
+14. The Engineering Room
 
 ## The approach I took
 
