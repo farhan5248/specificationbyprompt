@@ -4,10 +4,10 @@ I refer to the Toyota Production System (TPS) and not lean because like other bu
 My focus was primarily on people and their interactions instead of tools and processes though the latter did help. 
 These are some of the terms and their definitions I taught my team.
 
-1. [Gemba](https://farhan5248.github.io/Toyota-Production-System-Terms/Gemba.md)
-2. [Muda](https://farhan5248.github.io/Toyota-Production-System-Terms/Muda.md)
-3. [Standard Work](https://farhan5248.github.io/Toyota-Production-System-Terms/StandardWork.md)
-4. [Kaizen](https://farhan5248.github.io/Toyota-Production-System-Terms/Kaizen.md)
-5. [Jidoka](https://farhan5248.github.io/Toyota-Production-System-Terms/Jidoka.md)
-6. [Poka Yoke](https://farhan5248.github.io/Toyota-Production-System-Terms/PokaYoke.md)
-7. [Just In Time](https://farhan5248.github.io/Toyota-Production-System-Terms/JustInTime.md)
+1. [Gemba](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Gemba.md)
+2. [Muda](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Muda.md)
+3. [Standard Work](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/StandardWork.md)
+4. [Kaizen](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Kaizen.md)
+5. [Jidoka](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Jidoka.md)
+6. [Poka Yoke](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/PokaYoke.md)
+7. [Just In Time](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/JustInTime.md)
