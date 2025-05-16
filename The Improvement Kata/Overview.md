@@ -1,4 +1,4 @@
-# The Improvement Kata
+# Overview
 
 The last thing before we could begin was how to go about making changes.  On a large scale, I explained the gravity slingshot strategy of chasing after achievable goals based on the skills we have, then gathering momentum and picking a bigger goal. However I needed to give guidance on how to apply that on a daily basis. That's where Mike Rother's Improvement Kata came in.
 

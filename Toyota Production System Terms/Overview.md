@@ -6,8 +6,8 @@ These are some of the terms and their definitions I taught my team.
 
 1. [Gemba](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Gemba)
 2. [Muda](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Muda)
-3. [Standard Work](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/StandardWork)
+3. [Standard Work](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Standard%20Work)
 4. [Kaizen](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Kaizen)
 5. [Jidoka](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Jidoka)
-6. [Poka Yoke](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/PokaYoke)
-7. [Just In Time](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/JustInTime)
+6. [Poka Yoke](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Poka%20Yoke)
+7. [Just In Time](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Just%20In%20Time)
