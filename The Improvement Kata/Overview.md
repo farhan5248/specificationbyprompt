@@ -6,3 +6,11 @@ The last thing before we could begin was how to go about making changes.  On a l
 2. Grasp the current condition: Is there a standard? Are we following it?
 3. Establish your next target condition: Define the small change to how the work is done and how to measure that it's not worse than before. It doesn't have to be better, just not worse.
 4. Conduct experiments to get there. This is where the Kaizen come in. Sometimes it was automation (Jidoka), sometimes it was mistake prevention (poka-yoke) and other times it was just eliminating the need for the task.
+
+1. [Install Tools](https://farhan5248.github.io/The%20Improvement%20Kata/Install%20Tools)
+2. [Remove Admin Toil](https://farhan5248.github.io/The%20Improvement%20Kata/Remove%20Admin%20Toil)
+3. [Early Adopter Testers](https://farhan5248.github.io/The%20Improvement%20Kata/Early%20Adopter%20Testers)
+4. [Early Adopter Automators](https://farhan5248.github.io/The%20Improvement%20Kata/Early%20Adopter%20Automators)
+5. [Upskilling Testers](https://farhan5248.github.io/The%20Improvement%20Kata/Upskilling%20Testers)
+6. [Involving Developers](https://farhan5248.github.io/The%20Improvement%20Kata/Involving%20Developers)
+7. [Planning Automation](https://farhan5248.github.io/The%20Improvement%20Kata/Planning%20Automation)

@@ -13,3 +13,9 @@ These are the list of stories by categories.
 2. QA testers running their tests before the COBOL code is delivered to prevent defects
     1. Does running the QA team tests during coding slow developers down?
     2. Does it matter if the tests actually drive the development?
+
+Stuff from the Prezi to migrate
+1. [Toyota%20Production%20System%20Terms](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Overview)
+2. [Seeing%20The%20Problem%20in%20Dev](https://farhan5248.github.io/Seeing%20The%20Problem%20in%20Dev/Overview)
+3. [Communicating%20The%20Solution%20To%20QA](https://farhan5248.github.io/Communicating%20The%20Solution%20To%20QA/Overview)
+4. [The%20Improvement%20Kata](https://farhan5248.github.io/The%20Improvement%20Kata/Overview)
