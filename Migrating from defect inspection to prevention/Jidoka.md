@@ -1,5 +1,7 @@
 # Jidoka
 
+Making inspection go faster 
+
 In my experience, whether doing deploys or automating test execution or anything else like test case creation using MBT etc folks always aim for full automation; I don't. 
 My approach is to automate a small part and then each time I do the same task again, I automate more, stopping at the point of diminishing returns.
 This is why I like the definition of automation with a human touch for Jidoka. I don't think we should try to completely automate someone out of a job.

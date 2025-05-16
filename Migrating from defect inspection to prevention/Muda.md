@@ -1,5 +1,7 @@
 # Muda
 
+re-work when making selenium stuff or re-doing drug automation, Creating a budget by eliminating waste 
+
 When I joined the QA team, I had introduced the term shift left. By the time I left the team, I grew to hate the mere mention of it :P. 
 My dislike came from all the misinterpretations of it. At the time I traced it all the way back to Dr Deming and it's how I came across his work.
 

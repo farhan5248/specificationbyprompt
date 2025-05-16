@@ -1,5 +1,7 @@
 # The Power of Habit
 
+How to sustain it? On the job training, 4 step git routine 
+
 At this point I know who I will work with initially. I know what skills they have. The fourth thing was what was I going to ask them to do.
 
 I needed small changes with low cognitive load so I had to figure out a small idea that could apply to every aspect of the team's work. I had read about Paul O'Neil, the CEO of ALCOA and the culture of safety that they had there. 

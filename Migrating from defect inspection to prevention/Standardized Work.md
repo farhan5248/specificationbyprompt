@@ -1,5 +1,7 @@
 # Standard Work
 
+drug swarming or helping each other 
+
 Before changing anything by making it faster or eliminating anything, we needed a standard. 
 Standardising the work was an informal way of developing a Value Stream Map. 
 I tried to gradually understand the whole system of work through informal conversations. 

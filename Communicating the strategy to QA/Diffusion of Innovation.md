@@ -1,5 +1,7 @@
 # Diffusion of Innovation
 
+Who goes first? ski slope
+
 Next I had to figure out where everyone fit in the curve of diffusion of innovation. I wanted people to volunteer to try new things rather then telling them. Here's what happened when I told the team I'd help them install Eclipse and booked a short meeting to do so.
 
 1. Some folks read the instructions, installed Eclipse, and let me know it's done. I canceled the meeting. They were the innovators.

@@ -1,5 +1,7 @@
 # Culture of Easy Ownership
 
+The direction of challenge 
+
 I should emphasise that the improvements were not intended to make individual efficiency by optimising locally. They had to optimise globally by taking a systems thinking view of our goal. The team had to continually improve by making it easier for others to own more of their tasks. Then whereas someone helping in the past slowed a tester down because of the overhead of explaining stuff, they were now finishing the work faster. You would see a positive feedback loop develop.
 
 What does easy ownership look like? The manual tester had to write tests so clearly that there would be no assumed knowledge needed to run it by

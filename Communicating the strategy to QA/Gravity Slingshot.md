@@ -1,5 +1,7 @@
 # Gravity Slingshot
 
+willing but unable, impostor syndrome, don't have time, improvement momentum
+
 When explaining my strategy to transform the team, I use the analogy of a gravity slingshot. Basically gravity slingshots are used because it’s not practical to simply add more fuel to power a spacecraft. Adding more fuel makes it weigh more. This means more fuel needs to be added to the rocket to launch the now-heavier spacecraft. Since including extra fuel also increases the rocket’s mass, more fuel is needed to carry that fuel, and so on. 
 
 In the context of my team's journey, it was near impossible to come up with an estimate to do all this work. The more we thought about the steps, the more work it added. Eventually I'm pretty sure it wouldn't have received budget approval and there would be no launch. So we aimed for converting Word documents to SoapUI projects automatically at first, then switched our destination to Robot Framework, then finally to Cucumber with Java hoping to make the long journey to Model Based Testing.

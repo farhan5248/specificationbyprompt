@@ -1,4 +1,4 @@
-# Sheep Dog Stories
+# Sheep Dog Blog
 
 The goal of this site and supporting code is to describe my experiences through stories about the QA team I led. 
 I've explained more [here](https://farhan5248.github.io/About).
@@ -11,16 +11,8 @@ When I thought about how to transform my team, I realised heroic effort was unsu
 Instead it had to be this gradual organic evolution of our ways of working similar to a sheep dog moving a flock. 
 This approach was inspired by the Improvement Kata which is described in Mike Rother's book, Toyota Kata.
 
-These are the list of stories by categories. 
-
-1. QA testers create test automation themselves to make defect inspection in QA go faster
-    1. [Why the Ubiquitous language?](https://farhan5248.github.io/Inspection/1)
-2. QA testers running their tests before the COBOL code is delivered to prevent defects
-    1. [Does running the QA team tests during coding slow developers down?](https://farhan5248.github.io/Prevention/1)
-    2. [Does it matter if the tests actually drive the development?](https://farhan5248.github.io/Prevention/2)
-
-Stuff from the Prezi to migrate
-1. [Toyota Production System Terms](https://farhan5248.github.io/Toyota%20Production%20System%20Terms/Overview)
-2. [Seeing The Problem in Dev](https://farhan5248.github.io/Seeing%20The%20Problem%20in%20Dev/Overview)
-3. [Communicating The Solution To QA](https://farhan5248.github.io/Communicating%20The%20Solution%20To%20QA/Overview)
-4. [The Improvement Kata](https://farhan5248.github.io/The%20Improvement%20Kata/Overview)
+1. [Why run the QA tests earlier?](https://farhan5248.github.io/Why%20run%20the%20QA%20tests%20earlier/index)
+2. [What led me to a QA team?](https://farhan5248.github.io/What%20led%20me%20to%20a%20QA%20team/index)
+3. [Communicating the strategy to QA](https://farhan5248.github.io/Communicating%20the%20strategy%20to%20QA/index)
+4. [Migrating from defect inspection to prevention](https://farhan5248.github.io/Migrating%20from%20defect%20inspection%20to%20prevention/index)
+5. [Recipe for next time](https://farhan5248.github.io/Recipe%20for%20next%20time/index)

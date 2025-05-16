@@ -1,5 +1,7 @@
 # Poka Yoke
 
+language editor 
+
 This was the last improvement type to introduce. 
 Folks didn't get it until we automated things and sped things up. 
 They then saw the time wasted fixing mistakes which were becoming the bottle neck.
