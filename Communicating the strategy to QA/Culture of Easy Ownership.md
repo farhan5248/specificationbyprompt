@@ -7,6 +7,7 @@ This was our direction or challenge
 I should emphasise that the improvements were not intended to make individual efficiency by optimising locally. 
 They had to optimise globally by taking a systems thinking view of our goal. 
 The team had to continually improve by making it easier for others to own more of their tasks. 
+My idea was inspired from a Netflix AWS presentation about how they made it easier for developers to own ops related tasks.
 What does easy ownership look like? The manual tester had to write tests so clearly that there would be no assumed knowledge needed to run it by
 1. A manual tester to help them execute the test cases if they were running late.
 2. A test automation developer to help them run the tests faster and eventually auto-generate the test automation code to run it earlier.
