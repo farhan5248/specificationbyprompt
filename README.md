@@ -1,6 +1,6 @@
 # Sheep Dog Blog
 
-The goal of this site and supporting code is to describe my experiences through stories about the QA team I led. 
+The goal of this site and supporting code is to describe my experiences about applying lean principles and practices to the QA team I led. 
 I've explained more [here](https://farhan5248.github.io/About).
 A summary of the supporting repositories and projects is [here](https://farhan5248.github.io/RepositoriesAndProjects).
 

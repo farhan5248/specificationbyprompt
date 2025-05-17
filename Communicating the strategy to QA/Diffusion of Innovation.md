@@ -1,6 +1,9 @@
 # Diffusion of Innovation
 
-Who goes first? ski slope
+
+4. Conduct experiments to get there. This is where the Kaizen come in. Sometimes it was automation (Jidoka), sometimes it was mistake prevention (poka-yoke) and other times it was just eliminating the need for the task.
+
+Who conducts first? ski slope
 
 Next I had to figure out where everyone fit in the curve of diffusion of innovation. I wanted people to volunteer to try new things rather then telling them. Here's what happened when I told the team I'd help them install Eclipse and booked a short meeting to do so.
 

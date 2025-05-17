@@ -7,7 +7,7 @@ These are some of the terms and their definitions I taught my team.
 
 1. [Gemba](https://farhan5248.github.io/Migrating%20from%20defect%20inspection%20to%20prevention/Gemba)
 2. [Muda](https://farhan5248.github.io/Migrating%20from%20defect%20inspection%20to%20prevention/Muda)
-3. [Standardized Work](https://farhan5248.github.io/Migrating%20from%20defect%20inspection%20to%20prevention/Standard%20Work)
+3. [Standardized Work](https://farhan5248.github.io/Migrating%20from%20defect%20inspection%20to%20prevention/Standardized%20Work)
 4. [Kaizen](https://farhan5248.github.io/Migrating%20from%20defect%20inspection%20to%20prevention/Kaizen)
 5. [Jidoka](https://farhan5248.github.io/Migrating%20from%20defect%20inspection%20to%20prevention/Jidoka)
 6. [Poka Yoke](https://farhan5248.github.io/Migrating%20from%20defect%20inspection%20to%20prevention/Poka%20Yoke)
