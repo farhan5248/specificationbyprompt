@@ -1,7 +1,6 @@
 # Recipe for next time
 
-
-
+This is a work in progress
 
 1. [Team Topologies](https://farhan5248.github.io/What%20led%20me%20to%20a%20QA%20team/Team%20Topologies)
 2. [Install Tools](https://farhan5248.github.io/The%20Improvement%20Kata/Install%20Tools)
