@@ -18,7 +18,7 @@ An example is a tool the COBOL testers were using.
 It was tedious to click through a whole bunch of buttons to input 2-3 parameters so I made the custom Maven plug-in by-pass the GUI. 
 Now they just double-clicked one script.
 
-I mentionned earlier that my goal was to not to make inspection go faster since inspection doesn't ensure quality.
+I mentioned earlier that my goal was to not to make inspection go faster since inspection doesn't ensure quality.
 There were times where we did have to make inspection more efficient though. 
 That is I wouldn't suggest maximising the number of tests being automated but I also didn't shun automating the test execution altogether. 
 The intention was to free-up people's time and so we'd automate just enough to buy someone enough time to unlearn and learn something new.
