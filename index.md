@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Deming Driven Testing
+permalink: /
 ---
 
 The goal of this site and supporting code is to describe my experiences about applying lean principles and practices to the QA team I led. 
