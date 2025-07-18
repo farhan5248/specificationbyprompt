@@ -1,4 +1,6 @@
-# Tree Swing
+---
+title: Tree Swing
+---
 
 My developers were good at what they did. We had our own automated tests. While the pipeline didn't have as much tests as I'd now like, it did have enough. 
 After the pipeline was implemented up to production, the next release  had a major change.

@@ -1,4 +1,6 @@
-# What led me to a QA team
+---
+title: What led me to a QA team
+---
 
 Except for the very end of my time on my last dev team, my career was mainly spent on deployment automation or what I thought was a CICD pipeline. 
 Towards the end, I realised that I needed BDD (TDD with QA as I call it sometimes). 
@@ -7,7 +9,7 @@ To me it was automated deployments, testing was something QA did, my job was to 
 If testing was slow, that was QA's job to make it go faster, developers just had to code and get it to QA on time. 
 I should add that I rarely got anything wrong, thanks to heroic effort to memorise the code bases I worked on, an unsustainable practice in hindsight as I got older :P
 
-1. [The Awesome Machine](https://farhan5248.github.io/What%20led%20me%20to%20a%20QA%20team/The%20Awesome%20Machine)
-2. [Tree Swing](https://farhan5248.github.io/What%20led%20me%20to%20a%20QA%20team/Tree%20Swing)
-3. [Maginot Line](https://farhan5248.github.io/What%20led%20me%20to%20a%20QA%20team/Maginot%20Line)
-4. [Shift Left Testing](https://farhan5248.github.io/What%20led%20me%20to%20a%20QA%20team/Shift%20Left%20Testing)
+1. [The Awesome Machine](The%20Awesome%20Machine)
+2. [Tree Swing](Tree%20Swing)
+3. [Maginot Line](Maginot%20Line)
+4. [Shift Left Testing](Shift%20Left%20Testing)

@@ -1,4 +1,6 @@
-# Planning Automation
+---
+title: Planning Automation
+---
 
 This is about making it easier for someone to write a test case. Specifically it was generalist testers in the Stream aligned teams. Just as the junior COBOL developer was able to use the tests to walk through the code, we want to make it easier for a junior or new tester to do the same but with test cases. The MBT model can fill in gaps between steps or create new scenarios as a basis for new test cases. The code completion features of Xtext combined with a model can help suggest next steps or values based on existing test cases.
 

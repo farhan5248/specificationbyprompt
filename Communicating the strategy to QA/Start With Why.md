@@ -1,4 +1,6 @@
-# Start With Why
+---
+title: Start With Why
+---
 
 As I spent more time working with the QA teams, I noticed that the QA managers had practices that didn't align with CICD or DevOps principles or practices. 
 The belief was that CICD or DevOps were just developer toys to play with and they weren't interested in the conversation.

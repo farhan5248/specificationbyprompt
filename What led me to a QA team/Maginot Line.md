@@ -1,4 +1,6 @@
-# Maginot Line
+---
+title: Maginot Line
+---
 
 I realised that the pipeline was built for a purpose that was no longer required just like the Maginot line. 
 It was designed to make deploys into existing environments fast and mistake-proof given its size and complexity because those were the most time consuming activities in the past. 

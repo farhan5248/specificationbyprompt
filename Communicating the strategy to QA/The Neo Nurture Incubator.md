@@ -1,4 +1,6 @@
-# The Neo Nurture Incubator
+---
+title: The Neo Nurture Incubator
+---
 
 Grasp the current condition. I had to start with the skills people already had and come up with creative ways to build on that. 
 The state of things was such that nobody had time to learn any other skills. 

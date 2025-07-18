@@ -1,4 +1,6 @@
-# The Power of Habit
+---
+title: The Power of Habit
+---
 
 Establish your next target condition. 
 I had read about Paul O'Neil, the CEO of ALCOA and the culture of safety that they had there. 

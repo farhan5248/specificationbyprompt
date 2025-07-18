@@ -1,4 +1,6 @@
-# Just in Time
+---
+title: Just in Time
+---
 
 My entire QA team worked in a waterfall project, all the code was written before any tests were executed. 
 In some cases, you'd have 3 months of test case planning followed by 3 months of test case execution.

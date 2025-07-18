@@ -1,4 +1,6 @@
-# Diffusion of Innovation
+---
+title: Diffusion of Innovation
+---
 
 Conduct experiments to get there. This is where the Kaizen come in. Sometimes it was automation (Jidoka), sometimes it was mistake prevention (Poka-Yoke) and other times it was just eliminating the need for the task.
 

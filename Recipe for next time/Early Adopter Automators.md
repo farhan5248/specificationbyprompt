@@ -1,4 +1,6 @@
-# Early Adopter Automators
+---
+title: Early Adopter Automators
+---
 
 Have the test automation developers try manually cleaning up the files of early adopter testers and then converting them to test automation through the Maven plug-in. The Maven plug-in makes it easier to parse the Xtext defined DSL language files that can be transformed into test automation code. The goal here is to identify which of these developers can be early adopters and are willing to change their way of working to support the testers. 
 

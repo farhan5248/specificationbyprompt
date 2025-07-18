@@ -1,13 +1,17 @@
-# What this site is about
+---
+layout: page
+title:  About
+permalink: /about/
+---
 
-## My background
+# My background
 
 I've been a Java developer for 15 years primarily working on the architecture, design and deployments or large enterprise systems. 
 Over the past 10 years, I've led a development team (~20 people) and a QA team (~40 people). 
 I spent most of my time on architecture, design and automated deployments.I've worked on really large integration projects (20 environments with a single environment having 20, 50 or 200 VM). 
 I've gone from doubting to loving TDD/BDD and supporting other developers and testers in adopting it. 
 
-## Why I've made this and is it for you?
+# Why I've made this and is it for you?
 
 During that time I found that QA took weeks to months to complete their test execution phase and in most cases didn't think CICD or DevOps applied to them.
 When I went looking for information, I never read about how anyone got their traditional QA teams to change.
@@ -35,7 +39,7 @@ So if you've read some of these books that I've read or listened to these podcas
 13. Small Batches
 14. The Engineering Room
 
-## The approach I took
+# The approach I took
 
 I recently came across the term Deming Driven Testing from [Mike Harris](https://testandanalysis.home.blog/) which I like very much because it describes the approach I took accurately.
 I applied the following to the process of inspection carried out by the QA team:
@@ -73,7 +77,7 @@ If you're wondering which tools were used by the testers, they were:
 15. Jenkins
 16. Maven
 
-## The direction of challenge?
+# The direction of challenge?
 
 Keeping the improvement kata in mind, the direction of challenge is to gradually provide feedback earlier by having the QA tests run earlier.
 To make it concrete, the QA testers needed to write their test cases in the ubiquitous language described in DDD by Eric Evans using an IDE.
@@ -99,7 +103,7 @@ To be clear this is like the [Java Parser API](https://javaparser.org/) I use to
 Through this API, you could extract whichever data you wanted to transform it into whatever you wanted from all of the tests written by all of the testers in the entire team for every component they tested.
 It also ensured that the language used to describe the business domain was mapped to the system that was being tested.
 
-## How I'm trying to share the knowledge
+# How I'm trying to share the knowledge
 
 While helping the team learn, I found that instead of giving cold hard facts and principles, I communicated better with stories.
 In this site, I'm attempting to explain some principles that I applied to those teams by recounting some of my experiences.
@@ -110,7 +114,7 @@ I'm actually listening to The Goal by Eliyahu M. Goldratt for inspiration.
 I'm starting with the QA portion of my story but there's also the dev portion.
 That is, what made me think of joining a QA team when my own team did TDD/BDD and had a CICD pipeline and fully automated deployments to production; why wasn't that enough?
 
-## Where all the documentation is
+# Where all the documentation is
 
 This is a work in progress so I'll be updating it daily/weekly. In general the documentation is divided up as so:
 1. **Prezi**: To understand the context within which I've used these tools and frameworks, I created this [Prezi presentation](https://prezi.com/view/yNpSiGMbioX8lNp5tS2q/). 

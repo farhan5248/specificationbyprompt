@@ -1,4 +1,6 @@
-# Team Topologies
+---
+title: Team Topologies
+---
 
 The popular idea at the time when I joined the QA team was to break up the centralised QA teams.
 That is, the testers should be embedded into the development teams.

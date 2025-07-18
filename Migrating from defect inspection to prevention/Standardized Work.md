@@ -1,4 +1,6 @@
-# Standardized Work
+---
+title: Standardized Work
+---
 
 Before changing anything by making it faster or eliminating it, we needed a standard. 
 Standardising the work was an informal way of developing a Value Stream Map. 

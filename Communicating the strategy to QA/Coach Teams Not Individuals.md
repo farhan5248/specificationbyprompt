@@ -1,4 +1,6 @@
-# Coach Teams Not Individuals
+---
+title: Coach Teams Not Individuals
+---
 
 Until I joined the QA team, my job titles were either developer, senior developer or development lead. 
 I was in fact the least qualified person to manage a QA team in a traditional sense. 

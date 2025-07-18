@@ -1,4 +1,6 @@
-# The Awesome Machine
+---
+title: The Awesome Machine
+---
 
 What initially took 5 business days and 10+ developers to deploy to production was eventually done automatically in a few hours, 2 hours ahead of schedule the first time.
 When I was hired to join the team, every single senior developer with almost a decade or more of experience said it couldn't be done.

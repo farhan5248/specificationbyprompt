@@ -1,4 +1,6 @@
-# Kaizen
+---
+title: Kaizen
+---
 
 Initially when someone had an idea to improve, they thought they needed to ask for permission.
 I assume it was because amongst other reasons they thought it'll take time and cause a delay or it might have negative impacts. 

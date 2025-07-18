@@ -1,4 +1,6 @@
-# Culture of Easy Ownership
+---
+title: Culture of Easy Ownership
+---
 
 This was our direction or challenge
 

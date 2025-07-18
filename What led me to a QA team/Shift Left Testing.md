@@ -1,4 +1,6 @@
-# Shift Left Testing
+---
+title: Shift Left Testing
+---
 
 The way I try to explain BDD is that it's like TDD but with the 3 amigos. 
 For the next release we used Cucumber but since the QA team still preferred to do their own thing, only the BSA and developers used it. 

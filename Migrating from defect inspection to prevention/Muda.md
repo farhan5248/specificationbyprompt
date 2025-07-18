@@ -1,4 +1,6 @@
-# Muda
+---
+title: Muda
+---
 
 When I joined the QA team, I had introduced the term shift left. By the time I left the team, I grew to hate the mere mention of it :P. 
 My dislike came from all the misinterpretations of it. 

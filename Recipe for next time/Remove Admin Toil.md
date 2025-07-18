@@ -1,4 +1,6 @@
-# Remove Admin Toil
+---
+title: Remove Admin Toil
+---
 
 Before approaching someone to change their work, start removing non-threatening stuff like admin stuff. Some people think knowledge gives them job security so sharing that is scary. Admin stuff is boring, automating it gives you an excuse to work with them and get to know about them. 
 

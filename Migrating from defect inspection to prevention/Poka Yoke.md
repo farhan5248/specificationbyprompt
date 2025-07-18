@@ -1,4 +1,6 @@
-# Poka Yoke
+---
+title: Poka Yoke
+---
 
 Initially didn't understand how they could change the way they worked such that developer defects could be prevented.
 Fortunately one of the teams had an existing way of working that could be used to demonstrate defect prevention.

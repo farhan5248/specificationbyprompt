@@ -1,4 +1,6 @@
-# Gemba
+---
+title: Gemba
+---
 
 First I started spending time with individual testers to understand their workflow flow. 
 I was doing an informal Value Stream Map in my head. 

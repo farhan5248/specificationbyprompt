@@ -1,4 +1,6 @@
-# Jidoka
+---
+title: Jidoka
+---
 
 In my experience, whether doing deploys or automating test execution or anything else like test case creation using MBT etc folks always aim for full automation; I don't. 
 My approach is to automate a small part and then each time I do the same task again, I automate more, stopping at the point of diminishing returns.

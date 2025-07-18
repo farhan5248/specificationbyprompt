@@ -1,4 +1,6 @@
-# Gravity Slingshot
+---
+title: Gravity Slingshot
+---
 
 Let's say folks were not afraid anymore, but if the journey wasn't feasible, they wouldn't do it.
 When explaining my strategy to transform the team, I used the analogy of a gravity slingshot. 

@@ -1,4 +1,6 @@
-# Involving Developers
+---
+title: Involving Developers
+---
 
 First try to generate and run the automation in small batches without involving the developer. This is to make sure that when the time comes, the developer is only coding or wiring stuff together that is absolutely need it. This ensures that the time they spend executing the test cases is reduced as much as possible. We were trying to make it really easy for them to run these tests. Once a tester is capable of generating automation on their own you can consider involving a developer. Gradually the developer will delivery more virtually bug free code to QA saving everybody time. 
 
