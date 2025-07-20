@@ -18,13 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Deming Driven Testing
+title: Modular Monolith
 author: Farhan Sheikh
 email: farhan.sheikh.5248@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Documenting the journey of manual QA testers adopting BDD by applying the principles of W. Edwards Deming's to the inspection phase of the software development lifecycle.
 lang: en
-baseurl: "/demingdriventesting" # the subpath of your site, e.g. /blog
+baseurl: "/modularmonolith" # the subpath of your site, e.g. /blog
 url: "https://farhan5248.github.io/"
 github_username:  farhan5248
 markdown: GFM
