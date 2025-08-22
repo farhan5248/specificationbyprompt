@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Modular Monolith
+title: Specification By Prompt
 permalink: /
 ---
 
