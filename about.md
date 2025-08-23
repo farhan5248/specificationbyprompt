@@ -27,10 +27,18 @@ The tests my team wrote were so clear that:
 3. They could be automatically converted into test automation provided the mapping to the architecture.
 4. They could be used by junior developers to update code that's 40+ years old with little supervision and no defects.
 
-I should mention that the way my team wrote their tests was developed by the original developers of the system before there ever was a QA team.
-Then when the first QA analyst was hired (I spoke to her) she just continued their way of working.
+Why the need for test automation if AI can read the specs?
+Secondly, if it needs it, why not create it itself?
+The answer to both is, to me that would be like a mental patient writing their on discharge evaluation from a mental institution.
+
+AI code generation is non-deterministic, it halucinates etc. If you gave one automated test to 5 developers, you'd get 5 different implementations of the main code which is OK, we expect that.
+However one test shouldn't have 5 different interpretations of the the expected results. So I take the deterministic approach of creating the test automation automatically. That code generation process is tested thoroughly and used as an auditor of the AI coding agent's work.
+
+Am I talking about unit tests or acceptance tests? 
+The way my team wrote their tests was developed by the original developers of the system before there ever was a QA team.
+Then when the first QA analyst was hired more than a decade ago, she told me that she just continued their way of working.
 So are the tests my team wrote unit tests because the developers came up with the process or acceptance tests because my QA team runs it? 
-To me, it's a unit test as defined by Ian Cooper in his presentation.
+To me, it's a unit test as defined by [Ian Cooper in his presentation][ian-cooper-testing].
 
 My intention is to complete the vscode plugin, the migration to micro-services and apply relevant design patterns all with help from Claude of course :).
 Then I'll have claude document it all for reference later. 
@@ -40,3 +48,4 @@ Finally I'll delete the code and have claude recreate it incrementally, adding e
 
 [modular-monolith]: https://www.youtube.com/watch?v=5OjqD-ow8GE
 [spring-boot-book]: https://mosy.tech/products-overview/
+[ian-cooper-testing]: https://www.youtube.com/watch?v=EZ05e7EMOLM
