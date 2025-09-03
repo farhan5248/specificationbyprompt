@@ -4,41 +4,40 @@ title:  About
 permalink: /about/
 ---
 
-Splitting up a monolith into a [modular monolith][modular-monolith] (before going to micro-services) was the original technical problem I was trying to solve.
+Splitting up a monolith into a [modular monolith][1] (before going to micro-services) was the original technical problem I was trying to solve.
 It's when the QA team gave the estimate of double the coding efforts that I went off on a tangent to understand why are QA teams the way they are.
 In 2018 I thought that a QA team writing specs in a DSL would help drive development using TDD/BDD/SBE to rewrite the legacy code written in webMethods. 
 I left the team in 2022 before ChatGPT came out and still thought that approach would work for COBOL.
 Now I think those natural language DSL specs if done well combined with Claude Code can be used as prompts and so I call this approach Specification by Prompt (SBP).
-
-This site describes how I would go about breaking up a monolith or modernising legacy code by using the QA team's natural language DSL as prompts for Claude Code. 
-I'll try to mimic the structure of [Learn Microservices with Spring Boot][spring-boot-book] but from the perspective of QA.
-Each feature file would be treated as a prompt for Claude Code to write the code from scratch. 
-The concept is to leverage the existing Gherkin/BDD specifications that QA teams already write and use them as detailed prompts for AI-driven development.
 
 The approach would involve:
 - Ensuring that individual feature files specify edge conditions and ranges making it easier to infer ranges.
 - Using Claude Code to generate implementation code from these specifications
 - Maintaining the living documentation aspect while enabling rapid development using sub-agents. If Claude Code gets it wrong, rather than chatting with it, I'd refine the specification and have it try again.
 
-Why do I think this works? 
-The tests my team wrote were so clear that:
-1. They could be given to the customer for review.
-2. They could be understood by another tester without any assumed knowledge to be executed.
-3. They could be automatically converted into test automation provided the mapping to the architecture.
-4. They could be used by junior developers to update code that's 40+ years old with little supervision and no defects.
+# Personal Journey and Evolution
 
-Why the need for test automation if AI can read the specs?
-Secondly, if it needs it, why not create it itself?
-The answer to both is, to me that would be like a mental patient writing their on discharge evaluation from a mental institution.
+## The 2018-2022 Transformation Experience
 
-AI code generation is non-deterministic, it halucinates etc. If you gave one automated test to 5 developers, you'd get 5 different implementations of the main code which is OK, we expect that.
-However one test shouldn't have 5 different interpretations of the the expected results. So I take the deterministic approach of creating the test automation automatically. That code generation process is tested thoroughly and used as an auditor of the AI coding agent's work.
+My time with the QA teams from 2018-2022 was transformative in ways I didn't expect. What started as a technical problem (splitting monoliths) became a deep dive into organizational psychology and team dynamics.
 
-Am I talking about unit tests or acceptance tests? 
-The way my team wrote their tests was developed by the original developers of the system before there ever was a QA team.
-Then when the first QA analyst was hired more than a decade ago, she told me that she just continued their way of working.
-So are the tests my team wrote unit tests because the developers came up with the process or acceptance tests because my QA team runs it? 
-To me, it's a unit test as defined by [Ian Cooper in his presentation][ian-cooper-testing].
+The QA team's estimate of double the coding effort was a wake-up call. Instead of accepting it, I became obsessed with understanding why QA teams operate the way they do. This led me down a rabbit hole of learning about Dr. Deming, lean principles, and the psychology of change.
+
+## Pre-AI vs Post-AI Thinking Evolution
+
+**2018-2022 (Pre-AI Era)**: I believed natural language DSLs would drive TDD/BDD/SBE development for legacy system rewrites. The focus was on test-driven development and specification by example.
+
+**2022+ (Post-AI Era)**: With the emergence of ChatGPT and Claude, I realized these same natural language specifications could serve as direct prompts for AI code generation. The approach evolved from test-driven to specification-driven development.
+
+This shift represents more than just tooling - it's a fundamental change in how we think about the relationship between business requirements and code implementation.
+
+## Lessons Learned
+
+**What Worked**: The specifications my team wrote were so clear they could be reviewed by customers, executed by any tester, and used by junior developers on 40+ year old code with minimal supervision.
+
+**What I Underestimated**: The time and effort required to change organizational culture. Technical solutions are easy compared to helping people see their work differently.
+
+**Biggest Surprise**: The original test approach was created by developers, not QA. When the first QA analyst joined a decade ago, she simply continued their methodology and so did my team more than a decade later. This taught me that good practices often emerge organically and spread through institutional memory.
 
 My intention is to complete the vscode plugin, the migration to micro-services and apply relevant design patterns all with help from Claude of course :).
 Then I'll have claude document it all for reference later. 
@@ -46,6 +45,4 @@ I'll also ask claude to try and see what about the tests need to change to creat
 This would be to identify any missing coverage or identify extra descriptions of the behavior to be specified in the specs. 
 Finally I'll delete the code and have claude recreate it incrementally, adding extra specs as needed to clarify the behavior.
 
-[modular-monolith]: https://www.youtube.com/watch?v=5OjqD-ow8GE
-[spring-boot-book]: https://mosy.tech/products-overview/
-[ian-cooper-testing]: https://www.youtube.com/watch?v=EZ05e7EMOLM
+[1]: https://www.youtube.com/watch?v=5OjqD-ow8GE
