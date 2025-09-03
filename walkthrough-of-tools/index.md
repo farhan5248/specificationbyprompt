@@ -11,6 +11,6 @@ This section covers the tools and frameworks in the sheep-dog github sites used 
 
 ## Technical Implementation Details
 
-1. [Ubiquitous Language Implementation][1]: Detailed technical approach for implementing natural language DSL with IDE tooling and automation frameworks
+1. [Ubiquitous Language][1]: Detailed technical approach for implementing natural language DSL with IDE tooling and automation frameworks
 
-[1]: ubiquitous-language-implementation
+[1]: ubiquitous-language
