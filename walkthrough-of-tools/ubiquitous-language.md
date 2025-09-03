@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ubiquitous Language Technical Implementation
+title: Ubiquitous Language
 ---
 
 # Technical Implementation of Ubiquitous Language for QA Teams
