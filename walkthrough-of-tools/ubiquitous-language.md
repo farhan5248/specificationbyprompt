@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Ubiquitous Language Technical Implementation
-permalink: /ubiquitous-language-implementation/
 ---
 
 # Technical Implementation of Ubiquitous Language for QA Teams
