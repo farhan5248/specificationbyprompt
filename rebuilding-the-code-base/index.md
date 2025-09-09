@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Rebuilding the Code Base
 ---
 
