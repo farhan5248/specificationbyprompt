@@ -2,7 +2,8 @@
 title: How to Bake a Change
 ---
 
-It's been 7 years since I joined the QA team. If I had to do it again, here's what I think I'd do. 
+It's been years since I joined the QA team. If I had to do it again, here's what I think I'd do. 
+I'll try to mimic the structure of [Learn Microservices with Spring Boot][10] but from the perspective of QA.
 Perhaps it's good to listen to Daniel Terhorst-North's presentation first [How to Bake a Change][9]
 
 1. [Extrinsic vs Intrinsic Motivation][1]
@@ -23,3 +24,4 @@ Perhaps it's good to listen to Daniel Terhorst-North's presentation first [How t
 [7]: involving-developers
 [8]: planning-automation
 [9]: https://www.youtube.com/watch?v=wO8M6M39vZk
+[10]: https://mosy.tech/books/learn-microservices/

@@ -1,4 +1,4 @@
-# Spec-Kit vs Sheep-Dog Approach: Comparison Report
+# Spec-Kit Assessment
 
 ## Key Findings
 
