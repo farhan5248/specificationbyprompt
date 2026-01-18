@@ -17,10 +17,10 @@ It enforces the use of a natural language DSL to write the tests which are used 
 The concept is to leverage the Gherkin/BDD specifications that QA teams already write and use them as detailed prompts for Spec Driven Development.
 
 
-1. [Milestone Status][1]: It'll take me a few weeks to complete this. In the meantime, I maintain a Claude generated summary of my progress by combining the code base, agents, commands and the github issues milestone.
+1. [Architecture & Capabilities][1]: Overview of the Sheep Dog projects and their dependencies, plus the development roadmap.
 2. [Walkthrough of the tools][2]: There's new tools and frameworks being developed all the time. For now, parts of my work might be replaceable with tools like Beads or Gas Town. Claude generates these assessment reports of how tools I'm interested in can be used in my workflow. I'll start refactoring my work to use them in February most likely.
 3. [How to Bake a Change][3]: I'll revisit this last, after the workflow is developed to document how I'd redo migrating a QA team from mass inspection to defect prevention to shift left on verfication testing.
 
-[1]: milestone-status/index
+[1]: architecture-and-capabilities/index
 [2]: walkthrough-of-tools/index
 [3]: how-to-bake-a-change/index
