@@ -21,7 +21,7 @@
 
 1. **DDD → MDD**: Ubiquitous language specifications (`.asciidoc`) are transformed into a UML model. DDD provides bounded contexts, aggregates, and ubiquitous language.
 2. **MDD → BDD**: UML model generates Cucumber test automation (`.feature` files and step definitions). SbE uses concrete examples as the bridge between business and technical artifacts.
-3. **BDD → SDD**: AI coding agents read `.feature` tests and generate main code that implements them. TDD ensures code quality through the Red-Green-Refactor cycle.
+3. **BDD → SDD**: AI coding agents read `.feature` tests and `.md` design specs and generate main code that implements them. TDD ensures code quality through the Red-Green-Refactor cycle.
 4. **Round-Trip**: Changes can flow backwards - code changes update tests, tests update model, model updates docs. SbP orchestrates AI-assisted verification and generation across the pipeline.
 
 ## Domain-Agnostic Methodology
@@ -40,9 +40,9 @@ The SbP methodology is not limited to software development tooling. The same app
 | Drug Claims Adjudication | Claims processing terms | Adjudication logic |
 | Electronic Health Records | EHR data/workflow terms | Record processing code |
 
-## Theory vs. sheep-dog Implementation
+## Domain-Driven Design (DDD)
 
-### 1. Domain-Driven Design (DDD)
+SbP treats the *transformation pipeline itself* as the domain.
 
 | Aspect | Standard Practice | SbP Implementation       |
 |--------|-------------------|--------------------------|
@@ -52,32 +52,14 @@ The SbP methodology is not limited to software development tooling. The same app
 | **Value Objects** | Immutable domain concepts | `UMLElement`, `UMLTestData`, `UMLTestSetup` |
 | **Repository Pattern** | Abstraction from persistence | `SourceFileRepository` (local files), `ServiceMySQLRepository` (cloud) |
 
-**Key Difference**: SbP treats the *transformation pipeline itself* as the domain.
+**Key Files**
+- Xtext grammar: `sheep-dog-local/sheepdogxtextplugin.parent/sheepdogxtextplugin/src/org/farhan/dsl/sheepdog/SheepDog.xtext`
+- Ubiquitous Language: `sheep-dog-qa/sheep-dog-specs/src/test/resources/asciidoc/specs/ubiquitous-language/`
+- Core domain: `sheep-dog-local/sheep-dog-dev/src/main/java/org/farhan/mbt/core/`
 
-### 2. Test-Driven Development (TDD)
+## Specification by Example (SbE)
 
-| Aspect | Standard Practice | sheep-dog Implementation |
-|--------|-------------------|--------------------------|
-| **Red-Green-Refactor** | Write failing test → implement → refactor | UML patterns define expected structure; code generated using them |
-| **Unit Tests** | Test individual units in isolation | Test runners organized by transformation direction |
-| **Test Coverage** | Measure code coverage | JaCoCo plugin configured for coverage reporting |
-| **Test-First** | Tests written before code | Specifications (`.asciidoc`) written before implementation |
-
-**Key Difference**: sheep-dog extends TDD to **specification-first development** where UML pattern files (`uml-class-*.md`) define what code *should* look like, then verification reports compare actual vs. expected.
-
-### 3. Behavior-Driven Development (BDD)
-
-| Aspect | Standard Practice | sheep-dog Implementation |
-|--------|-------------------|--------------------------|
-| **Gherkin Syntax** | Given-When-Then scenarios | `.feature` files generated from `.asciidoc` specs |
-| **Cucumber Framework** | Execute specifications | Cucumber 7.14.1 with JUnit 5, Guice/Spring DI |
-| **Living Documentation** | Tests as documentation | Bidirectional: docs generate tests AND tests can update docs |
-| **Step Definitions** | Map Gherkin to code | `src-gen/test/java/org/farhan/stepdefs/` |
-| **Step Objects** | Domain objects in tests | `UMLStepObject`, `AsciiDoctorStepObject`, `CucumberStepObject` |
-
-**Key Difference**: Traditional BDD has one-way flow (specs → tests). sheep-dog supports **round-trip**: specs ↔ tests, keeping both synchronized.
-
-### 4. Specification by Example (SbE)
+After the domain is defined, examples are developed to ensure domain & tech alignment.
 
 | Aspect | Standard Practice | sheep-dog Implementation |
 |--------|-------------------|--------------------------|
@@ -86,9 +68,13 @@ The SbP methodology is not limited to software development tooling. The same app
 | **Shared Understanding** | Business & tech alignment | UML serves as shared model between documentation and code |
 | **Living Documentation** | Specs stay current | Bidirectional transforms keep all artifacts synchronized |
 
-**Key Difference**: sheep-dog adds **Specification by Prompt (SbP)** - a novel methodology using UML pattern templates for AI-assisted verification and code generation.
+**Key Files**
+- Language mapping specs with concrete examples: `sheep-dog-qa/sheep-dog-specs/src/test/resources/asciidoc/specs/language-mapping/`
+- Usage examples: `sheep-dog-qa/sheep-dog-specs/src/test/resources/asciidoc/specs/usage/`
 
-### 5. Model-Driven Development (MDD)
+## Model-Driven Development (MDD)
+
+MDD is to generate **executable BDD tests** (Cucumber) from **human-readable specifications** (AsciiDoc) with , with UML as the transformation hub.
 
 | Aspect | Standard Practice | sheep-dog Implementation |
 |--------|-------------------|--------------------------|
@@ -98,9 +84,37 @@ The SbP methodology is not limited to software development tooling. The same app
 | **Platform Independence** | Models abstract away implementation | UML serves as platform-independent intermediate representation |
 | **Round-Trip Engineering** | Sync model and code changes | Bidirectional transforms: model ↔ tests ↔ documentation |
 
-**Key Difference**: sheep-dog uses MDD to bridge **human-readable specifications** (AsciiDoc) with **executable BDD tests** (Cucumber), with UML as the transformation hub.
+**Key Files**
+- Transformation chain: `asciidoctor-to-uml` → `uml-to-cucumber` Maven goals
+- UML model classes: `sheep-dog-local/sheep-dog-dev/src/main/java/org/farhan/mbt/core/UML*.java`
+- Generated test automation: `src-gen/test/resources/cucumber/specs/` and `src-gen/test/java/org/farhan/stepdefs/`
 
-### 6. Specification-Driven Development (SDD)
+## Behavior-Driven Development (BDD)
+
+The generated BDD test automation drives the development of the main code using **Claude Code**.
+
+| Aspect | Standard Practice | sheep-dog Implementation |
+|--------|-------------------|--------------------------|
+| **Gherkin Syntax** | Given-When-Then scenarios | `.feature` files generated from `.asciidoc` specs |
+| **Cucumber Framework** | Execute specifications | Cucumber 7.14.1 with JUnit 5, Guice/Spring DI |
+| **Living Documentation** | Tests as documentation | Bidirectional: docs generate tests AND tests can update docs |
+| **Step Definitions** | Map Gherkin to code | `src-gen/test/java/org/farhan/stepdefs/` |
+| **Step Objects** | Domain objects in tests | `UMLStepObject`, `AsciiDoctorStepObject`, `CucumberStepObject` |
+
+**Key Files**
+- Feature files: `sheep-dog-local/sheep-dog-dev/src-gen/test/resources/cucumber/specs/`
+- Step definitions: `sheep-dog-local/sheep-dog-dev/src-gen/test/java/org/farhan/stepdefs/`
+
+## Specification-Driven Development (SDD)
+
+**Claude Code** uses the BDD specs to iteratively develop the main code, guided by two complementary specification types:
+- **UML patterns** (`site/uml/`) - Define structural rules (packages, classes, methods, interactions, logging)
+- **Feature files** (`.feature`) - Define behavioral expectations (Given-When-Then scenarios)
+
+The SbP workflow implements the classic TDD/BDD **Red-Green-Refactor** cycle:
+1. **Red** - MDD generates test code (`.feature` + step definitions) from specs; tests fail because main code doesn't exist yet
+2. **Green** (`/sbp -f -c`) - Claude Code cross-references each scenario and generates main code to make tests pass
+3. **Refactor** (`/sbp -v -m` then `/sbp -f -m`) - Verify main code against UML patterns, then fix violations to ensure structural compliance
 
 | Aspect | Standard Practice | sheep-dog Implementation |
 |--------|-------------------|--------------------------|
@@ -108,45 +122,27 @@ The SbP methodology is not limited to software development tooling. The same app
 | **Contract-First** | Define contracts before implementation | UML patterns define class structure, packages, method signatures; `.feature` files define behavior |
 | **Code Generation** | Generate stubs/skeletons from specs | Claude Code reads UML specs + `.feature` files and generates/fixes main code |
 | **Validation** | Generated code validated against specs | `/sbp -v -m` verifies main code against UML patterns, Cucumber tests verify behavior |
-| **AI-Assisted Generation** | Emerging practice | Claude Code uses SBP workflow: verify → fix → verify cycle |
+| **AI-Assisted Generation** | Emerging practice | Claude Code uses SbP workflow: verify → fix → verify cycle |
 
-**Key Difference**: sheep-dog uses **Claude Code** as the coding agent, guided by two complementary specification types:
-- **UML patterns** (`site/uml/`) - Define structural rules (packages, classes, methods, interactions, logging)
-- **Feature files** (`.feature`) - Define behavioral expectations (Given-When-Then scenarios)
+**Key Files**
+- UML structural patterns: `site/uml/uml-class-*.md`, `uml-package.md`, `uml-communication.md`, `uml-interaction.md`
+- Feature files as behavioral specs: `.feature` files define expected behavior
+- SbP workflow prompts: `site/sbp/sbp-main-verify.md`, `sbp-main-forward.md` - guide Claude Code to verify and fix
+- Verification reports: `site/uml/uml-*.main-report.md` - track compliance status
 
-The SBP workflow implements the classic TDD/BDD **Red-Green-Refactor** cycle:
-1. **Red** - MDD generates test code (`.feature` + step definitions) from specs; tests fail because main code doesn't exist yet
-2. **Green** (`/sbp -f -c`) - Claude Code cross-references each scenario and generates main code to make tests pass
-3. **Refactor** (`/sbp -v -m` then `/sbp -f -m`) - Verify main code against UML patterns, then fix violations to ensure structural compliance
+## Test-Driven Development (TDD)
 
-## Key Files Demonstrating Each Methodology
+**Claude Code** generates tests not covered by BDD generated specs to fill in gaps in coverage using **Red-Green-Refactor** cycles.
 
-### DDD In Practice
-- Xtext grammar: `sheep-dog-local/sheepdogxtextplugin.parent/sheepdogxtextplugin/src/org/farhan/dsl/sheepdog/SheepDog.xtext`
-- Ubiquitous Language: `sheep-dog-qa/sheep-dog-specs/src/test/resources/asciidoc/specs/ubiquitous-language/`
-- Core domain: `sheep-dog-local/sheep-dog-dev/src/main/java/org/farhan/mbt/core/`
+| Aspect | Standard Practice | sheep-dog Implementation |
+|--------|-------------------|--------------------------|
+| **Red-Green-Refactor** | Write failing test → implement → refactor | UML patterns define expected structure; code generated using them |
+| **Unit Tests** | Test individual units in isolation | Test runners organized by transformation direction |
+| **Test Coverage** | Measure code coverage | JaCoCo plugin configured for coverage reporting |
+| **Test-First** | Tests written before code | Specifications (`.asciidoc`) written before implementation |
 
-### MDD In Practice
-- Transformation chain: `asciidoctor-to-uml` → `uml-to-cucumber` Maven goals
-- UML model classes: `sheep-dog-local/sheep-dog-dev/src/main/java/org/farhan/mbt/core/UML*.java`
-- Generated test automation: `src-gen/test/resources/cucumber/specs/` and `src-gen/test/java/org/farhan/stepdefs/`
-
-### SbE In Practice
-- Language mapping specs with concrete examples: `sheep-dog-qa/sheep-dog-specs/src/test/resources/asciidoc/specs/language-mapping/`
-- Usage examples: `sheep-dog-qa/sheep-dog-specs/src/test/resources/asciidoc/specs/usage/`
-
-### BDD In Practice
-- Feature files: `sheep-dog-local/sheep-dog-dev/src-gen/test/resources/cucumber/specs/`
-- Step definitions: `sheep-dog-local/sheep-dog-dev/src-gen/test/java/org/farhan/stepdefs/`
-
-### TDD In Practice
-- `site/sbp/sbp-main-forward.md` - Forward engineering workflow
+**Key Files**
+- Forward engineering workflow: `site/sbp/sbp-main-forward.md`
 - UML patterns: `site/uml/uml-class-*.md` files
 - Test runners: `sheep-dog-local/sheep-dog-dev/src/test/java/org/farhan/runners/`
 
-### SDD In Practice
-- UML structural patterns: `site/uml/uml-class-*.md`, `uml-package.md`, `uml-communication.md`, `uml-interaction.md`
-- Feature files as behavioral specs: `.feature` files define expected behavior
-- SBP workflow prompts: `site/sbp/sbp-main-verify.md`, `sbp-main-forward.md` - guide Claude Code to verify and fix
-- Verification reports: `site/uml/uml-*.main-report.md` - track compliance status
-- Main code generated/fixed by Claude Code to satisfy both UML patterns and `.feature` tests

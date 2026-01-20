@@ -14,4 +14,4 @@ The goal of SbP (Specification by Prompt) is to fully automate code creation sta
 The **sheep-dog-main** codebase implements the SbP methodology and doesn't just *use* DDD, MDD, TDD, BDD, SbE, and SDD - it [**automates the synchronization**][2] between their artifacts through bidirectional transformations. The sheep-dog codebase is also **self-developing** - it uses itself to build the tools that implement SbP. 
 
 [1]: https://www.youtube.com/watch?v=5OjqD-ow8GE
-[2]: https://www.ias-research.com/softengg/software-architecture/domain-driven-design-bdd-and-tdd-a-synergistic-approach
+[2]: architecture-and-capabilities/methodology-integration.md
