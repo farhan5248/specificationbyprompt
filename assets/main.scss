@@ -1,0 +1,9 @@
+---
+---
+
+@import "minima";
+
+// Wider layout (1200px instead of default 740px)
+.wrapper {
+  max-width: calc(1200px - 60px);
+}
