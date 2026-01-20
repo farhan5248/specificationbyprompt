@@ -4,7 +4,7 @@ title: Architecture & Capabilities
 
 # Architecture & Capabilities
 
-Start with the [methodology integration][2] to understand how SbP integrates DDD, MDD, TDD, BDD, SbE, and SDD. The remaining pages are development milestones for new features.
+Start with the [methodology integration][2] to understand how SbP integrates DDD, MDD, TDD, BDD, SbE, and SDD. Then review the [Ubiquitous Language][3] technical considerations. The remaining pages are development milestones for new features.
 
 1. [Ubiquitous Language Test Code Generation][0]
 2. [Verification with Markdown and Claude agents and skills][1]
@@ -34,3 +34,4 @@ Start with the [methodology integration][2] to understand how SbP integrates DDD
 [0]: ubiquitous-language-test-code-generation
 [1]: verification-with-markdown-and-claude-agents-and-skills
 [2]: methodology-integration
+[3]: ubiquitous-language

@@ -3,7 +3,7 @@ layout: page
 title: Ubiquitous Language
 ---
 
-# Technical Implementation of Ubiquitous Language for QA Teams
+# Technical Considerations of DDD Ubiquitous Language for QA Teams
 
 This section details the technical approach for implementing ubiquitous language in QA transformation, covering tool selection, framework implementation, and automation strategies.
 
