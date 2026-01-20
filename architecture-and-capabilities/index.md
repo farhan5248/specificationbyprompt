@@ -4,7 +4,7 @@ title: Architecture & Capabilities
 
 # Architecture & Capabilities
 
-These are all the milestones in Github Issues needed to develop the workflow.
+Start with the [methodology integration][2] to understand how SbP integrates DDD, MDD, TDD, BDD, SbE, and SDD. The remaining pages are development milestones for new features.
 
 1. [Ubiquitous Language Test Code Generation][0]
 2. [Verification with Markdown and Claude agents and skills][1]
@@ -33,3 +33,4 @@ These are all the milestones in Github Issues needed to develop the workflow.
 
 [0]: ubiquitous-language-test-code-generation
 [1]: verification-with-markdown-and-claude-agents-and-skills
+[2]: methodology-integration
