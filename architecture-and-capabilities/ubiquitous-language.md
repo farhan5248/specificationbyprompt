@@ -3,11 +3,9 @@ layout: page
 title: Ubiquitous Language
 ---
 
-# Technical Considerations of DDD Ubiquitous Language for QA Teams
-
 This section details the technical approach for implementing ubiquitous language in QA transformation, covering tool selection, framework implementation, and automation strategies.
 
-## Implementation Overview
+# Implementation Overview
 
 The implementation of ubiquitous language was a natural language DSL, specifically an external DSL. 
 The code generated was an internal DSL to make it easier to map from platform-specific implementation back to the business scenario.
@@ -17,9 +15,9 @@ If tests weren't going to be automated, was the extra detail wasteful for manual
 - Non-SMEs could help execute detailed manual tests which reduced [toil/overburden/muri][1] on SME testers
 - Maintained consistency between automated and manual test approaches. This way, teams could decide as late as possible which tests to automate with minimal back and forth between tester and test automation developer.
 
-## Tool Selection Rationale
+# Tool Selection Rationale
 
-### Why Natural Language DSL vs Programming Languages?
+## Why Natural Language DSL vs Programming Languages?
 
 Teaching large QA teams to code would be challenging as described in the analogy about taking everyone to the top of the hill all at once to teach them to ski from [Sooner Safer Happier][10]. 
 Instead, refining a language they already used to communicate with Business Systems Analysts and developers [reused skills they already had][2], requiring less modification to how they work.
@@ -34,7 +32,7 @@ This enabled easy adoption of model-based testing and its benefits such as incre
 One challenge was ensuring that the DSL didn't devolve into a programming language.
 Every now and then folks would try to treat it as a programming language which made the specifications awkward to read. Robot Framework for example allowed you to embed variables and program code anywhere in a robot file. You couldn't read the test without having to simulate the embedded code to understand the test expectation.
 
-### Why IDE vs Document-Based Tools?
+## Why IDE vs Document-Based Tools?
 
 Initially, teams used Microsoft Word and Excel files that were parsed and converted to automation. 
 This was like coding with Microsoft Notepad and finding errors at compile time instead of while typing.
@@ -55,7 +53,7 @@ This is similar to the [Java Parser API][9] used for automatic Java code generat
 
 You can read more about [language workbenches on Martin Fowler's site][7].
 
-## Modern AI Integration
+# Modern AI Integration
 
 Though not practiced at the time of original implementation, specifications written in this ubiquitous language can now be used as prompts for agentic coding tools, enabling AI to write the bulk of implementation code directly from business-readable test specifications.
 
@@ -65,9 +63,9 @@ This creates a powerful cycle:
 3. Same specifications become AI prompts for code generation
 4. Generated code maintains traceability to business requirements
 
-### The Auditing Approach
+## The Auditing Approach
 
-A critical question arises: if AI can read the specifications directly, why do we need test automation? And if we need it, why not have AI create the tests itself?
+If AI can read the specifications directly, why do we need test automation? And if we need it, why not have AI create the tests itself?
 
 The answer is like asking a mental patient to write their own discharge evaluation from a mental institution - there's an inherent conflict of interest.
 
