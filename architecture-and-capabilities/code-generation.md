@@ -20,7 +20,7 @@ It iterates though a series of test cases going through the red-green-refactor c
 - **MBT Code**: `src-gen/test` is off-limits for Claude and has the `.feature` test scenario files and and `.java` glue code and interfaces. I'll move more of the boiler plate code from `src/test/java` to this directory.
 - **Non MBT Code**: `src/test/java` is also off-limits for Claude. It has code that connects the generated test automation to the main code. Though Claude can generate this, it occasionally hardcodes responses just to make the test pass so I excluded it for the first set of fully automated runs. I'll update the MBT code generation to address that. It's because of this, that I have to empty out the method bodies rather than outright deleting the class or the code won't compile.
 
-## Before Darmok Runs
+## Prepping for a Run
 
 Before I attempted to delete everything, I went through a few cycles of renaming.
 This was going to be important for when I asked Claude to create tests in the DSL to fill in gaps; I'll explain more in **After Darmok Runs**.
@@ -52,7 +52,7 @@ Static helper methods for grammar element operations. Separates utility operatio
  - `public static String getCellListAsString(List<ICell> list)`
 ```
 
-## After Darmok Runs
+## After It Runs
 
 Even though I had tests, they weren't all good enough for Claude to infer the complete implementation.
 Before I deleted and recreated the code, I asked it to use **JaCoCo** reports and walk through the code and find parts of the code that had coverage but whose logic wouldn't be implied by the current tests. It was interesting because though I thought my test was clear about the expectations, I had implemented things that it wouldn't have thought of. 
@@ -64,8 +64,11 @@ Then I deleted the code and it tried again and identified the next gaps, sometim
 
 I'm interested in this approach because I'm curious about how easily I can get it to take over any project of mine and figure out what the testing gaps are. 
 I'd have it go in a loop until it concluded there were no gaps and I had a set of characterisation tests for the project.
+When I work on the `src/main/java/org/farhan/dsl/lang` package, I'll start with a few examples but use this approach to make an alternative red-green-refactor process.
+Here, the red phase will generate new test cases in the `` project based on the branch comparison rather than iterate what's already there.
+The process will stop once no more tests are being suggested implying the code has been migrated.
 
-## Red Green Refactor
+## Red-Green-Refactor
 
 - The red phase is the test automation generation using traditional code generation techniques from model driven development.
 - The green phase is a simple prompt telling Claude to fix the failing test.
@@ -96,7 +99,7 @@ Run `mvn verify -Dtest={runnerClassName} -Dmaven.test.failure.ignore=true` in {p
   e. Run mvn test to make sure all the project tests pass
 ```
 
-### Refactoring Cycle
+### Refactor Cycle
 
 I don't specify too much here. I assume there's other tools out there that will probably take care of this and so I'd use one of them for this cycle. For now though, the refactor cycle does these tasks:
 1. Eliminate duplication with utility files. There's one main utility class. Over the several runs, I've watched Claude figure out what it can refactor out in to that utility class. Each time I rebuild the code, I leave that utility class alone and the subsequent green cycles need less refactoring.
@@ -132,22 +135,72 @@ I've tried these two experiments
 
 ### Graph Model Traversal
 
+There's much to explain here but I'll keep it short until I have diagrams to visualise it.
+The process isn't using a graph model currently. 
+I manually walk through the test cases simulating the depth first traversal and sorting the test cases in the `scenario-list.txt` file.
+
+#### What is a test case?
+
+I'll start with what is a test case. For the purpose of my explanation, it's a path through a graph model.
+The test steps are the vertices and the directed edges represent which step preceeds another.
+
+#### Why give it only one failing test case?
+
+If I give more than one test at once, Claude bounces all over the place. It'll run a test, look at some failure and try and fix it. Then another test behaviour changes and now it tries to fix that. It can go for minutes without fixing anything at all. 
+
+#### What effect does the order have?
+
+If I gave one test case at a time but where each one was very different from the previous one, then it doesn't have a reference to compare a similar successful implementation.
+So whenever I give it a failing test case, I give it examples of succesful ones.
+You could randomly give test cases, each time including similar ones and it would work fine.
+I don't do that for two reasons. One I'm sequencing them manually and I assume a depth first traversal for the way I model them would produce the same order. Two, when it refactors the code, I want it to look at all the related changes together instead of revisiting the same class again and again which slows it down.
+
+When switching features, the last test for a feature might not look like the first test for the next feature. 
+In the case of the Validate, Quickfix, Generate, they are because I iterate through them in that order. 
+However if I jumped from one feature to another randomly (this happened by accident in the begining) it can take almost 15 minutes to do one test case compared to the average 4 minutes. 
+If the first test case is small enough, then it doesn't matter as much.
+
+#### What effect does the length difference have?
+
+The goal is to have a sequence of test cases such that they are slightly different from each other.
+If multiple test cases are on the same path, they're sorted in order from shortest to longest. 
+The importance of being slighty different is that Claude will then have to make a smaller code change. 
+The bigger the difference, the more it has to think, the more the variation in the resulting code and the more time it takes.
+I can reduce that time by adding more examples to `uml-interaction.md`.
+
+I've tried two extremes: 
+1. If I give it all the tests and then a set of examples which is basically the original code in `uml-interaction.md` file.It'll just copy and paste entire chunks of code which defeats the purpose of having it figure out what to do. When Claude created the `uml-interaction.md` file it did just that. It reviewed the entire code base and came up with the minimum number of examples to demonstrate how to implement stuff. That list was too long and I had to delete examples. I think the list is still too long.
+
+2. If I do the other extreme, and give it one edge/pair of steps at a time, it needs less examples, and can quickly figure out what to implement. It's harder for me to do this manually so I didn't experiment with this too much.
+I'll need an actual graph model to generate these different length paths and attempt a breadth-first traversal.
+
 ### UML Patterns
+
+Instead of a uml diagram, I'd like it to follow uml patterns per project found in `{projectPath}\site\uml\*.md`.
+It's basically naming conventions and relationships between them or code snippets for method bodies.
+
+These are the types in order of importance:
+1. **overview**: This contains the DSL description. I will rework it this week. The version you see has been maintained by Claude when it was creating the class patterns. 
+2. **class**: These are basically lists of regex defining what the public method signatures are and what each class or method is responsible for.
+3. **interaction**: Instead of a sequence diagram, these are code snippets like the ones I'd find on Stack Overflow. I had it create the samples used here but I have a feeling it's overkill and it doesn't need all of them. Once I can delete the `src/test` directory and build the project from scratch, I'll confirm if it actually uses it. For xtext specific stuff, I think it'll need it or maybe even for test code creation but I don't think it needs it for much else.
+4. **package**: I try to focus it on specific classes and not read the entire code base. This is done by using **JaCoCo** runs for a passing test. Sometimes it needs to know where the other classes are and this file describes what each class does.
+5. **communication**: Right now the refactoring is between methods in the class or methods from the single `SheepDogUtility` class. However each test case has a corresponding pattern in the code. I was trying to capture that here so that the refactoring phase could determine how to divide up the work between more than one class. The labels like `Suggest` or `Correct` correspond to these patterns. I'll test how effective it is once I can delete the whole project after resolving the `src/test` issues.
+6. **activity**: This is a work in progress, I wanted it to have a representation of the **Plant UML** graph model so it could find similar tests but I don't think I'll need it since the red cycle handles finding the related tests.
 
 ## DSL Vocabulary and Grammar
 
 ### Capturing the intention
 
 I haven't had to write much of a description for my features or scenarios.
-I invest my time in having a good automated test and already plan on upgrading my DSL to be more expressive.
+I invest my time in having a good automated test and already plan on upgrading my DSL to be more expressive (As suggested by Claude so it can express itself better :)).
 
 That said, I feel having a good description at the top of the feature file to capture the intention makes up for gaps in my DSL.
 1. feature intention
 2. happy path
-3. exception paths, typically don't need implementation
+3. exception paths, typically don't need implementation if the first two bullets are done well enough.
 
 ### Statistical Process Control
 
 Some short test cases take longer than a long test case. I wonder if that's because the longer test case is more descriptive or is it something else?
 
-Perhaps I have a hammer and am just looking for a nail but I think I need to make a chart to look for common cause and special cause variation here! It'll be a fun exercise to find the causes of what makes some tests take longer than the average, sometimes twice as long. I'd then feed that data back into the overall process so that it can try a sequence of smaller tests or automatically add an example to the uml-interaction.md file to help it jump to the conclusion if it consistently struggles with a test case. 
+Perhaps I have a hammer and am just looking for a nail but I think I need to make a chart to look for common cause and special cause variation here! It'll be a fun exercise to find the causes of what makes some tests take longer than the average, sometimes twice as long. I'd then feed that data back into the overall process so that it can try a sequence of smaller tests or automatically add an example to the `uml-interaction.md` file to help it jump to the conclusion if it consistently struggles with a test case. 
