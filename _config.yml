@@ -27,7 +27,9 @@ baseurl: "/specificationbyprompt" # the subpath of your site, e.g. /blog
 url: "https://farhan5248.github.io/"
 github_username:  farhan5248
 linkedin_username: farhan-sheikh-fivetwofoureight
-markdown: GFM
+markdown: kramdown
+kramdown:
+  input: GFM
 
 # Build settings
 theme: minima
