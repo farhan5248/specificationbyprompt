@@ -9,7 +9,7 @@ title: Code Generation
 
 # What Darmok does
 
-These are my notes on the current version of a small program I call Darmok.
+These are my notes on the current version of a small program I call [Darmok][darmok].
 Darmok is currently a powershell script which puts back the java code in [`src/main/java`][issues] after I delete the implementation.
 It iterates though a sequence of test cases going through the red-green-refactor cycle for each of them.
 
@@ -241,6 +241,7 @@ Some short test cases take longer than a long test case. I wonder if that's beca
 
 Perhaps I have a hammer and am just looking for a nail but I think I need to make a chart to look for common cause and special cause variation here! It'll be a fun exercise to find the causes of what makes some tests take longer than the average, sometimes twice as long. I'd then feed that data back into the overall process so that it can try a sequence of smaller tests or automatically add an example to the `uml-interaction.md` file to help it jump to the conclusion if it consistently struggles with a test case.
 
+[darmok]: https://www.startrek.com/en-ca/news/one-trek-mind-deciphering-darmok
 [darmok-log]: https://github.com/farhan5248/specificationbyprompt/blob/main/architecture-and-capabilities/run-rgr-20260218-164707.log
 [red-log]: https://github.com/farhan5248/specificationbyprompt/blob/main/architecture-and-capabilities/rgr-red-20260218-170754.log
 [green-log]: https://github.com/farhan5248/specificationbyprompt/blob/main/architecture-and-capabilities/rgr-green-20260218-170831.log
