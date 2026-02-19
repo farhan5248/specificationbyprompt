@@ -20,8 +20,6 @@ It iterates though a sequence of test cases going through the red-green-refactor
 - **MBT Code**: [`src-gen/test`][src-gen-test] is off-limits for Claude and has the `.feature` test scenario files and and `.java` glue code and interfaces. I'll move more of the boiler plate code from [`src/test`][src-test] to this directory.
 - **Non MBT Code**: [`src/test`][src-test] is also off-limits for Claude. It has code that connects the generated test automation to the main code. Though Claude can generate this, it occasionally hardcodes responses just to make the test pass so I excluded it for the first set of fully automated runs. I'll update the MBT code generation to address that. It's because of this, that I have to empty out the method bodies rather than outright deleting the class or the code won't compile.
 
-TODO put snippet of example test assertion and how it connects to main code
-
 ## Prepping for a Run
 
 Before I attempted to delete everything, I went through a few cycles of renaming.
@@ -79,11 +77,11 @@ The process will stop once no more tests are being suggested implying the code h
 
 Previously I was making a commit after every scenario but this was a bit much
 
-TODO Put image of commit after every scenario implemented
+![Commit after every scenario](rgr-scenario-commit.png)
 
 Now the files are staged after each green cycle so I can see the changes while it works but they're only committed at the end of a feature file.
 
-TODO put image of commit after after feature implemented from Rebuild 11
+![Commit after feature](rgr-scenario-feature.png)
 
 Most of the interesting information is in the log files. These are samples:
 1. [`Red`][red-log]
@@ -243,10 +241,10 @@ Some short test cases take longer than a long test case. I wonder if that's beca
 
 Perhaps I have a hammer and am just looking for a nail but I think I need to make a chart to look for common cause and special cause variation here! It'll be a fun exercise to find the causes of what makes some tests take longer than the average, sometimes twice as long. I'd then feed that data back into the overall process so that it can try a sequence of smaller tests or automatically add an example to the `uml-interaction.md` file to help it jump to the conclusion if it consistently struggles with a test case.
 
-[darmok-log]: link
-[red-log]: link
-[green-log]: link
-[refactor-log]: link
+[darmok-log]: https://github.com/farhan5248/specificationbyprompt/blob/main/architecture-and-capabilities/run-rgr-20260218-164707.log
+[red-log]: https://github.com/farhan5248/specificationbyprompt/blob/main/architecture-and-capabilities/rgr-red-20260218-170754.log
+[green-log]: https://github.com/farhan5248/specificationbyprompt/blob/main/architecture-and-capabilities/rgr-green-20260218-170831.log
+[refactor-log]: https://github.com/farhan5248/specificationbyprompt/blob/main/architecture-and-capabilities/rgr-refactor-20260218-170211.log
 [rebuild-8]: https://github.com/farhan5248/sheep-dog-local/tree/Rebuild8
 [rebuild-9]: https://github.com/farhan5248/sheep-dog-local/tree/Rebuild9
 [rebuild-10]: https://github.com/farhan5248/sheep-dog-local/tree/Rebuild10
