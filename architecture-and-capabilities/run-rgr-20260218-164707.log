@@ -1,0 +1,270 @@
+[2026-02-18 16:47:07] ===========================================
+[2026-02-18 16:47:07] RGR Automation Script
+[2026-02-18 16:47:07] ===========================================
+[2026-02-18 16:47:07] Parsing scenarios from: C:\Users\Farhan\git\sheep-dog-main\scripts\scenarios-list.txt
+[2026-02-18 16:47:07] Log file: C:\Users\Farhan\git\sheep-dog-main\temp\run-rgr-20260218-164707.log
+[2026-02-18 16:47:07] 
+[2026-02-18 16:47:07] Found 14 scenarios to process
+[2026-02-18 16:47:07] 
+[2026-02-18 16:47:07] ===========================================
+[2026-02-18 16:47:07] Cleaning up NUL files...
+[2026-02-18 16:47:07] ===========================================
+[2026-02-18 16:47:22] 
+[2026-02-18 16:47:22] ===========================================
+[2026-02-18 16:47:22] Running mvn clean in sheep-dog-test...
+[2026-02-18 16:47:22] ===========================================
+[2026-02-18 16:47:24] 
+[2026-02-18 16:47:24] Found 4 feature files to process
+[2026-02-18 16:47:24] 
+[2026-02-18 16:47:24] ==========================================
+[2026-02-18 16:47:24] FEATURE FILE: Proposals for Workspace Step Objects
+[2026-02-18 16:47:24] ==========================================
+[2026-02-18 16:47:24] Scenarios in this file: 3
+[2026-02-18 16:47:24] 
+[2026-02-18 16:47:24] ==========================================
+[2026-02-18 16:47:24] Processing Scenario: No component has existing
+[2026-02-18 16:47:24] Tag: Suggest
+[2026-02-18 16:47:24] ==========================================
+[2026-02-18 16:47:24]   Added tag @Suggest to file
+[2026-02-18 16:47:24] 
+[2026-02-18 16:47:24] Running Red-Green workflow for tag: Suggest
+[2026-02-18 16:47:24]   [1/2] Running rgr-red...
+[2026-02-18 16:47:58]   Completed rgr-red (Duration: 00:00:33)
+[2026-02-18 16:47:58]   [2/2] Running rgr-green...
+[2026-02-18 16:51:58]   Completed rgr-green (Duration: 00:03:59)
+[2026-02-18 16:51:58] 
+[2026-02-18 16:51:58]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:04:33)
+[2026-02-18 16:51:58] 
+[2026-02-18 16:51:58] ==========================================
+[2026-02-18 16:51:58] Processing Scenario: Has component no existing
+[2026-02-18 16:51:58] Tag: Suggest
+[2026-02-18 16:51:58] ==========================================
+[2026-02-18 16:51:58]   Added tag @Suggest to file
+[2026-02-18 16:51:58] 
+[2026-02-18 16:51:58] Running Red-Green workflow for tag: Suggest
+[2026-02-18 16:51:58]   [1/2] Running rgr-red...
+[2026-02-18 16:52:27]   Completed rgr-red (Duration: 00:00:29)
+[2026-02-18 16:52:27]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 16:52:27] 
+[2026-02-18 16:52:27]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:29)
+[2026-02-18 16:52:27] 
+[2026-02-18 16:52:27] ==========================================
+[2026-02-18 16:52:27] Processing Scenario: Has component has existing
+[2026-02-18 16:52:28] Tag: Suggest
+[2026-02-18 16:52:28] ==========================================
+[2026-02-18 16:52:28]   Added tag @Suggest to file
+[2026-02-18 16:52:28] 
+[2026-02-18 16:52:28] Running Red-Green workflow for tag: Suggest
+[2026-02-18 16:52:28]   [1/2] Running rgr-red...
+[2026-02-18 16:52:57]   Completed rgr-red (Duration: 00:00:29)
+[2026-02-18 16:52:57]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 16:52:57] 
+[2026-02-18 16:52:57]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:29)
+[2026-02-18 16:52:57] 
+[2026-02-18 16:52:57] ==========================================
+[2026-02-18 16:52:57] All scenarios in file Proposals for Workspace Step Objects processed
+[2026-02-18 16:52:57] ==========================================
+[2026-02-18 16:52:57] Committing all red-green changes for file: run-rgr red-green Proposals for Workspace Step Objects
+[2026-02-18 16:52:57] 
+[2026-02-18 16:52:57] Running rgr-refactor for file: Proposals for Workspace Step Objects
+[2026-02-18 16:52:57] 
+[2026-02-18 16:56:11] Committing changes in sheep-dog-test repo: run-rgr-refactor Proposals for Workspace Step Objects (Duration: 00:03:13)
+[2026-02-18 16:56:11] 
+[2026-02-18 16:56:11] ==========================================
+[2026-02-18 16:56:11] FEATURE FILE: Proposals for File and Workspace Step Objects
+[2026-02-18 16:56:11] ==========================================
+[2026-02-18 16:56:11] Scenarios in this file: 2
+[2026-02-18 16:56:11] 
+[2026-02-18 16:56:11] ==========================================
+[2026-02-18 16:56:11] Processing Scenario: No component has existing
+[2026-02-18 16:56:11] Tag: Suggest
+[2026-02-18 16:56:11] ==========================================
+[2026-02-18 16:56:11]   Added tag @Suggest to file
+[2026-02-18 16:56:11] 
+[2026-02-18 16:56:11] Running Red-Green workflow for tag: Suggest
+[2026-02-18 16:56:11]   [1/2] Running rgr-red...
+[2026-02-18 16:57:14]   Completed rgr-red (Duration: 00:01:02)
+[2026-02-18 16:57:14]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 16:57:14] 
+[2026-02-18 16:57:14]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:01:02)
+[2026-02-18 16:57:14] 
+[2026-02-18 16:57:14] ==========================================
+[2026-02-18 16:57:14] Processing Scenario: Has component has existing
+[2026-02-18 16:57:14] Tag: Suggest
+[2026-02-18 16:57:14] ==========================================
+[2026-02-18 16:57:14]   Added tag @Suggest to file
+[2026-02-18 16:57:14] 
+[2026-02-18 16:57:14] Running Red-Green workflow for tag: Suggest
+[2026-02-18 16:57:14]   [1/2] Running rgr-red...
+[2026-02-18 16:57:49]   Completed rgr-red (Duration: 00:00:34)
+[2026-02-18 16:57:49]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 16:57:49] 
+[2026-02-18 16:57:49]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:34)
+[2026-02-18 16:57:49] 
+[2026-02-18 16:57:49] ==========================================
+[2026-02-18 16:57:49] All scenarios in file Proposals for File and Workspace Step Objects processed
+[2026-02-18 16:57:49] ==========================================
+[2026-02-18 16:57:49] Committing all red-green changes for file: run-rgr red-green Proposals for File and Workspace Step Objects
+[2026-02-18 16:57:49] 
+[2026-02-18 16:57:49] Running rgr-refactor for file: Proposals for File and Workspace Step Objects
+[2026-02-18 16:57:49] 
+[2026-02-18 17:00:05] Committing changes in sheep-dog-test repo: run-rgr-refactor Proposals for File and Workspace Step Objects (Duration: 00:02:15)
+[2026-02-18 17:00:05] Warning: Git commit failed or no changes to commit
+[2026-02-18 17:00:05] 
+[2026-02-18 17:00:05] ==========================================
+[2026-02-18 17:00:05] FEATURE FILE: Proposals for Workspace Step Definitions
+[2026-02-18 17:00:05] ==========================================
+[2026-02-18 17:00:05] Scenarios in this file: 4
+[2026-02-18 17:00:05] 
+[2026-02-18 17:00:05] ==========================================
+[2026-02-18 17:00:05] Processing Scenario: Has component no existing step object
+[2026-02-18 17:00:05] Tag: Suggest
+[2026-02-18 17:00:05] ==========================================
+[2026-02-18 17:00:05]   Added tag @Suggest to file
+[2026-02-18 17:00:05] 
+[2026-02-18 17:00:05] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:00:05]   [1/2] Running rgr-red...
+[2026-02-18 17:00:37]   Completed rgr-red (Duration: 00:00:31)
+[2026-02-18 17:00:37]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 17:00:37] 
+[2026-02-18 17:00:37]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:31)
+[2026-02-18 17:00:37] 
+[2026-02-18 17:00:37] ==========================================
+[2026-02-18 17:00:37] Processing Scenario: Has component no existing step definition
+[2026-02-18 17:00:37] Tag: Suggest
+[2026-02-18 17:00:37] ==========================================
+[2026-02-18 17:00:37]   Added tag @Suggest to file
+[2026-02-18 17:00:37] 
+[2026-02-18 17:00:37] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:00:37]   [1/2] Running rgr-red...
+[2026-02-18 17:01:08]   Completed rgr-red (Duration: 00:00:31)
+[2026-02-18 17:01:08]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 17:01:08] 
+[2026-02-18 17:01:08]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:31)
+[2026-02-18 17:01:08] 
+[2026-02-18 17:01:08] ==========================================
+[2026-02-18 17:01:08] Processing Scenario: Has component has existing step definition
+[2026-02-18 17:01:08] Tag: Suggest
+[2026-02-18 17:01:08] ==========================================
+[2026-02-18 17:01:08]   Added tag @Suggest to file
+[2026-02-18 17:01:08] 
+[2026-02-18 17:01:08] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:01:08]   [1/2] Running rgr-red...
+[2026-02-18 17:01:39]   Completed rgr-red (Duration: 00:00:30)
+[2026-02-18 17:01:39]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 17:01:39] 
+[2026-02-18 17:01:39]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:30)
+[2026-02-18 17:01:39] 
+[2026-02-18 17:01:39] ==========================================
+[2026-02-18 17:01:39] Processing Scenario: No component has existing step definition
+[2026-02-18 17:01:39] Tag: Suggest
+[2026-02-18 17:01:39] ==========================================
+[2026-02-18 17:01:39]   Added tag @Suggest to file
+[2026-02-18 17:01:39] 
+[2026-02-18 17:01:39] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:01:39]   [1/2] Running rgr-red...
+[2026-02-18 17:02:10]   Completed rgr-red (Duration: 00:00:31)
+[2026-02-18 17:02:10]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 17:02:10] 
+[2026-02-18 17:02:10]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:31)
+[2026-02-18 17:02:10] 
+[2026-02-18 17:02:10] ==========================================
+[2026-02-18 17:02:10] All scenarios in file Proposals for Workspace Step Definitions processed
+[2026-02-18 17:02:10] ==========================================
+[2026-02-18 17:02:10] Committing all red-green changes for file: run-rgr red-green Proposals for Workspace Step Definitions
+[2026-02-18 17:02:11] 
+[2026-02-18 17:02:11] Running rgr-refactor for file: Proposals for Workspace Step Definitions
+[2026-02-18 17:02:11] 
+[2026-02-18 17:06:17] Committing changes in sheep-dog-test repo: run-rgr-refactor Proposals for Workspace Step Definitions (Duration: 00:04:06)
+[2026-02-18 17:06:17] 
+[2026-02-18 17:06:17] ==========================================
+[2026-02-18 17:06:17] FEATURE FILE: Proposals for Workspace Step Parameters
+[2026-02-18 17:06:17] ==========================================
+[2026-02-18 17:06:17] Scenarios in this file: 5
+[2026-02-18 17:06:17] 
+[2026-02-18 17:06:17] ==========================================
+[2026-02-18 17:06:17] Processing Scenario: No existing step object
+[2026-02-18 17:06:17] Tag: Suggest
+[2026-02-18 17:06:17] ==========================================
+[2026-02-18 17:06:17]   Added tag @Suggest to file
+[2026-02-18 17:06:17] 
+[2026-02-18 17:06:17] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:06:17]   [1/2] Running rgr-red...
+[2026-02-18 17:06:50]   Completed rgr-red (Duration: 00:00:32)
+[2026-02-18 17:06:50]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 17:06:50] 
+[2026-02-18 17:06:50]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:32)
+[2026-02-18 17:06:50] 
+[2026-02-18 17:06:50] ==========================================
+[2026-02-18 17:06:50] Processing Scenario: No existing step definition
+[2026-02-18 17:06:50] Tag: Suggest
+[2026-02-18 17:06:50] ==========================================
+[2026-02-18 17:06:50]   Added tag @Suggest to file
+[2026-02-18 17:06:50] 
+[2026-02-18 17:06:50] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:06:50]   [1/2] Running rgr-red...
+[2026-02-18 17:07:22]   Completed rgr-red (Duration: 00:00:31)
+[2026-02-18 17:07:22]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 17:07:22] 
+[2026-02-18 17:07:22]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:31)
+[2026-02-18 17:07:22] 
+[2026-02-18 17:07:22] ==========================================
+[2026-02-18 17:07:22] Processing Scenario: Has existing step definition without parameters
+[2026-02-18 17:07:22] Tag: Suggest
+[2026-02-18 17:07:22] ==========================================
+[2026-02-18 17:07:22]   Added tag @Suggest to file
+[2026-02-18 17:07:22] 
+[2026-02-18 17:07:22] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:07:22]   [1/2] Running rgr-red...
+[2026-02-18 17:07:53]   Completed rgr-red (Duration: 00:00:31)
+[2026-02-18 17:07:53]   [2/2] Skipping rgr-green (tests already passing)
+[2026-02-18 17:07:53] 
+[2026-02-18 17:07:53]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:00:31)
+[2026-02-18 17:07:53] 
+[2026-02-18 17:07:53] ==========================================
+[2026-02-18 17:07:54] Processing Scenario: Has existing step definition with parameters
+[2026-02-18 17:07:54] Tag: Suggest
+[2026-02-18 17:07:54] ==========================================
+[2026-02-18 17:07:54]   Added tag @Suggest to file
+[2026-02-18 17:07:54] 
+[2026-02-18 17:07:54] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:07:54]   [1/2] Running rgr-red...
+[2026-02-18 17:08:31]   Completed rgr-red (Duration: 00:00:37)
+[2026-02-18 17:08:31]   [2/2] Running rgr-green...
+[2026-02-18 17:11:30]   Completed rgr-green (Duration: 00:02:59)
+[2026-02-18 17:11:30] 
+[2026-02-18 17:11:30]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:03:36)
+[2026-02-18 17:11:30] 
+[2026-02-18 17:11:30] ==========================================
+[2026-02-18 17:11:30] Processing Scenario: Has existing step definition with Content parameter
+[2026-02-18 17:11:30] Tag: Suggest
+[2026-02-18 17:11:30] ==========================================
+[2026-02-18 17:11:30]   Added tag @Suggest to file
+[2026-02-18 17:11:30] 
+[2026-02-18 17:11:30] Running Red-Green workflow for tag: Suggest
+[2026-02-18 17:11:30]   [1/2] Running rgr-red...
+[2026-02-18 17:12:21]   Completed rgr-red (Duration: 00:00:51)
+[2026-02-18 17:12:21]   [2/2] Running rgr-green...
+[2026-02-18 17:15:01]   Completed rgr-green (Duration: 00:02:39)
+[2026-02-18 17:15:01] 
+[2026-02-18 17:15:01]   Red-Green workflow completed for tag: Suggest (Total Duration: 00:03:30)
+[2026-02-18 17:15:01] 
+[2026-02-18 17:15:01] ==========================================
+[2026-02-18 17:15:01] All scenarios in file Proposals for Workspace Step Parameters processed
+[2026-02-18 17:15:01] ==========================================
+[2026-02-18 17:15:01] Committing all red-green changes for file: run-rgr red-green Proposals for Workspace Step Parameters
+[2026-02-18 17:15:01] 
+[2026-02-18 17:15:01] Running rgr-refactor for file: Proposals for Workspace Step Parameters
+[2026-02-18 17:15:01] 
+[2026-02-18 17:16:43] Committing changes in sheep-dog-test repo: run-rgr-refactor Proposals for Workspace Step Parameters (Duration: 00:01:42)
+[2026-02-18 17:16:43] Warning: Git commit failed or no changes to commit
+[2026-02-18 17:16:43] 
+[2026-02-18 17:16:43] 
+[2026-02-18 17:16:43] ==========================================
+[2026-02-18 17:16:43] RGR Automation Complete!
+[2026-02-18 17:16:43] ==========================================
+[2026-02-18 17:16:43] Total feature files processed: 4
+[2026-02-18 17:16:43] Total scenarios processed: 14
+[2026-02-18 17:16:43] Total tags added: 14
+[2026-02-18 17:16:43] Log file: C:\Users\Farhan\git\sheep-dog-main\temp\run-rgr-20260218-164707.log
+[2026-02-18 17:16:43] ==========================================

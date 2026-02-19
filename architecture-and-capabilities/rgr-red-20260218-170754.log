@@ -1,0 +1,980 @@
+[2026-02-18 17:07:54] ===========================================
+[2026-02-18 17:07:54] RGR-Red Automation Script
+[2026-02-18 17:07:54] ===========================================
+[2026-02-18 17:07:54] Project: sheep-dog-test
+[2026-02-18 17:07:54] Pattern: Suggest
+[2026-02-18 17:07:54] Framework: Guice
+[2026-02-18 17:07:54] Runner Class: SuggestTest
+[2026-02-18 17:07:54] Log File: C:\Users\Farhan\git\sheep-dog-main\temp\rgr-red-20260218-170754.log
+[2026-02-18 17:07:54] ===========================================
+[2026-02-18 17:07:54] 
+[2026-02-18 17:07:54] STEP 2: AsciiDoctor to UML Conversion
+[2026-02-18 17:07:54] ==========================================
+[2026-02-18 17:07:54] Converting AsciiDoc to UML for pattern: Suggest
+[2026-02-18 17:07:54] Working Directory: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-qa\sheep-dog-specs
+[2026-02-18 17:07:54] Command: mvn org.farhan:sheep-dog-dev-svc-maven-plugin:asciidoctor-to-uml -Dtags="Suggest" -Dhost="dev.sheepdogdev.io"
+[2026-02-18 17:07:54] ==========================================
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.farhan:sheep-dog-specs >---------------------
+[INFO] Building sheep-dog-specs 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- sheep-dog-dev-svc:1.42:asciidoctor-to-uml (default-cli) @ sheep-dog-specs ---
+[INFO] Starting execute
+[INFO] tags: Suggest
+[INFO] baseDir: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-qa\sheep-dog-specs
+[INFO] Service ready
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLBackgroundToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLDocStringToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLExamplesTableToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLFeatureToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLScenarioOutlineToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLScenarioToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLStepDefinitionToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLStepObjectToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLStepParametersTableToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLStepTableToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create Cucumber Files/UMLStepToCode.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create UML Model/CodeBackgroundToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create UML Model/CodeDocStringToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create UML Model/CodeExamplesTableToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create UML Model/CodeFeatureToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create UML Model/CodeScenarioOutlineToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create UML Model/CodeScenarioToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create UML Model/CodeStepTableToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/Cucumber/Create UML Model/CodeStepToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLBackgroundToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLDocStringToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLExamplesTableToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLFeatureToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLScenarioOutlineToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLScenarioToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLStepDefinitionToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLStepObjectToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLStepParametersTableToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLStepTableToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create Asciidoc Files/UMLStepToDocument.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentBackgroundToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentDocStringToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentExamplesTableToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentFeatureToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentScenarioOutlineToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentScenarioToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentStepDefinitionToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentStepObjectToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentStepParametersTableToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentStepTableToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Language Mapping/UML Model/Create UML Model/DocumentStepToUML.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Code Generation for Only Issues.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Code Generation for Workspace Issues.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Grammar Long Names.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Proposals for File and Workspace Step Objects.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Proposals for File Step Objects.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Proposals for Workspace Step Definitions.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Proposals for Workspace Step Objects.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Proposals for Workspace Step Parameters.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Quickfixes for File Issues.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Quickfixes for Only Issues.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Quickfixes for Workspace Issues.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Validation for File Issues.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Validation for Only Issues.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Ubiquitous Language/Validation for Workspace Issues.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Usage/Create Code From Documentation.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Usage/Create Documentation From Code.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Usage/Format Asciidoc Files.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Usage/Format Cucumber Files.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Usage/Select Documentation By Tags.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/specs/Usage/Update Existing Code.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/code-prj project/src-gen/test/java/org/farhan/objects/blah/ObjectPage.java file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/code-prj project/src-gen/test/java/org/farhan/stepdefs/blah/BlahObjectPageSteps.java file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/code-prj project/src-gen/test/resources/cucumber/specs/app/Process.feature file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/code-prj project/src-gen/test/resources/cucumber/specs/Process.feature file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/maven plugin/asciidoctor-to-uml goal.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/maven plugin/cucumber-to-uml goal.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/maven plugin/uml-to-asciidoctor goal.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/maven plugin/uml-to-cucumber goal.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/maven plugin/uml-to-cucumber-guice goal.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/maven plugin/uml-to-cucumber-spring goal.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/spec-prj project/src/test/resources/asciidoc/specs/app/Process.asciidoc file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/spec-prj project/src/test/resources/asciidoc/specs/Process.asciidoc file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/spec-prj project/src/test/resources/asciidoc/specs/Process2.asciidoc file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/spec-prj project/src/test/resources/asciidoc/stepdefs/blah application/Object page.asciidoc file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/spec-prj project/src/test/resources/asciidoc/stepdefs/daily batchjob/app/Input file.asciidoc file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/spec-prj project/src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/spec-prj project/uml/pst.uml file.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/xtext plugin/apply quickfix action.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/xtext plugin/generate step definition action.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/xtext plugin/list proposals action.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/xtext plugin/list proposals dialog.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/xtext plugin/list quickfixes action.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/xtext plugin/list quickfixes dialog.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/xtext plugin/validate action.asciidoc
+[INFO] Converting: src/test/resources/asciidoc/stepdefs/xtext plugin/validate dialog.asciidoc
+[INFO] Ending execute
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.435 s
+[INFO] Finished at: 2026-02-18T17:08:13-05:00
+[INFO] ------------------------------------------------------------------------
+[2026-02-18 17:08:13] Converted AsciiDoc to UML for pattern: Suggest
+[2026-02-18 17:08:13] 
+[2026-02-18 17:08:13] STEP 3: UML to Cucumber Conversion
+[2026-02-18 17:08:13] ==========================================
+[2026-02-18 17:08:13] Generating Cucumber files for pattern: Suggest
+[2026-02-18 17:08:13] Working Directory: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-local\sheep-dog-test
+[2026-02-18 17:08:13] Command: mvn org.farhan:sheep-dog-dev-svc-maven-plugin:uml-to-cucumber-guice -Dtags="Suggest" -Dhost="dev.sheepdogdev.io"
+[2026-02-18 17:08:13] ==========================================
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.farhan:sheep-dog-test >----------------------
+[INFO] Building Lean Sheep Dog Tools for Testers 1.35-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- sheep-dog-dev-svc:1.41:uml-to-cucumber-guice (default-cli) @ sheep-dog-test ---
+[INFO] Starting execute
+[INFO] tags: Suggest
+[INFO] baseDir: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-local\sheep-dog-test
+[INFO] Service ready
+[INFO] ObjectName: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for File and Workspace Step Objects.feature
+[INFO] ObjectName: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for File Step Objects.feature
+[INFO] ObjectName: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for Workspace Step Definitions.feature
+[INFO] ObjectName: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for Workspace Step Objects.feature
+[INFO] ObjectName: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for Workspace Step Parameters.feature
+[INFO] ObjectName: src-gen/test/java/org/farhan/stepdefs/specprj/src/test/resources/asciidoc/specs/SpecPrjProcess2AsciidocFileSteps.java
+[INFO] ObjectName: src-gen/test/java/org/farhan/objects/specprj/src/test/resources/asciidoc/specs/Process2AsciidocFile.java
+[INFO] ObjectName: src-gen/test/java/org/farhan/stepdefs/specprj/src/test/resources/asciidoc/stepdefs/dailybatchjob/SpecPrjInputFileAsciidocFileSteps.java
+[INFO] ObjectName: src-gen/test/java/org/farhan/objects/specprj/src/test/resources/asciidoc/stepdefs/dailybatchjob/InputFileAsciidocFile.java
+[INFO] ObjectName: src-gen/test/java/org/farhan/stepdefs/xtext/XtextListProposalsActionSteps.java
+[INFO] ObjectName: src-gen/test/java/org/farhan/objects/xtext/ListProposalsAction.java
+[INFO] ObjectName: src-gen/test/java/org/farhan/stepdefs/xtext/XtextListProposalsDialogSteps.java
+[INFO] ObjectName: src-gen/test/java/org/farhan/objects/xtext/ListProposalsDialog.java
+[INFO] Converting: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for File and Workspace Step Objects.feature
+[INFO] Converting: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for File Step Objects.feature
+[INFO] Converting: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for Workspace Step Definitions.feature
+[INFO] Converting: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for Workspace Step Objects.feature
+[INFO] Converting: src-gen/test/resources/cucumber/specs/Ubiquitous Language/Proposals for Workspace Step Parameters.feature
+[INFO] Converting: src-gen/test/java/org/farhan/stepdefs/specprj/src/test/resources/asciidoc/specs/SpecPrjProcess2AsciidocFileSteps.java
+[INFO] Converting: src-gen/test/java/org/farhan/objects/specprj/src/test/resources/asciidoc/specs/Process2AsciidocFile.java
+[INFO] Converting: src-gen/test/java/org/farhan/stepdefs/specprj/src/test/resources/asciidoc/stepdefs/dailybatchjob/SpecPrjInputFileAsciidocFileSteps.java
+[INFO] Converting: src-gen/test/java/org/farhan/objects/specprj/src/test/resources/asciidoc/stepdefs/dailybatchjob/InputFileAsciidocFile.java
+[INFO] Converting: src-gen/test/java/org/farhan/stepdefs/xtext/XtextListProposalsActionSteps.java
+[INFO] Converting: src-gen/test/java/org/farhan/objects/xtext/ListProposalsAction.java
+[INFO] Converting: src-gen/test/java/org/farhan/stepdefs/xtext/XtextListProposalsDialogSteps.java
+[INFO] Converting: src-gen/test/java/org/farhan/objects/xtext/ListProposalsDialog.java
+[INFO] Ending execute
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.299 s
+[INFO] Finished at: 2026-02-18T17:08:21-05:00
+[INFO] ------------------------------------------------------------------------
+[2026-02-18 17:08:21] Generated Cucumber files for pattern: Suggest
+[2026-02-18 17:08:21] 
+[2026-02-18 17:08:21] STEP 4: Generate Runner Class
+[2026-02-18 17:08:21] Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-local\sheep-dog-test\src\test\java\org\farhan\suites\SuggestTest.java
+[2026-02-18 17:08:21] 
+[2026-02-18 17:08:21] STEP 5: Run the Tests
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.farhan:sheep-dog-test >----------------------
+[INFO] Building Lean Sheep Dog Tools for Testers 1.35-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- build-helper:3.3.0:add-test-source (add-test-source) @ sheep-dog-test ---
+[INFO] Test Source directory: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-local\sheep-dog-test\src-gen\test\java added.
+[INFO] 
+[INFO] --- build-helper:3.3.0:add-test-resource (add-test-source) @ sheep-dog-test ---
+[INFO] 
+[INFO] --- jacoco:0.8.14:prepare-agent (prepare-agent) @ sheep-dog-test ---
+[INFO] argLine set to -javaagent:C:\\Users\\Farhan\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.14\\org.jacoco.agent-0.8.14-runtime.jar=destfile=C:\\Users\\Farhan\\git\\sheep-dog-main\\sheep-dog-local\\sheep-dog-test\\target\\jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sheep-dog-test ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ sheep-dog-test ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sheep-dog-test ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] Copying 13 resources from src-gen\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ sheep-dog-test ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 57 source files with javac [debug target 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ sheep-dog-test ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.farhan.suites.SuggestTest
+
+@sheep-dog-test @Suggest
+Scenario: No component no existing                                                                                        # cucumber//specs/Ubiquitous Language/Proposals for File Step Objects.feature:14
+2026-02-18 17:08:29.166 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.169 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.181 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.184 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.185 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.188 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.189 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Output file is present
+2026-02-18 17:08:29.199 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+2026-02-18 17:08:29.200 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.200 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.200 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.200 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.200 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: 
+2026-02-18 17:08:29.201 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                 |
+    | The daily batchjob Output file is present |
+    | empty                                     |
+2026-02-18 17:08:29.208 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.211 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 2 proposals
+2026-02-18 17:08:29.212 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.212 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                     # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/2 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                      # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion                     | Suggestion Name            | Suggestion Description                                 |
+    | The Output file                | Output file                | Referred in: The daily batchjob Output file is present |
+    | The daily batchjob Output file | daily batchjob/Output file | Referred in: The daily batchjob Output file is present |
+
+@sheep-dog-test @Suggest
+Scenario: Has component no existing                                                                                       # cucumber//specs/Ubiquitous Language/Proposals for File Step Objects.feature:31
+2026-02-18 17:08:29.222 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.222 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.222 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.223 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.223 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.223 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.223 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Output file is present
+2026-02-18 17:08:29.223 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+2026-02-18 17:08:29.223 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.223 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.224 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.224 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.224 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob
+2026-02-18 17:08:29.224 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                 |
+    | The daily batchjob Output file is present |
+    | The daily batchjob                        |
+2026-02-18 17:08:29.224 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.225 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 2 proposals
+2026-02-18 17:08:29.225 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.225 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                     # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/2 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                      # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion                     | Suggestion Name            | Suggestion Description                                 |
+    | The Output file                | Output file                | Referred in: The daily batchjob Output file is present |
+    | The daily batchjob Output file | daily batchjob/Output file | Referred in: The daily batchjob Output file is present |
+
+@sheep-dog-test @Suggest
+Scenario: No component no existing has background                                                                                    # cucumber//specs/Ubiquitous Language/Proposals for File Step Objects.feature:48
+2026-02-18 17:08:29.231 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.231 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.231 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.232 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.232 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSetup for name: Background
+2026-02-18 17:08:29.233 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSetup
+2026-02-18 17:08:29.233 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Output file is present
+2026-02-18 17:08:29.233 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file background steps snippet is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.backgroundStepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                 |
+    | The daily batchjob Output file is present |
+2026-02-18 17:08:29.234 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.235 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.235 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.235 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.235 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: 
+2026-02-18 17:08:29.235 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  And The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows              # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name |
+    | empty     |
+2026-02-18 17:08:29.236 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.236 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 2 proposals
+2026-02-18 17:08:29.236 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.236 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                                # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/2/TestStep/1 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                                 # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion                     | Suggestion Name            | Suggestion Description                                 |
+    | The Output file                | Output file                | Referred in: The daily batchjob Output file is present |
+    | The daily batchjob Output file | daily batchjob/Output file | Referred in: The daily batchjob Output file is present |
+
+@sheep-dog-test @Suggest
+Scenario: No component has existing                                                                                           # cucumber//specs/Ubiquitous Language/Proposals for File and Workspace Step Objects.feature:14
+2026-02-18 17:08:29.241 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.241 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.241 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.241 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.241 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.241 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.241 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Output file is present
+2026-02-18 17:08:29.241 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+2026-02-18 17:08:29.242 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.242 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.242 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.242 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.242 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: 
+2026-02-18 17:08:29.242 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                 |
+    | The daily batchjob Output file is present |
+    | empty                                     |
+2026-02-18 17:08:29.244 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.246 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.246 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.247 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.247 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.247 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name |
+    | daily batchjob/Input file.feature | is present           |
+2026-02-18 17:08:29.249 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.249 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 3 proposals
+2026-02-18 17:08:29.249 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.249 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/2 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                          # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion                     | Suggestion Name            |
+    | The Output file                | Output file                |
+    | The daily batchjob Output file | daily batchjob/Output file |
+    | The daily batchjob Input file  | Input file                 |
+
+@sheep-dog-test @Suggest
+Scenario: Has component has existing                                                                                          # cucumber//specs/Ubiquitous Language/Proposals for File and Workspace Step Objects.feature:36
+2026-02-18 17:08:29.252 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.252 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.252 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.252 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.252 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.252 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.252 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Output file is present
+2026-02-18 17:08:29.253 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+2026-02-18 17:08:29.254 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.254 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.254 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.254 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.254 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob
+2026-02-18 17:08:29.255 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                 |
+    | The daily batchjob Output file is present |
+    | The daily batchjob                        |
+2026-02-18 17:08:29.256 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.256 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.256 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.257 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.257 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.257 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name |
+    | daily batchjob/Input file.feature | is present           |
+2026-02-18 17:08:29.257 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.259 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 3 proposals
+2026-02-18 17:08:29.259 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.259 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/2 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                          # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion                     | Suggestion Name            |
+    | The Output file                | Output file                |
+    | The daily batchjob Output file | daily batchjob/Output file |
+    | The daily batchjob Input file  | Input file                 |
+
+@sheep-dog-test @Suggest
+Scenario: Has component no existing step object                                                                           # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Definitions.feature:14
+2026-02-18 17:08:29.263 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.263 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.263 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.263 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.263 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.264 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.264 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Input file
+2026-02-18 17:08:29.264 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                     |
+    | The daily batchjob Input file |
+2026-02-18 17:08:29.266 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Entering suggestCellListWorkspace for step: The daily batchjob Input file
+2026-02-18 17:08:29.266 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Exiting suggestCellListWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                     # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                                       |
+    | TestSuite/1/TestStepContainer/1/TestStep/1/Table/Row/1 |
+  Then The xtext plugin list proposals dialog will be empty                                                               # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeEmpty()
+
+@sheep-dog-test @Suggest
+Scenario: Has component no existing step definition                                                                       # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Definitions.feature:27
+2026-02-18 17:08:29.273 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.273 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.273 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.274 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.274 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.274 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.274 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Input file
+2026-02-18 17:08:29.274 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                     |
+    | The daily batchjob Input file |
+2026-02-18 17:08:29.274 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Entering suggestCellListWorkspace for step: The daily batchjob Input file
+2026-02-18 17:08:29.275 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Exiting suggestCellListWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                     # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                                       |
+    | TestSuite/1/TestStepContainer/1/TestStep/1/Table/Row/1 |
+  Then The xtext plugin list proposals dialog will be empty                                                               # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeEmpty()
+
+@sheep-dog-test @Suggest
+Scenario: Has component has existing step definition                                                                          # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Definitions.feature:40
+2026-02-18 17:08:29.277 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.277 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.277 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.277 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.278 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.278 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.278 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Input file
+2026-02-18 17:08:29.278 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                     |
+    | The daily batchjob Input file |
+2026-02-18 17:08:29.278 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.278 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.278 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.280 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.280 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.280 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.280 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.280 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.280 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.280 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.280 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStatement for name: Creates empty file
+2026-02-18 17:08:29.281 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStatement
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name | Step Definition Description |
+    | daily batchjob/Input file.feature | is present           | Creates empty file          |
+2026-02-18 17:08:29.282 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: The daily batchjob Input file
+2026-02-18 17:08:29.282 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 1 proposals
+2026-02-18 17:08:29.282 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: The daily batchjob Input file
+2026-02-18 17:08:29.283 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 1 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/1 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                          # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion | Suggestion Name | Suggestion Description |
+    | is present | is present      | Creates empty file     |
+
+@sheep-dog-test @Suggest
+Scenario: No component has existing step definition                                                                           # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Definitions.feature:58
+2026-02-18 17:08:29.285 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Input file is present
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.286 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.287 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.287 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The Input file
+2026-02-18 17:08:29.287 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                |
+    | The daily batchjob Input file is present |
+    | The Input file                           |
+2026-02-18 17:08:29.287 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.287 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.287 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.287 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.287 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.288 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.288 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.288 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.288 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.288 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.288 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStatement for name: Creates empty file
+2026-02-18 17:08:29.288 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStatement
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name | Step Definition Description |
+    | daily batchjob/Input file.feature | is present           | Creates empty file          |
+2026-02-18 17:08:29.289 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: The daily batchjob Input file is present
+2026-02-18 17:08:29.289 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 1 proposals
+2026-02-18 17:08:29.289 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: The daily batchjob Input file is present
+2026-02-18 17:08:29.289 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 1 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/1 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                          # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion | Suggestion Name | Suggestion Description |
+    | is present | is present      | Creates empty file     |
+
+@sheep-dog-test @Suggest
+Scenario: No component no existing                                                                                        # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Objects.feature:14
+2026-02-18 17:08:29.291 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.291 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.292 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.292 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.292 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.292 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.292 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: 
+2026-02-18 17:08:29.292 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name |
+    | empty     |
+2026-02-18 17:08:29.293 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.293 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 0 proposals
+2026-02-18 17:08:29.294 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.294 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                     # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/1 |
+  Then The xtext plugin list proposals dialog will be empty                                                               # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeEmpty()
+
+@sheep-dog-test @Suggest
+Scenario: No component has existing                                                                                           # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Objects.feature:28
+2026-02-18 17:08:29.297 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.297 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.298 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.298 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.298 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.298 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.298 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: 
+2026-02-18 17:08:29.299 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name |
+    | empty     |
+2026-02-18 17:08:29.299 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.299 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.299 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.299 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.299 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.299 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.300 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.300 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.300 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStatement for name: Description
+
+2026-02-18 17:08:29.300 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStatement
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name | Object Description |
+    | daily batchjob/Input file.feature | is present           | Description
+       |
+2026-02-18 17:08:29.301 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.301 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 1 proposals
+2026-02-18 17:08:29.301 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.301 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/1 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                          # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion                    | Suggestion Name | Suggestion Description |
+    | The daily batchjob Input file | Input file      | Description
+           |
+
+@sheep-dog-test @Suggest
+Scenario: Has component no existing                                                                                       # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Objects.feature:47
+2026-02-18 17:08:29.304 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.304 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.304 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.304 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.305 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.305 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.305 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob
+2026-02-18 17:08:29.305 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name          |
+    | The daily batchjob |
+2026-02-18 17:08:29.305 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.305 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 0 proposals
+2026-02-18 17:08:29.305 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.306 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                     # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/1 |
+  Then The xtext plugin list proposals dialog will be empty                                                               # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeEmpty()
+
+@sheep-dog-test @Suggest
+Scenario: Has component has existing                                                                                          # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Objects.feature:60
+2026-02-18 17:08:29.308 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.308 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name          |
+    | The daily batchjob |
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.309 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.310 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.310 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.310 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.310 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.310 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.310 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStatement for name: Description
+2026-02-18 17:08:29.310 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStatement
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name | Object Description |
+    | daily batchjob/Input file.feature | is present           | Description        |
+2026-02-18 17:08:29.310 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepObjectNameWorkspace for step: 
+2026-02-18 17:08:29.310 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepObjectNameWorkspace with 1 proposals
+2026-02-18 17:08:29.310 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Entering suggestStepDefinitionNameWorkspace for step: 
+2026-02-18 17:08:29.311 [main] DEBUG o.f.dsl.issues.TestStepIssueResolver - Exiting suggestStepDefinitionNameWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                           |
+    | TestSuite/1/TestStepContainer/1/TestStep/1 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                          # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion                    | Suggestion Name | Suggestion Description |
+    | The daily batchjob Input file | Input file      | Description            |
+
+@sheep-dog-test @Suggest
+Scenario: No existing step object                                                                                         # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Parameters.feature:8
+2026-02-18 17:08:29.313 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.313 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.313 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.314 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.314 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.314 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.314 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Input file is created as follows
+2026-02-18 17:08:29.314 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                           |
+    | The daily batchjob Input file is created as follows |
+2026-02-18 17:08:29.315 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Entering suggestCellListWorkspace for step: The daily batchjob Input file is created as follows
+2026-02-18 17:08:29.315 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Exiting suggestCellListWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                     # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                                       |
+    | TestSuite/1/TestStepContainer/1/TestStep/1/Table/Row/1 |
+  Then The xtext plugin list proposals dialog will be empty                                                               # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeEmpty()
+
+@sheep-dog-test @Suggest
+Scenario: No existing step definition                                                                                         # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Parameters.feature:21
+2026-02-18 17:08:29.318 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.318 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.319 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.319 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.319 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.319 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.319 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Input file is created as follows
+2026-02-18 17:08:29.319 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                           |
+    | The daily batchjob Input file is created as follows |
+2026-02-18 17:08:29.320 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.320 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.320 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.320 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.320 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is present
+2026-02-18 17:08:29.320 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name |
+    | daily batchjob/Input file.feature | is present           |
+2026-02-18 17:08:29.320 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Entering suggestCellListWorkspace for step: The daily batchjob Input file is created as follows
+2026-02-18 17:08:29.320 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Exiting suggestCellListWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                                       |
+    | TestSuite/1/TestStepContainer/1/TestStep/1/Table/Row/1 |
+  Then The xtext plugin list proposals dialog will be empty                                                                   # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeEmpty()
+
+@sheep-dog-test @Suggest
+Scenario: Has existing step definition without parameters                                                                     # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Parameters.feature:37
+2026-02-18 17:08:29.322 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.322 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.322 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.323 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.323 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.323 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.323 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Input file is present
+2026-02-18 17:08:29.323 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                |
+    | The daily batchjob Input file is present |
+2026-02-18 17:08:29.324 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.324 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.324 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.324 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.324 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is created as follows
+2026-02-18 17:08:29.324 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.325 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.325 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.325 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is created as follows
+2026-02-18 17:08:29.325 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.325 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepParameters for IRow
+2026-02-18 17:08:29.326 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepParameters
+2026-02-18 17:08:29.326 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTable
+2026-02-18 17:08:29.327 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTable
+2026-02-18 17:08:29.327 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createRow
+2026-02-18 17:08:29.328 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createRow
+2026-02-18 17:08:29.328 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H1
+2026-02-18 17:08:29.329 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+2026-02-18 17:08:29.329 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H2
+2026-02-18 17:08:29.329 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+2026-02-18 17:08:29.329 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H3
+2026-02-18 17:08:29.329 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name  | Parameters |
+    | daily batchjob/Input file.feature | is created as follows | H1, H2, H3 |
+2026-02-18 17:08:29.330 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Entering suggestCellListWorkspace for step: The daily batchjob Input file is present
+2026-02-18 17:08:29.330 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Exiting suggestCellListWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                                       |
+    | TestSuite/1/TestStepContainer/1/TestStep/1/Table/Row/1 |
+  Then The xtext plugin list proposals dialog will be empty                                                                   # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeEmpty()
+
+@sheep-dog-test @Suggest
+Scenario: Has existing step definition with parameters                                                                        # cucumber//specs/Ubiquitous Language/Proposals for Workspace Step Parameters.feature:53
+2026-02-18 17:08:29.333 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestProject
+2026-02-18 17:08:29.333 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestProject
+2026-02-18 17:08:29.333 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestSuite for nameLong: Test Suite
+2026-02-18 17:08:29.333 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestSuite
+2026-02-18 17:08:29.333 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestCase for name: Test Case
+2026-02-18 17:08:29.334 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestCase
+2026-02-18 17:08:29.334 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTestStep for name: The daily batchjob Input file is created as follows
+2026-02-18 17:08:29.334 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTestStep
+  Given The spec-prj project src/test/resources/asciidoc/specs/Process2.asciidoc file steps snippet is created as follows     # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.specs.SpecPrjProcess2AsciidocFileSteps.stepsSnippetIsCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Step Name                                           |
+    | The daily batchjob Input file is created as follows |
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is created as follows
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is created as follows
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepParameters for IRow
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepParameters
+2026-02-18 17:08:29.335 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTable
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTable
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createRow
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createRow
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H1
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H2
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H3
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepObject for nameLong: daily batchjob/Input file.feature
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepObject
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepDefinition for name: is created as follows
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepDefinition
+2026-02-18 17:08:29.336 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStepParameters for IRow
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStepParameters
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createTable
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createTable
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createRow
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createRow
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H1
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H2
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createCell for name: H3
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createCell
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Entering createStatement for name: Header parameters for tables
+2026-02-18 17:08:29.337 [main] DEBUG org.farhan.dsl.lang.SheepDogBuilder - Exiting createStatement
+  And The spec-prj project src/test/resources/asciidoc/stepdefs/daily batchjob/Input file.asciidoc file is created as follows # org.farhan.stepdefs.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.SpecPrjInputFileAsciidocFileSteps.isCreatedAsFollows(io.cucumber.datatable.DataTable)
+    | Object Name                       | Step Definition Name  | Parameters | Parameters Description       |
+    | daily batchjob/Input file.feature | is created as follows | H1, H2, H3 | Header parameters for tables |
+2026-02-18 17:08:29.338 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Entering suggestCellListWorkspace for step: The daily batchjob Input file is created as follows
+2026-02-18 17:08:29.338 [main] DEBUG o.farhan.dsl.issues.RowIssueResolver - Exiting suggestCellListWorkspace with 0 proposals
+  When The xtext plugin list proposals action is performed as follows                                                         # org.farhan.stepdefs.xtext.XtextListProposalsActionSteps.isPerformedAsFollows(io.cucumber.datatable.DataTable)
+    | Selected Element                                       |
+    | TestSuite/1/TestStepContainer/1/TestStep/1/Table/Row/1 |
+  Then The xtext plugin list proposals dialog will be set as follows                                                          # org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(io.cucumber.datatable.DataTable)
+    | Suggestion | Suggestion Name | Suggestion Description       |
+    | H1, H2, H3 | H1, H2, H3      | Header parameters for tables |
+      org.opentest4j.AssertionFailedError
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:46)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:161)
+	at org.farhan.common.TestObject.processInputOutputs(TestObject.java:82)
+	at org.farhan.common.TestObject.assertInputOutputs(TestObject.java:15)
+	at org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(XtextListProposalsDialogSteps.java:25)
+	at ?.The xtext plugin list proposals dialog will be set as follows(classpath:cucumber//specs/Ubiquitous%20Language/Proposals%20for%20Workspace%20Step%20Parameters.feature:67)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.farhan.common.TestObject.processInputOutputs(TestObject.java:80)
+	at org.farhan.common.TestObject.assertInputOutputs(TestObject.java:15)
+	at org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(XtextListProposalsDialogSteps.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76)
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128)
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.opentest4j.AssertionFailedError: No proposal found with ID that matches the name: H1, H2, H3 and value: H1, H2, H3
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+	at org.farhan.impl.objects.ListProposalsDialogImpl.assertSuggestion(ListProposalsDialogImpl.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	... 91 more
+
+[ERROR] Tests run: 17, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.208 s <<< FAILURE! -- in org.farhan.suites.SuggestTest
+[ERROR] Proposals for Workspace Step Parameters.Proposals for Workspace Step Parameters - Has existing step definition with parameters -- Time elapsed: 0.021 s <<< FAILURE!
+org.opentest4j.AssertionFailedError
+	at org.farhan.common.TestObject.processInputOutputs(TestObject.java:82)
+	at org.farhan.common.TestObject.assertInputOutputs(TestObject.java:15)
+	at org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(XtextListProposalsDialogSteps.java:25)
+	at ?.The xtext plugin list proposals dialog will be set as follows(classpath:cucumber//specs/Ubiquitous%20Language/Proposals%20for%20Workspace%20Step%20Parameters.feature:67)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.farhan.common.TestObject.processInputOutputs(TestObject.java:80)
+	at org.farhan.common.TestObject.assertInputOutputs(TestObject.java:15)
+	at org.farhan.stepdefs.xtext.XtextListProposalsDialogSteps.willBeSetAsFollows(XtextListProposalsDialogSteps.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.opentest4j.AssertionFailedError: No proposal found with ID that matches the name: H1, H2, H3 and value: H1, H2, H3
+	at org.farhan.impl.objects.ListProposalsDialogImpl.assertSuggestion(ListProposalsDialogImpl.java:32)
+	... 26 more
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   
+[INFO] 
+[ERROR] Tests run: 17, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.168 s
+[INFO] Finished at: 2026-02-18T17:08:29-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project sheep-dog-test: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Users\Farhan\git\sheep-dog-main\sheep-dog-local\sheep-dog-test\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[2026-02-18 17:08:31] 
+[2026-02-18 17:08:31] ===========================================
+[2026-02-18 17:08:31] RGR-Red automation completed!
+[2026-02-18 17:08:31] Log file: C:\Users\Farhan\git\sheep-dog-main\temp\rgr-red-20260218-170754.log
+[2026-02-18 17:08:31] Maven exit code: 1
+[2026-02-18 17:08:31] Tests are FAILING - ready for green phase (exit code 0)
+[2026-02-18 17:08:31] ===========================================
