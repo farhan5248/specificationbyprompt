@@ -178,7 +178,7 @@ If I give more than one test at once, Claude bounces all over the place. It'll r
 If I gave one test case at a time but each one was very different from the previous one, then it didn't have a similar successful implementation as a reference. It would then attempt to search the entire code base.
 So whenever I give it a failing test case, I give it examples of succesful ones and their jacoco with tests reports
 
-TODO image of jacoco with test report
+![jacoco with test report](jacoco.png)
 
 You could randomly give test cases, each time including similar ones and it would work fine.
 I don't do that for two reasons.
