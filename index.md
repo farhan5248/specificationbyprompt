@@ -11,7 +11,9 @@ The extensions are basically custom markup editors built with Xtext. Right now t
 They enforce the use of a natural language DSL to write the tests which are used in prompts for Claude Code. The prompt is simple, fix the failing test.
 
 1. [Architecture & Capabilities][1]: Overview of the Sheep Dog projects and their usage.
-2. [How to Bake a Change][2]: I'll revisit this last, after the workflow is developed to document how I'd redo migrating a QA team from mass inspection to defect prevention to shift left on verfication testing using AI.
+2. [From Shift Left to No Dev][3]: Why I think Deming still matters and even more so with AI.
+3. [How to Bake a Change][2]: I'll revisit this last, after the workflow is developed to document how I'd redo migrating a QA team from mass inspection to defect prevention to shift left on verfication testing using AI.
 
 [1]: architecture-and-capabilities/index
 [2]: how-to-bake-a-change/index
+[3]: from-shift-left-to-no-dev/index
