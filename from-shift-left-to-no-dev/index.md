@@ -2,80 +2,46 @@
 title: From Shift Left to No Dev
 ---
 
-# E-mail
+Gene Kim was on Dave Farley's podcast, and he said that [if you want to move really fast, you need a feedback and a control system to make sure you don't go off the rails][1]. AI coding agents move fast. The faster they go, the more variation in their output and the greater the need for controls. This is why I think Deming still matters and especially more so with AI — quality has to be built into the process, not inspected in afterward.
 
-To be respectful of your time, and at the risk of sounding like the Deming version of a Jehovah's witness, I've prepared this pamphlet page which explains why I think you should bring Deming into your AI coding process. 
+On the QA team, we used SPC to study test execution rates and discovered a signal: testers would go from executing plenty of tests per day to zero — stuck redoing their test cases. That special cause variation pointed us to the metric that mattered most: **hypothesis confirmation time**, how long it takes a tester to confirm whether their test case is correct by running it against the code. The solution we built to reduce that time — from months to hours — is the same one I now use with Claude to reduce it further to minutes.
 
-I want to convey that there is a set of things you can do starting very small and making progress just as I did.
+# Before AI
 
-My motivation is to have a deming success story. I would like to see someone say, hey, look. We apply Dr Demming's SoPK, and this is how amazing it became. We did all these things, and now we have no Dev and sure they can talk about the CI CD and the TD, but they must call out explicitly that this is a deming way
+The journey to reduce hypothesis confirmation time was evolutionary — each improvement revealed the next bottleneck.
 
-I think then once we have the success story, more people will want to copy this deming buzzword to get on the Deming bandwagon. But this is why I reached out to you because I just don't see anyone calling this stuff out in an amazing success story that just makes people want this, right?
-So, I think we can use this AI. Bubble. To get some sort of publicity for Dr Deming's day working in software development.
+First, we automated the creation of test automation from the test cases ([jidoka][2]), eliminating the time spent on manual test execution. Then we mistake-proofed how test cases were written ([poka yoke][3]) to reduce rework. This led to the development of a DSL editor and Maven plugins — a platform where tests were written so clearly that a computer program could generate the test automation code. The test automation developers had effectively automated themselves out of the job of coding. Instead of a tester asking a test automation developer "can you automate this for me?", that role was replaced by a set of services. If a tester couldn't create their test automation within 15-20 minutes, they'd escalate and a test automation developer would fix the platform — not write the automation for them.
 
-# Proposition
+With the platform in place, we could [run the QA tests earlier][4] — verification tests during development, with validation tests still run later. One developer worked side by side with a tester in her dev environment. Every couple of hours, the tester would prepare the next small batch of tests and the developer would prepare the next chunk of code. They'd run it together in seconds and make a plan for the next batch. The developer delivered her code to QA later than the other developers, but she had virtually no bug fixes and test execution was completed earlier. The hypothesis confirmation time went from months — waiting until QA to discover if the test cases and code were correct — to hours.
 
-Gene Kim was on Dave Farley's podcast, and he said that [if you want to move really fast, you need a feedback and a control system to make sure you don't go off the rails][2]. I think that for an AI coding agent, controlling the variation in its output such that it produces code of a consistent level, is achieved by taking a test driven approach. So understanding factors that affect variation and having quality built in are the reasons why I think Deming still matters and especially more so with AI.
+Why focus on this metric? Because the [variation we studied][5] showed that the biggest disruption was when testers went from executing plenty of tests per day to zero — stuck redoing their test cases. The platform didn't just speed up execution; it shortened the feedback loop so that hypotheses were confirmed before errors could compound.
 
-What's the aim of the system of work or the direction of challenge? Reduce hypothesis confirmation time. While you don't need a tester to leverage code-generation (I don't while I do my research); if you do have them, you should treat them like scientists. The metric that you're trying to reduce is the time it takes for them to confirm their hypothesis (passing test case). While on the QA team, we reduced that time from months to hours. Now with Claude I can reduce that further to minutes.
+# After AI
 
-Why start with your manual testers? Most of the work they do around inspection is non-value added and easier to automate. This will create space for them to learn and then they can pay that forward. Even if your devs can write the tests themselves like I can, you probably don't want your technical resources doing non-technical work. It's enjoyable for me to work this way because I'm effectively designining my own product. However I'd rather a tester work with the business analysts etc to do this if I were back at a large enterprise. I can then focus on reducing the variation and basically being an industrial engineer like Ohno.
+Before we had AI, we already had proof that a developer with the right tests and a debugger didn't need much else.
 
-# Before AI - Mona
+On the QA team, a complex new feature was given to a junior developer with about a year of COBOL experience because the team was under-resourced. Everyone expected disaster: broken builds, defects in everyone else's work, senior developers pulled away to review and fix things. None of it happened. He [let the tests drive his code changes][6] — running them first to identify which parts of the code were affected, then only changing enough to make each test pass. Senior developers reviewed and refactored his work afterward but didn't have to write the code for him. He needed a debugger and the tests. That was it.
 
-How did we get to the DSL editor and no-test-dev with maven
- Drug-engine shift left. This is how we went from months of waiting to confirm the hypothesis to hours with Mona using no-test dev platform.
+This inspired me to have Claude Code go through the same process. The "Before AI" section described **no-test-dev** — testers generating their own test automation without a test automation developer. This section is about **no-dev** — Claude generating the main code without a developer.
 
- With my QA team, they base the test automation developers made a platform, and it was almost like as if it was no dev, but no Test Dev, right.
- And it was test coding as a service, whether it was Eclipse and a jar file for an API. The idea and today could be vs code and a bunch of services in the cloud.
+[Darmok][7] puts the junior developer's process into a loop. It iterates through a sequence of test cases going through the red-green-refactor cycle for each one:
+- **Red**: Test automation is generated from the DSL using traditional code generation — no AI needed
+- **Green**: Claude is given the failing test along with similar passing tests and told to fix it, only modifying main code
+- **Refactor**: Claude removes duplication, guided by the patterns in the UML files
 
- The goal was that the test automation developers automated themselves out of the job of coding. Instead of the tester talking to the test automation developer and saying, hey, can you automate this for me? That job disappeared. And what was there instead was a set of services.
+Just like the junior developer, Claude works best when given **one failing test at a time** with similar successful tests as reference. If given too many tests at once, it bounces between failures without fixing anything — the same way any junior developer would struggle if handed an entire project at once instead of debugging one at a time.
 
- Some code was implemented, right, such that the tester themselves could create whatever code they wanted. And if you know, let's say, this unspoken SLA, if you can't create a test automation in 15 minutes or 20 minutes or the process takes a long time. Sometimes, every performance issues fine, you escalate, and you call a test automation developer, and they will figure out how to fix that as quickly as possible, so that from the service of being able to create test automation.
+The order and size of the test cases matter too. Tests sequenced so that each is slightly different from the previous one result in smaller code changes, less variation, and faster cycles. When I've experimented with random ordering or large jumps between test cases, it can take almost 15 minutes per test compared to the average 4 minutes. I suspect there's [common cause and special cause variation][8] to study here — some short tests take longer than long ones, and understanding why could feed back into improving the test sequence or the examples Claude uses.
 
-Links 
-- can you run the all the tests earlier. verification ones, you'll still need validation
-- Why the hypothesis metric? explain why I focused on this and why other ones don't need no-dev. Refer to mura
-- solving heijunka with dsl editor
+# Why Deming Still Matters
 
-# After AI - the kid
+Why invest in your QA team? They're the key supporting characters in this story. Most of the work they do around inspection is non-value added and easier to automate. Automating that work creates space for them to learn and pay it forward. Even if your devs can write the tests themselves like I can, you probably don't want your technical resources doing non-technical work. I'd rather a tester work with the business analysts to write the specifications while I focus on reducing the variation — basically being an industrial engineer like Ohno. The faster the system moves, the more you need that [feedback and control system][1] Gene Kim described. Deming's approach gives you one.
 
- the story of the kid, junior developers making defect free code. basic debugging skills armed with tests provided in the right sequence. 
-
-Describe how the no-test-dev is used in red to support green cycle in RGR and this ensures quality built-in.
-No Dev in the green cycle, the story of the kid revisited
-And that's what I done with my QA team. And so, when I do the research now, with Claude, this is just taking it further. And so, no test Dev, but it's just no Dev at all right. Combine this sort of story of running tests in small batch sizes, where the developer being the bottleneck or the story of the junior developer who just used a test to debug? 
-
-To me, claudes are just Junior developers in some ways. But this is why I think when you go down the path of removing the person from the picture. And letting the manual tester do the work themselves. This is basically no test Dev in the red cycle followed by no Dev in the green cycle
-
- Explain where SPC can be used to study the code variation. Self correcting process using spc to identify which parts of darmok plugin to improve. Either break up the tests or add more examples to uml-interaction.
-
- Links
- - the story of the kid
- - initial research
-
-# References
-
-## UPDATE MURA
-
- The goal was to try and reduce variation in the process of inspection. This would involve identifying it, then the overburdened individual and then the non-value wasteful activities that we'd automate away. The most useful or eye opening metric was the time to confirm a tester's hypothesis. review variation/mura page, explain the xbarR chart for scientist time to confirm hypothesis
-
- Explain what variation was studied to point me in this direction, specifically the time it took to confirm a hypothesis if you treat your testers are scientests. The DSL editor was a tool used to reduce toil/overburden which was reduced by eliminating waste. Part of reducing overburden meant writing tests that are so clear that eventually a computer program could take over the test automation coding. With defects being systematically prevented through earlier verification testing, there was less of a need for inspection and we focused on validation testing. Spreadsheet driven testing was at least twice as fast as what I was doing with Cucumber or Robot Framework. But the speed of mass inspection at the end as a regression wasn't the goal. I was trying to reduce the dependence on inspection in the first place. 
-
-This metric of the time it takes to confirm a hypothesis. And know if it is good or bad comes about from using SPC. I did not know what I was doing. I collected a lot of data. And basically. Um. It's not so much the number of test cases someone was executing per day, whether the test passed or failed because you could execute two to three tests per day and then go up to 20 or 30.
-In the beginning. The two to three simply means you're starting a new feature. You proceed a little slowly. Everything is going as expected. There's nothing you know that is unexpected that you need to deal with. Well, it becomes interesting is a sharp drop for a long time. It's okay for you to be executing 20 deaths per day and tomorrow, going back to two and then three because you switch from one feature to another.
-But what I found interesting was. When you go from? Plenty tests per day to zero for the next couple of days. And that's because you're just re redoing your test cases. And that's how I discovered that. Um, that's how this metric became of interest to me to study. How do I make sure that the testers can write a good test case, right?
-And Sure, you could have used a model based testing tool and that will help them write the test cases really fast. Right, but that doesn't prevent them from confirming the hypothesis that they wrote the test case is really fast, because all it has done is written. A great many test cases that are wrong really quickly.
-It's only when they're able to run the test against the code can they confirm the hypothesis.
-
-## UPDATE HEIJUNKA
-
- update roser podcast review about heijunka. Instead of 4 door and 2 door car, it was drug app vs mb app work. First DA tried automating DA tests but there was no point. Then they spent time trying to automate MB tests but couldn't understand them and slowed down the MB SME. Then they helped execute MB tests in pairs and the MB testers wrote tests with less assumed knowledge.
-
-## TRANSCRIPT
-
-
-1. [Extrinsic vs Intrinsic Motivation][1]
-
-[1]: https://mosy.tech/books/learn-microservices/
-[2]: Gene clip on engineering room
+[1]: https://open.spotify.com/episode/2oJPAPHKGJ9LlfMiBvBobq
+[2]: /demingdriventesting/migrating-from-defect-inspection-to-prevention/jidoka
+[3]: /demingdriventesting/migrating-from-defect-inspection-to-prevention/poka-yoke
+[4]: /demingdriventesting/why-run-the-qa-tests-earlier
+[5]: /demingdriventesting/migrating-from-defect-inspection-to-prevention/mura
+[6]: /demingdriventesting/why-run-the-qa-tests-earlier/does-it-matter-if-the-tests-actually-drive-the-development
+[7]: /specificationbyprompt/architecture-and-capabilities/code-generation
+[8]: /specificationbyprompt/architecture-and-capabilities/code-generation#statistical-process-control
