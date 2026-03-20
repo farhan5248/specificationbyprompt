@@ -1,6 +1,6 @@
 # Coding As A Service
 
-## LinkedIn Post
+## Summary
 
 In 2010, engineers built a baby incubator from Toyota car parts so local mechanics could fix it — not because mechanics could build incubators, but because the engineers redesigned the problem so they could contribute.
 
