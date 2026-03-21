@@ -2,109 +2,101 @@
 
 ## Summary
 
-In 2010, engineers built a baby incubator from Toyota car parts so local mechanics could fix it — not because mechanics could build incubators, but because the engineers redesigned the problem so they could contribute.
+In 2010, engineers built a baby incubator from Toyota car parts so local mechanics could fix it — not because mechanics could build incubators, but because the engineers redesigned the problem so they could contribute. The legal profession did the same thing with paralegals. Lawyers didn't disappear. They created a bounded role for people with domain knowledge to handle a meaningful portion of the work within defined limits. The profession had to choose to do that.
 
-The legal profession did the same thing with paralegals. Lawyers didn't disappear. They created a bounded role for people with domain knowledge to handle a meaningful portion of the work within defined limits. The profession had to choose to do that.
+I wanted to test whether I could remove myself from the loop entirely — and whether a tester could step into that space. Almost 8 years ago, my QA team of 30+ folks started writing test cases in a DSL, describing behavior as testable hypotheses. I've spent the last two weeks building and testing the guardrails that let Claude implement code from that style of test cases. The result: I'm confident my old team could contribute to bug fixes and new feature development today — meaningfully, the same way a paralegal contributes to legal work or a mechanic keeps an incubator running. And my role? It shifts — from writing the code to building the scaffolding that makes this possible.
 
-When DevOps arrived, ops teams didn't disappear either. They became platform engineers — building the templates and guardrails that developers self-serve from. Infrastructure as Code didn't replace ops. It changed what ops does.
-
-I think the same shift is coming for developers and testers.
-
-8 years ago, my QA team of about 30+ folks started writing test cases in a DSL. They described behavior as testable hypotheses — specific, falsifiable, pass or fail. I've spent the last year experimenting with the scaffolding that lets Claude implement code from such test cases, with guardrails it can't accidentally move. At this point I'm confident they could contribute to bug fixes or new feature development today. Not from scratch. Not alone. But meaningfully — the same way a paralegal contributes to legal work, or a mechanic keeps an incubator running.
-
-The developer's job doesn't disappear. It shifts — to building the scaffolding that makes this possible. Someone just has to choose to build it.
+While I'm confident in a tester's ability to work this way and Claude's ability to make the production code, I still don't trust it to make the test automation on its own. I'll continue to primarily depend on MBT/MDD for that, using Claude to fill in the gaps. I've written more about it here.
 
 ---
 
-## Section 1: The NeoNurture Revisited
+## The NeoNurture Revisited
+
+New tools tend to amplify whoever uses them first. Without deliberate redesign, Claude just makes developers faster — the same way better surgical tools make surgeons faster, not patients more capable. 
 
 In 2010, Design that Matters created the [NeoNurture][neo] — a neonatal incubator built entirely from Toyota car parts. Sealed-beam headlights provided warmth. Dashboard fans circulated air. Door chimes sounded alarms. It ran on a motorcycle battery. The insight wasn't just clever engineering. It was a deliberate redesign of *who could maintain it*. In developing countries, medical-grade incubators existed but routinely broke down — because the people who could fix them weren't there. Car mechanics were. So the engineers changed the interface: you didn't need to be a trained medical technician. You just needed to know how to replace a broken headlight. The mechanics couldn't build incubators. But they could keep them running.
 
-There's a common assumption that new tools simply empower whoever already holds expertise. Think of the samurai and the gun. The story goes that samurai resisted firearms to protect their way of life. But that's not quite right. When the Portuguese introduced the matchlock to Japan in 1543, samurai adopted it rapidly — Oda Nobunaga was fielding hundreds within a decade. The gun didn't meet resistance from warriors. It met resistance from *rulers*. The Tokugawa shogunate suppressed firearms after 1600 to maintain the class hierarchy that depended on them. The gatekeeping wasn't about skill. It was about control.
+The legal profession did the same. Lawyers created a bounded role for people with domain knowledge and the right training to handle a meaningful portion of legal work — paralegals. The profession had to choose to create that role. It didn't happen automatically.
 
-Something similar happens in software. Developers who say "you need me — I'm just more productive with Claude" aren't necessarily protecting their position intentionally. But the effect is the same: testers and product owners stay exactly where they were. AI tools used naively just make developers more productive, without changing who can contribute.
+Testers are skilled at inspection (verifying after the fact whether what was built matches what was intended) and specification (defining behavior upfront through concrete examples). If those examples are precise and executable, there's nothing to inspect afterward: the code either passes the specification or it doesn't. The tester moves from inspector to author. They're not checking the product. They're defining it. We need less of the first skill and more of the second.
 
-Testers have two skills. The first is inspection — verifying after the fact whether what was built matches what was intended. The second is specification — defining behavior upfront through concrete examples. If those examples are precise and executable, there's nothing to inspect afterward: the code either passes the specification or it doesn't. The tester moves from inspector to author. They're not checking the product. They're defining it. We need less of the first skill and more of the second.
-
-I want to be like the NeoNurture engineer — someone who makes writing code look like what testers already do, so that when they do it, they think they're specifying behavior but they're actually implementing it.
+The NeoNurture engineers didn't give mechanics better tools or design a product that made them more effective at solving the problem. They redesigned the problem itself so that others could solve it. I want to be like the NeoNurture engineer — someone who makes writing code look like what testers already do, so that when they do it, instead of only specifying behavior they would actually be implementing it.
 
 ---
 
-## Section 2: Coding as Testing
+## Can Testers Drive the Development
 
-In a [previous post][1], I described two milestones. The first was **no-test-dev**: testers generating their own test automation without a test automation developer, using a DSL that a computer program could translate directly into code. The second was **no-dev**: Claude generating the main code without a developer, driven by those same test cases one at a time through a red-green-refactor loop.
+In [Darmok][1], I described what is now a Maven plugin that automates the red-green-refactor cycle. The test automation is generated deterministically from the DSL. Claude generates the main code and now also updates the test code that connects it. But in that work, I was still in the loop — sequencing the test cases, setting up the architecture, defining the guardrails. Since then, I've removed myself from the loop entirely. That's the key difference this post is about: *can a tester step into that space, without me?*
 
-That work established that Claude can implement code when given the right tests and constraints. But I was still in the loop — setting up the architecture, defining the test automation framework, making the guardrails. The question this post asks is the next step: *can a tester take over the coding within those guardrails, without me?*
+The interface between tester and Claude is the [ubiquitous language][2] — the shared vocabulary that already exists between the business, testers, and developers. A test case isn't just a quality check; in this process it's the specification. That's what drives the coding.
 
-Testers have a language. Not just any language — the [ubiquitous language][2] from Domain Driven Design: the shared vocabulary that already exists between the business, testers, and developers. They write test cases in it. They describe behavior through examples. They frame outcomes as pass or fail. A test case doesn't have to be just a quality check — it can be a complete specification of what software should do. Using that laanguage reuses skills they already have. That's the interface I want to use between them and Claude.
-
-Not replacing developers. The developer still defines the architecture and builds the guardrails — the test automation framework, the interface definitions, the validation rules. Just as a mechanic can't engineer an incubator from scratch, a tester can't design a system architecture. But within those guardrails, can a tester drive the coding? Can they write test cases, communicate with Claude entirely in that form, and have it translate their specifications into working code?
+The developer still defines the architecture and builds the guardrails — the test automation framework, the interface definitions, the validation rules. Just as a mechanic can't engineer an incubator from scratch, a tester can't design a system architecture. But within those guardrails, can a tester drive the coding? Can they write test cases, communicate with Claude entirely in that form, and have it translate their specifications into working code?
 
 That's the question the experiment set out to answer.
 
-[neo]: /demingdriventesting/communicating-the-strategy-to-qa/the-neo-nurture-incubator
-[1]: /specificationbyprompt/from-shift-left-to-no-dev
-[2]: /specificationbyprompt/architecture-and-capabilities/ubiquitous-language
-
 ---
 
-## Section 3: What I've Learnt
+## The Experiment
 
-The experiment had two goals. First, simulate new feature development: delete the implementation and have Claude rebuild it from test cases, the same way a tester would drive a new feature by writing tests and having Claude implement from them. Second, identify variation across runs: compare the resulting branches against each other to find where Claude produced different implementations for the same specification — and figure out what would address it.
+The experiment had two goals. First, simulate new feature development: delete the implementation and have Claude rebuild it from test cases, the same way a tester would drive a new feature by writing tests and having Claude implement from them. Second, identify variation across runs: compare the resulting branches against each other to find where Claude produced different implementations for the same specification — and figure out what would address it. 
 
 When the DSL is too generic, different runs produce different code. How do you express the difference between null and an empty string as a test? Is that a language problem — does the ubiquitous language need a richer vocabulary? Is it a tooling problem — something the deterministic test automation framework should handle upstream? Or is it a refactoring problem — corrected after the fact by the markdown specification guardrails?
 
 To keep all communication in the ubiquitous language, one rule applied: any difference found between branches had to be expressed as a test case — not explained in English, not in Java. If Claude sees a difference, it communicates it as a test. If it wants to change code, it first writes a test that captures why. This forced the contrast to be expressed in the same language a tester would use — and made it possible to feed that contrast back into the process as the next test case to implement.
-
-What did it struggle with?
-
-- The boundary between test code and main code
-- The boundary between mocks and real implementations
-- Dependency injection
-- Non-determinism — when left to generate test automation freely, it made choices that were hard to reason about and harder to trust
-
-<!-- TODO: elaborate with notes from Slack -->
-
----
-
-## Section 4: Guardrails Are the Work
-
-Here's what the experiment showed.
-
-The answer to the hypothesis is yes — a tester can drive coding within guardrails. But only if the guardrails exist. And building them is the work.
-
-When variation appeared across runs, the fix wasn't in one place. It was all three: reworking the ubiquitous language to be more precise, changing what went into the markdown specifications and what didn't, and deterministic tooling to handle what the language couldn't express cleanly. There's no single lever — the scaffolding has to work together.
 
 What Claude can do:
 
 - Implement the main code, given a clear architecture and tests that validate against it
 - Connect test automation to implementation
 - Help with bug fixes and new features when paired with a tester writing test cases
+- Improve with better examples — the more patterns and examples available, the less variation across runs
 
-What must not be left to Claude:
+What did it struggle with? In general, the test automation code.
 
-- **Test automation** — must be created deterministically. Claude can't be trusted to write its own test cases without introducing non-determinism.
-- **Mocks** — must be defined deterministically. If Claude writes its own mocks, it can make them pass in ways that don't reflect real behavior.
-- **Interfaces** — generated from UML models, not invented by Claude on the fly.
-- **The guardrails themselves** — Claude must not be able to move its own constraints. It cannot modify test expectations, change what is asserted, or create new getters to work around validation scripts.
+**Assuming changes were pre-existing failures** It would break the code but somehow conclude that those problems were already there.
 
-SPC — Statistical Process Control — is part of the guardrail too. By treating Claude's outputs as a process, you can identify special cause variation — hallucination, drift from spec — and correct it systematically rather than reviewing every output manually.
+![](caas-preexisting.png)
 
-The developer's job doesn't disappear. It shifts. Instead of writing the code, the developer defines the architecture, builds the scaffolding, and maintains the guardrails that make tester contribution possible. Human beings still have to define the behavior and the structure. Claude connects the two.
+**Emptying out assertions** It would get tripped by its own duplicate code and think it needed to clean-up and then start "cleaning-up" the test code
 
-My old QA team, given how they write test cases with a DSL, could contribute to new features and bug fixes by pairing with Claude and doing BDD. Not from scratch. Not alone. But meaningfully.
+![](caas-emptyasserts.png)
 
-<!-- TODO: elaborate on language/markdown/tooling findings with Slack notes -->
+**Implementing the main code in the test code** Sometimes it attempted to implement the functionality within the test code itself.
 
-This isn't unprecedented. The legal profession did it with paralegals. Lawyers hold the expertise — they define strategy, structure arguments, make judgement calls. But they created a bounded role for people with domain knowledge and the right training to handle a meaningful portion of the work within those boundaries. The profession had to choose to create that role. It didn't happen automatically.
+![](caas-mainintest.png)
 
-That leaves one question — not a technical one. The samurai didn't give up the sword when guns arrived. They adopted guns as tools while keeping the sword as their identity. Developers can do the same: embrace Claude as a productivity tool while keeping exclusive access to code. The door stays closed.
+**Updating the specs that monitor it** It has some python scripts to make sure that the method signatures and interfaces aren't changed. At one point, instead of fixing the problems identified by the scripts, it decided to change the rules.
 
-Or they can choose to be the NeoNurture engineer. Open the door. Redesign the work so that others can contribute. The testers are already standing there with the right language. Someone just has to let them in.
+![](caas-siteuml.png)
+
+It also took a long time (10+ minutes as opposed to <5 when I created the test automation for it) when working with dependency injection or the boundary between a mock and the main code. It actually attempted to implement the mock in the main code.
 
 ---
 
-## Section 5: From Platform Engineering to Coding as a Service
+## Guardrails Are the Work
+
+Here's what the experiment showed.
+
+The answer to the hypothesis is yes — a tester can drive coding within guardrails. But only if the guardrails exist. And building them is the work.
+
+When variation appeared across runs, the fix wasn't in one place. It was all three:
+
+- Reworking the ubiquitous language to be more expressive
+- Changing what went into the markdown specifications and what didn't
+- Deterministic tooling to handle what the language couldn't express cleanly
+
+There's no single lever — the scaffolding has to work together.
+
+Despite all of the issues, it still managed to create the code. These problems don't happen most of the time, but there's always a new problem that shows up and it compounds if not caught. The good news is that there's a way to both prevent and check for these issues. 
+
+- **Preventing** Using templates or more examples. A good example or set of examples goes a long way compared to specifying rules of what it can or can't do or how to do something. Having a richer grammar and more test cases that specify both what to have and what not to.
+- **Inspecting** It's basically examining what's in git and then asking it to correct the problem. I'd keep an eye on the git commits, stop the process, and continue from the last session manually to see what corrective action would be needed. The correction was typically just pointing out that it touched a directory/file that it shouldn't have, the minute you point it out and ask it to try again it recovers. I haven't automated this yet but it's the next thing I'll work on.
+
+SPC — Statistical Process Control — is part of the guardrail too. By treating Claude's outputs as a process, you can identify special cause variation — hallucination, drift from spec — and correct it systematically rather than reviewing every output manually.
+
+---
+
+## From Infrastructure as a Service to Coding as a Service
 
 This pattern has happened before — in the relationship between developers and operations.
 
@@ -122,9 +114,11 @@ The parallel to this post is exact:
 | Templates are the guardrails | Test automation, UML interfaces, markdown specs are the guardrails |
 | Ops job shifts to maintaining the platform | Developer job shifts to maintaining the guardrails |
 
-Just as ops engineers didn't disappear — they became platform engineers — developers don't disappear either. They become the engineers who build and maintain the scaffolding that makes tester contribution possible.
+Just as ops engineers didn't disappear — they became platform engineers — developers don't disappear either. They become the engineers who build and maintain the scaffolding that makes tester contribution possible. The developer's job doesn't disappear. It shifts: from writing the code to defining the architecture, building the guardrails, and maintaining the templates that others self-serve from.
 
-I imagine platforms where testers use the ubiquitous language to describe behavior as testable hypotheses — not vague requirements like "the system should continue to behave as expected," but specific, falsifiable statements. True or false. Pass or fail. Claude implements from that. That's coding as a service. That's coding as testing. The tester is in the loop. The developer has designed the process and stepped back, now free to work on more challenging problems.
+My old QA team, given how they write test cases with a DSL, could contribute to new features and bug fixes by pairing with Claude and doing BDD. Not from scratch. Not alone. But meaningfully.
+
+I imagine platforms where testers use the ubiquitous language to describe behavior as testable hypotheses. Claude implements from that. The tester is in the loop. The developer has designed the process and stepped back, now free to work on more challenging problems.
 
 ---
 
@@ -138,18 +132,6 @@ I imagine platforms where testers use the ubiquitous language to describe behavi
 - Named #1 of "50 Best Inventions of 2010" by Time magazine
 - Note: remained a prototype — never manufactured at scale; hospitals in developing countries didn't adopt it
 - Sources: [Design that Matters](https://www.designthatmatters.org/past-projects), [RISD: Neonatal Incubator Built from Car Parts](https://www.risd.edu/news/stories/neonatal-incubator-built-car-parts), [TED Speaker Timothy Prestero](https://www.ted.com/speakers/timothy_prestero)
-
-### Samurai, Guns, and the Sword
-- Guns (matchlock/tanegashima) introduced to Japan by Portuguese in 1543
-- Samurai did NOT resist firearms — adopted them rapidly as practical tools of war
-- Oda Nobunaga fielding hundreds of matchlocks by the late 1540s
-- Key advantage of guns: a peasant conscript could learn to operate one in weeks vs. years of samurai training
-- **The sword was identity, not just a weapon.** The katana was said to embody the samurai's spirit — a symbol of honor and status. Samurai were expected to always carry two swords.
-- Samurai never chose the gun *over* the sword — they held both. Gun = practical tool. Sword = identity.
-- During the Tokugawa peace (1600–1868), samurai doubled down on sword culture — reinventing their identity around it via art and ceremony even without wars to fight
-- **The sword was taken, not surrendered.** In 1868, the Meiji government *forbade* samurai from carrying swords and removed their privileged status. It was not a choice.
-- **Implication for the post**: developers can embrace Claude (the gun) as a productivity tool while still keeping exclusive access to code (the sword) as their identity. Someone has to *choose* to redesign the door — be the NeoNurture engineer, not the Tokugawa shogunate.
-- Sources: [Samurai - Wikipedia](https://en.wikipedia.org/wiki/Samurai), [Firearms of Japan - Wikipedia](https://en.wikipedia.org/wiki/Firearms_of_Japan), [Samurai and Firearms - Artelino](https://www.artelino.com/articles/samurai-firearms.asp), [Bushido: Way of the Samurai - NGV](https://www.ngv.vic.gov.au/essay/bushido-way-of-the-samurai/)
 
 ### IaaS and IaC — Ops to Platform Engineering
 - Before IaaS: ops teams owned infrastructure, developers raised tickets and waited
@@ -167,3 +149,10 @@ I imagine platforms where testers use the ubiquitous language to describe behavi
 - The profession had to *choose* to create that role — it didn't happen automatically
 - Closest analogy to the developer/tester model: a skilled professional creates a bounded role for someone else to contribute without needing the full expertise
 - Sources: [What Is A Paralegal - Nursing School Hub](https://www.nursingschoolhub.com/what-is-a-nurse-paralegal/), [Guild - Wikipedia](https://en.wikipedia.org/wiki/Guild)
+
+---
+
+[neo]: https://www.designthatmatters.org/past-projects
+[1]: /specificationbyprompt/architecture-and-capabilities/code-generation
+[2]: /specificationbyprompt/architecture-and-capabilities/ubiquitous-language
+
