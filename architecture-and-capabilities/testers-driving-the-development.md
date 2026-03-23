@@ -1,6 +1,13 @@
-# Testers Driving the Development
+---
+title: Testers Driving the Development
+---
 
-## The NeoNurture Revisited
+* TOC
+{:toc}
+
+---
+
+# The NeoNurture Revisited
 
 New tools tend to amplify whoever uses them first. Without deliberate redesign, Claude just makes developers faster — the same way better surgical tools make surgeons faster, not patients more capable. 
 
@@ -14,7 +21,7 @@ The NeoNurture engineers didn't give mechanics better tools or design a product 
 
 ---
 
-## Can Testers Drive the Development
+# Can Testers Drive the Development
 
 In [Darmok][1], I described what is now a Maven plugin that automates the red-green-refactor cycle. The test automation is generated deterministically from the DSL. Claude generates the main code and now also updates the test code that connects it. But in that work, I was still in the loop — sequencing the test cases, setting up the architecture, defining the guardrails. Since then, I've removed myself from the loop entirely. That's the key difference this post is about: *can a tester step into that space, without me?*
 
@@ -24,7 +31,7 @@ The developer still defines the architecture and builds the guardrails — the t
 
 ---
 
-## The Experiment
+# The Experiment
 
 The experiment had two goals: 
 
@@ -70,7 +77,7 @@ Git commits from the last run
 
 ---
 
-## Guardrails Are the Work
+# Guardrails Are the Work
 
 Here's what the experiment showed:
 - The answer to the hypothesis is yes — a tester can drive coding within guardrails and building them is the work.
@@ -88,7 +95,7 @@ Despite all of the issues, it still managed to create the code. These problems d
 
 ---
 
-## From Infrastructure as a Service to Coding as a Service
+# From Infrastructure as a Service to Coding as a Service
 
 This pattern has happened before — in the relationship between developers and operations.
 
