@@ -103,5 +103,5 @@ I imagine platforms where testers use the ubiquitous language to describe behavi
 
 [1]: /specificationbyprompt/architecture-and-capabilities/code-generation
 [2]: /specificationbyprompt/architecture-and-capabilities/ubiquitous-language
-[3]: https://www.ted.com/talks/timothy_prestero_design_for_people_not_awards
+[3]: https://www.youtube.com/watch?v=0af00UcTO-c
 
