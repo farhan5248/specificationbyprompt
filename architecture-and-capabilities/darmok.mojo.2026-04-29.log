@@ -1,0 +1,959 @@
+2026-04-29 08:43:53.182 INFO  [mojo] RGR Automation Plugin (gen-from-existing)
+2026-04-29 08:43:54.646 DEBUG [mojo]   Cleanup: Deleted 0 NUL files
+2026-04-29 08:43:54.705 DEBUG [mojo]   Cleanup: Deleted target directory
+2026-04-29 08:43:54.705 INFO  [mojo] Baseline: Running maven...
+2026-04-29 08:44:13.971 INFO  [mojo] Baseline: Completed maven (00:00:19)
+2026-04-29 08:44:13.971 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for File Step Objects/No component no existing [ListProposalsAction]
+2026-04-29 08:44:13.971 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 08:44:13.971 INFO  [mojo]   Red: Running maven...
+2026-04-29 08:44:42.006 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 08:45:01.550 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 08:45:01.550 INFO  [mojo]   Red: Completed maven (00:00:47)
+2026-04-29 08:45:01.653 INFO  [mojo]   Red: Committing
+2026-04-29 08:45:01.752 INFO  [mojo]   Green: Running...
+2026-04-29 08:54:33.312 INFO  [mojo]   Green: Completed (00:09:31)
+2026-04-29 08:54:33.312 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 08:54:33.383 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 08:54:33.389 INFO  [mojo]   Green: Verify running...
+2026-04-29 08:54:56.306 INFO  [mojo]   Green: Verify passed (00:00:22)
+2026-04-29 08:56:09.156 INFO  [mojo]   Refactor: Running...
+2026-04-29 08:57:59.751 INFO  [mojo]   Refactor: Completed (00:01:50)
+2026-04-29 08:57:59.751 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 08:57:59.828 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 08:57:59.828 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 08:58:22.991 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 08:58:23.102 INFO  [mojo]   Refactor: Committing
+2026-04-29 08:58:23.323 INFO  [mojo]   Commit: c16759f8423442e4028bdcb3d56c4ee8c501e785
+2026-04-29 08:58:23.323 INFO  [mojo] 
+2026-04-29 08:58:23.339 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for File Step Objects/Has component no existing [ListProposalsAction]
+2026-04-29 08:58:23.339 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 08:58:23.341 INFO  [mojo]   Red: Running maven...
+2026-04-29 08:58:51.132 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 08:59:09.521 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 08:59:09.521 INFO  [mojo]   Red: Completed maven (00:00:46)
+2026-04-29 08:59:09.521 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 08:59:09.632 INFO  [mojo]   Red: Committing
+2026-04-29 08:59:09.760 INFO  [mojo]   Commit: ac143f72cab99b91200a97078593a0751dad9b8e
+2026-04-29 08:59:09.760 INFO  [mojo] 
+2026-04-29 08:59:09.776 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for File Step Objects/No component no existing has background [ListProposalsAction]
+2026-04-29 08:59:09.776 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 08:59:09.776 INFO  [mojo]   Red: Running maven...
+2026-04-29 08:59:37.531 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 08:59:54.285 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 08:59:54.286 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 08:59:54.286 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 08:59:54.474 INFO  [mojo]   Red: Committing
+2026-04-29 08:59:54.694 INFO  [mojo]   Commit: dc0e9c20e79c0f79942d5ef7cde7edab6a8829b0
+2026-04-29 08:59:54.694 INFO  [mojo] 
+2026-04-29 08:59:54.694 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Objects/No component no existing [ListProposalsAction]
+2026-04-29 08:59:54.694 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 08:59:54.694 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:00:23.026 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:00:38.728 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:00:38.728 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 09:00:38.728 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:00:38.823 INFO  [mojo]   Red: Committing
+2026-04-29 09:00:38.966 INFO  [mojo]   Commit: e456fc72c689247fe73ef0faec196129ec7ee9dd
+2026-04-29 09:00:38.966 INFO  [mojo] 
+2026-04-29 09:00:38.966 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Objects/No component has existing [ListProposalsAction]
+2026-04-29 09:00:38.966 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:00:38.966 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:01:06.643 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:01:26.083 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 09:01:26.083 INFO  [mojo]   Red: Completed maven (00:00:47)
+2026-04-29 09:01:26.159 INFO  [mojo]   Red: Committing
+2026-04-29 09:01:26.278 INFO  [mojo]   Green: Running...
+2026-04-29 09:06:29.502 INFO  [mojo]   Green: Completed (00:05:03)
+2026-04-29 09:06:29.502 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 09:06:29.571 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 09:06:29.571 INFO  [mojo]   Green: Verify running...
+2026-04-29 09:06:52.274 INFO  [mojo]   Green: Verify passed (00:00:22)
+2026-04-29 09:08:06.272 INFO  [mojo]   Refactor: Running...
+2026-04-29 09:10:30.964 INFO  [mojo]   Refactor: Completed (00:02:24)
+2026-04-29 09:10:30.964 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 09:10:31.046 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 09:10:31.046 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 09:10:54.026 INFO  [mojo]   Refactor: Verify passed (00:00:22)
+2026-04-29 09:10:54.148 INFO  [mojo]   Refactor: Committing
+2026-04-29 09:10:54.351 INFO  [mojo]   Commit: 75059d2675090b93aeb7ff0e77651d48c35d51f3
+2026-04-29 09:10:54.353 INFO  [mojo] 
+2026-04-29 09:10:54.353 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Objects/Has component no existing [ListProposalsAction]
+2026-04-29 09:10:54.353 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:10:54.353 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:11:21.693 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:11:38.766 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:11:38.766 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 09:11:38.768 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:11:38.879 INFO  [mojo]   Red: Committing
+2026-04-29 09:11:39.019 INFO  [mojo]   Commit: 01f94eabf1dd9cdd444d0173c95cf31e6c05afb6
+2026-04-29 09:11:39.019 INFO  [mojo] 
+2026-04-29 09:11:39.019 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Objects/Has component has existing [ListProposalsAction]
+2026-04-29 09:11:39.019 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:11:39.019 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:12:06.060 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:12:23.429 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:12:23.429 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 09:12:23.434 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:12:23.540 INFO  [mojo]   Red: Committing
+2026-04-29 09:12:23.683 INFO  [mojo]   Commit: 2d86086f2fbb36c51ed3b4db4198e48bd9b94f4c
+2026-04-29 09:12:23.683 INFO  [mojo] 
+2026-04-29 09:12:23.683 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for File and Workspace Step Objects/No component has existing [ListProposalsAction]
+2026-04-29 09:12:23.683 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:12:23.683 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:12:52.095 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:13:09.491 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:13:09.495 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 09:13:09.495 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:13:09.607 INFO  [mojo]   Red: Committing
+2026-04-29 09:13:09.744 INFO  [mojo]   Commit: b05504e32eddef27fa74d3be49d8e126e6a888a4
+2026-04-29 09:13:09.748 INFO  [mojo] 
+2026-04-29 09:13:09.748 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for File and Workspace Step Objects/Has component has existing [ListProposalsAction]
+2026-04-29 09:13:09.748 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:13:09.750 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:13:38.764 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:13:56.846 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:13:56.846 INFO  [mojo]   Red: Completed maven (00:00:47)
+2026-04-29 09:13:56.846 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:13:56.943 INFO  [mojo]   Red: Committing
+2026-04-29 09:13:57.097 INFO  [mojo]   Commit: b4328eb70208081aad1eaa79ac38b10f2952e576
+2026-04-29 09:13:57.097 INFO  [mojo] 
+2026-04-29 09:13:57.097 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Definitions/Has component no existing step object [ListProposalsAction]
+2026-04-29 09:13:57.097 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:13:57.097 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:14:25.108 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:14:42.747 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:14:42.747 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 09:14:42.747 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:14:42.930 INFO  [mojo]   Red: Committing
+2026-04-29 09:14:43.115 INFO  [mojo]   Commit: cf220e635fa9522f3af7e3470113366139c58e27
+2026-04-29 09:14:43.115 INFO  [mojo] 
+2026-04-29 09:14:43.115 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Definitions/Has component no existing step definition [ListProposalsAction]
+2026-04-29 09:14:43.129 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:14:43.130 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:15:10.421 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:15:28.107 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:15:28.107 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 09:15:28.107 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:15:28.192 INFO  [mojo]   Red: Committing
+2026-04-29 09:15:28.334 INFO  [mojo]   Commit: 5ba1d830d29f438773c25fbc2330b6af23e7ae35
+2026-04-29 09:15:28.334 INFO  [mojo] 
+2026-04-29 09:15:28.334 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Definitions/Has component has existing step definition [ListProposalsAction]
+2026-04-29 09:15:28.350 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:15:28.350 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:15:55.950 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:16:13.645 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 09:16:13.645 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 09:16:13.744 INFO  [mojo]   Red: Committing
+2026-04-29 09:16:13.839 INFO  [mojo]   Green: Running...
+2026-04-29 09:21:32.693 INFO  [mojo]   Green: Completed (00:05:18)
+2026-04-29 09:21:32.693 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 09:21:32.787 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 09:21:32.787 INFO  [mojo]   Green: Verify running...
+2026-04-29 09:21:53.665 INFO  [mojo]   Green: Verify passed (00:00:20)
+2026-04-29 09:22:59.516 INFO  [mojo]   Refactor: Running...
+2026-04-29 09:26:21.953 INFO  [mojo]   Refactor: Completed (00:03:22)
+2026-04-29 09:26:21.953 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 09:26:22.031 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 09:26:22.031 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 09:26:44.771 INFO  [mojo]   Refactor: Verify passed (00:00:22)
+2026-04-29 09:26:44.888 INFO  [mojo]   Refactor: Committing
+2026-04-29 09:26:45.123 INFO  [mojo]   Commit: 8939c399f1ab2b8aab67c44d4667e45561d4a78c
+2026-04-29 09:26:45.124 INFO  [mojo] 
+2026-04-29 09:26:45.125 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Definitions/Has component has existing step definition and step object proposals [ListProposalsAction]
+2026-04-29 09:26:45.125 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:26:45.125 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:27:13.005 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:27:30.349 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:27:30.349 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 09:27:30.349 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:27:30.445 INFO  [mojo]   Red: Committing
+2026-04-29 09:27:30.588 INFO  [mojo]   Commit: 04f9d1a06def5e81baa27867189c042180e24eaf
+2026-04-29 09:27:30.588 INFO  [mojo] 
+2026-04-29 09:27:30.588 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Definitions/No component has existing step definition [ListProposalsAction]
+2026-04-29 09:27:30.588 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:27:30.588 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:27:58.749 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:28:16.162 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:28:16.162 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 09:28:16.162 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:28:16.258 INFO  [mojo]   Red: Committing
+2026-04-29 09:28:16.401 INFO  [mojo]   Commit: 179b7b1f5775587d2e2f400630fdb74210de2a81
+2026-04-29 09:28:16.401 INFO  [mojo] 
+2026-04-29 09:28:16.401 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Parameters/No existing step object [ListProposalsAction]
+2026-04-29 09:28:16.401 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:28:16.401 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:28:44.319 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:29:03.017 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:29:03.017 INFO  [mojo]   Red: Completed maven (00:00:46)
+2026-04-29 09:29:03.017 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:29:03.127 INFO  [mojo]   Red: Committing
+2026-04-29 09:29:03.269 INFO  [mojo]   Commit: 9718a0adab665d01cf3ab95c1404beedf8db5294
+2026-04-29 09:29:03.269 INFO  [mojo] 
+2026-04-29 09:29:03.285 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Parameters/No existing step definition [ListProposalsAction]
+2026-04-29 09:29:03.285 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:29:03.285 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:29:33.432 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:29:49.508 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:29:49.508 INFO  [mojo]   Red: Completed maven (00:00:46)
+2026-04-29 09:29:49.508 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:29:49.604 INFO  [mojo]   Red: Committing
+2026-04-29 09:29:49.731 INFO  [mojo]   Commit: a2e6429e9931821fe0427c9a720f5964fdedb4c6
+2026-04-29 09:29:49.731 INFO  [mojo] 
+2026-04-29 09:29:49.747 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Parameters/Has existing step definition without parameters [ListProposalsAction]
+2026-04-29 09:29:49.747 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:29:49.747 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:30:17.737 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:30:35.157 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 09:30:35.157 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 09:30:35.157 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 09:30:35.252 INFO  [mojo]   Red: Committing
+2026-04-29 09:30:35.380 INFO  [mojo]   Commit: 7814de8a4f201d052ad1c544e6010f0cd53e60f0
+2026-04-29 09:30:35.394 INFO  [mojo] 
+2026-04-29 09:30:35.394 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Parameters/Has existing step definition with parameters [ListProposalsAction]
+2026-04-29 09:30:35.394 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:30:35.394 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:31:03.375 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:31:21.044 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 09:31:21.045 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 09:31:21.133 INFO  [mojo]   Red: Committing
+2026-04-29 09:31:21.228 INFO  [mojo]   Green: Running...
+2026-04-29 09:40:02.509 INFO  [mojo]   Green: Completed (00:08:41)
+2026-04-29 09:40:02.509 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 09:40:02.593 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 09:40:02.593 INFO  [mojo]   Green: Verify running...
+2026-04-29 09:40:26.071 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 09:41:23.939 INFO  [mojo]   Refactor: Running...
+2026-04-29 09:43:19.551 INFO  [mojo]   Refactor: Completed (00:01:55)
+2026-04-29 09:43:19.551 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 09:43:19.634 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 09:43:19.634 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 09:43:42.723 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 09:43:42.829 INFO  [mojo]   Refactor: Committing
+2026-04-29 09:43:43.050 INFO  [mojo]   Commit: e0d1a2317138121c1e10cd3a68114970936508ec
+2026-04-29 09:43:43.050 INFO  [mojo] 
+2026-04-29 09:43:43.050 INFO  [mojo] Processing Scenario: Language Definition/Issues/Proposals for Workspace Step Parameters/Has existing step definition with Content parameter [ListProposalsAction]
+2026-04-29 09:43:43.050 DEBUG [mojo]   Added tag @ListProposalsAction to file
+2026-04-29 09:43:43.050 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:44:10.778 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListProposalsActionTest.java
+2026-04-29 09:44:28.263 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 09:44:28.263 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 09:44:28.375 INFO  [mojo]   Red: Committing
+2026-04-29 09:44:28.482 INFO  [mojo]   Green: Running...
+2026-04-29 09:45:53.539 INFO  [mojo]   Green: Completed (00:01:25)
+2026-04-29 09:45:53.539 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 09:45:53.613 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 09:45:53.613 INFO  [mojo]   Green: Verify running...
+2026-04-29 09:46:17.007 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 09:47:03.393 INFO  [mojo]   Refactor: Running...
+2026-04-29 09:48:50.287 INFO  [mojo]   Refactor: Completed (00:01:46)
+2026-04-29 09:48:50.287 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 09:48:50.393 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 09:48:50.393 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 09:49:13.476 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 09:49:13.602 INFO  [mojo]   Refactor: Committing
+2026-04-29 09:49:13.778 INFO  [mojo]   Commit: befc0b7c7c326d65aa32cfdacf91985367b14650
+2026-04-29 09:49:13.778 INFO  [mojo] 
+2026-04-29 09:49:13.794 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Only Issues/Header row Cell names should start with a capital letter validation [ValidateAction]
+2026-04-29 09:49:13.794 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 09:49:13.794 INFO  [mojo]   Red: Running maven...
+2026-04-29 09:49:39.395 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 09:49:56.742 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 09:49:56.742 INFO  [mojo]   Red: Completed maven (00:00:42)
+2026-04-29 09:49:56.837 INFO  [mojo]   Red: Committing
+2026-04-29 09:49:56.978 INFO  [mojo]   Green: Running...
+2026-04-29 09:55:40.915 INFO  [mojo]   Green: Completed (00:05:43)
+2026-04-29 09:55:40.915 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 09:55:40.987 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 09:55:40.987 INFO  [mojo]   Green: Verify running...
+2026-04-29 09:56:04.534 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 09:57:33.868 INFO  [mojo]   Refactor: Running...
+2026-04-29 10:00:39.817 INFO  [mojo]   Refactor: Completed (00:03:05)
+2026-04-29 10:00:39.817 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 10:00:39.912 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 10:00:39.912 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 10:01:00.612 INFO  [mojo]   Refactor: Verify passed (00:00:20)
+2026-04-29 10:01:00.738 INFO  [mojo]   Refactor: Committing
+2026-04-29 10:01:04.985 INFO  [mojo]   Commit: 73b1b2ffe6d6b760d0c85732c43b4c029a401b6e
+2026-04-29 10:01:04.986 INFO  [mojo] 
+2026-04-29 10:01:04.986 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Only Issues/Body row Cell names can be any case validation [ValidateAction]
+2026-04-29 10:01:04.989 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:01:04.989 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:01:30.630 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:01:46.375 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 10:01:46.375 INFO  [mojo]   Red: Completed maven (00:00:41)
+2026-04-29 10:01:46.481 INFO  [mojo]   Red: Committing
+2026-04-29 10:01:46.593 INFO  [mojo]   Green: Running...
+2026-04-29 10:04:00.632 INFO  [mojo]   Green: Completed (00:02:14)
+2026-04-29 10:04:00.632 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 10:04:00.702 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 10:04:00.702 INFO  [mojo]   Green: Verify running...
+2026-04-29 10:04:24.253 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 10:05:18.561 INFO  [mojo]   Refactor: Running...
+2026-04-29 10:09:40.194 INFO  [mojo]   Refactor: Completed (00:04:21)
+2026-04-29 10:09:40.194 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 10:09:40.263 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 10:09:40.263 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 10:10:05.474 INFO  [mojo]   Refactor: Verify passed (00:00:25)
+2026-04-29 10:10:05.582 INFO  [mojo]   Refactor: Committing
+2026-04-29 10:10:05.767 INFO  [mojo]   Commit: b5ac0e3a3d29c6c4cd543198fbdc207e778e5732
+2026-04-29 10:10:05.768 INFO  [mojo] 
+2026-04-29 10:10:05.769 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Only Issues/Test suite name should start with a capital letter validation [ValidateAction]
+2026-04-29 10:10:05.770 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:10:05.771 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:10:32.001 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:10:49.748 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 10:10:49.748 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 10:10:49.843 INFO  [mojo]   Red: Committing
+2026-04-29 10:10:49.938 INFO  [mojo]   Green: Running...
+2026-04-29 10:14:06.273 INFO  [mojo]   Green: Completed (00:03:16)
+2026-04-29 10:14:06.273 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 10:14:06.353 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 10:14:06.353 INFO  [mojo]   Green: Verify running...
+2026-04-29 10:14:29.946 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 10:15:39.837 INFO  [mojo]   Refactor: Running...
+2026-04-29 10:17:49.165 INFO  [mojo]   Refactor: Completed (00:02:09)
+2026-04-29 10:17:49.165 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 10:17:49.247 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 10:17:49.247 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 10:18:12.157 INFO  [mojo]   Refactor: Verify passed (00:00:22)
+2026-04-29 10:18:12.266 INFO  [mojo]   Refactor: Committing
+2026-04-29 10:18:12.488 INFO  [mojo]   Commit: e38e36e381c1cb304cc83b9d4b4e35d3b86ac588
+2026-04-29 10:18:12.488 INFO  [mojo] 
+2026-04-29 10:18:12.488 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Only Issues/Test case name should start with a capital letter validation [ValidateAction]
+2026-04-29 10:18:12.488 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:18:12.488 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:18:38.989 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:18:56.586 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 10:18:56.586 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 10:18:56.682 INFO  [mojo]   Red: Committing
+2026-04-29 10:18:56.776 INFO  [mojo]   Green: Running...
+2026-04-29 10:22:06.088 INFO  [mojo]   Green: Completed (00:03:09)
+2026-04-29 10:22:06.088 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 10:22:06.167 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 10:22:06.167 INFO  [mojo]   Green: Verify running...
+2026-04-29 10:22:29.863 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 10:23:16.719 INFO  [mojo]   Refactor: Running...
+2026-04-29 10:24:49.218 INFO  [mojo]   Refactor: Completed (00:01:32)
+2026-04-29 10:24:49.218 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 10:24:49.299 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 10:24:49.299 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 10:25:12.865 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 10:25:12.977 INFO  [mojo]   Refactor: Committing
+2026-04-29 10:25:13.201 INFO  [mojo]   Commit: ea55868b06a08155a77347db5207cf6d1758a112
+2026-04-29 10:25:13.201 INFO  [mojo] 
+2026-04-29 10:25:13.201 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Only Issues/Test step must have a valid object name validation [ValidateAction]
+2026-04-29 10:25:13.201 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:25:13.201 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:25:39.795 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:25:56.967 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 10:25:56.967 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 10:25:57.061 INFO  [mojo]   Red: Committing
+2026-04-29 10:25:57.147 INFO  [mojo]   Green: Running...
+2026-04-29 10:33:01.852 INFO  [mojo]   Green: Completed (00:07:04)
+2026-04-29 10:33:01.852 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 10:33:01.941 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 10:33:01.941 INFO  [mojo]   Green: Verify running...
+2026-04-29 10:33:24.841 INFO  [mojo]   Green: Verify passed (00:00:22)
+2026-04-29 10:34:45.494 INFO  [mojo]   Refactor: Running...
+2026-04-29 10:36:18.197 INFO  [mojo]   Refactor: Completed (00:01:32)
+2026-04-29 10:36:18.197 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 10:36:18.273 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 10:36:18.273 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 10:36:42.170 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 10:36:42.294 INFO  [mojo]   Refactor: Committing
+2026-04-29 10:36:42.527 INFO  [mojo]   Commit: c315c36a76f004a2541f8b05eb28068765e68b5d
+2026-04-29 10:36:42.529 INFO  [mojo] 
+2026-04-29 10:36:42.530 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Only Issues/Test step must have a valid step definition name validation [ValidateAction]
+2026-04-29 10:36:42.531 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:36:42.532 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:37:09.005 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:37:28.719 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 10:37:28.720 INFO  [mojo]   Red: Completed maven (00:00:46)
+2026-04-29 10:37:28.820 INFO  [mojo]   Red: Committing
+2026-04-29 10:37:28.925 INFO  [mojo]   Green: Running...
+2026-04-29 10:40:28.982 INFO  [mojo]   Green: Completed (00:03:00)
+2026-04-29 10:40:28.982 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 10:40:29.076 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 10:40:29.076 INFO  [mojo]   Green: Verify running...
+2026-04-29 10:40:54.500 INFO  [mojo]   Green: Verify passed (00:00:25)
+2026-04-29 10:41:48.723 INFO  [mojo]   Refactor: Running...
+2026-04-29 10:45:20.792 INFO  [mojo]   Refactor: Completed (00:03:32)
+2026-04-29 10:45:20.792 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 10:45:20.866 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 10:45:20.866 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 10:45:44.310 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 10:45:44.432 INFO  [mojo]   Refactor: Committing
+2026-04-29 10:45:44.642 INFO  [mojo]   Commit: 43b66fa278579f77a2bdbb51807434a39361fdad
+2026-04-29 10:45:44.642 INFO  [mojo] 
+2026-04-29 10:45:44.642 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for File Issues/The first step needs to have a component specified validation [ValidateAction]
+2026-04-29 10:45:44.658 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:45:44.658 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:46:12.234 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:46:29.227 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 10:46:29.227 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 10:46:29.227 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 10:46:29.322 INFO  [mojo]   Red: Committing
+2026-04-29 10:46:29.466 INFO  [mojo]   Commit: 3b6ba0dfdb9101dcc23938d8a2adfacf8aae131d
+2026-04-29 10:46:29.466 INFO  [mojo] 
+2026-04-29 10:46:29.466 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for File Issues/No component in the first step triggers an error validation [ValidateAction]
+2026-04-29 10:46:29.466 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:46:29.466 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:46:56.530 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:47:14.564 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 10:47:14.564 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 10:47:14.658 INFO  [mojo]   Red: Committing
+2026-04-29 10:47:14.752 INFO  [mojo]   Green: Running...
+2026-04-29 10:50:53.379 INFO  [mojo]   Green: Completed (00:03:38)
+2026-04-29 10:50:53.393 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 10:50:53.459 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 10:50:53.459 INFO  [mojo]   Green: Verify running...
+2026-04-29 10:51:18.440 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 10:52:14.107 INFO  [mojo]   Refactor: Running...
+2026-04-29 10:54:02.959 INFO  [mojo]   Refactor: Completed (00:01:48)
+2026-04-29 10:54:02.960 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 10:54:03.049 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 10:54:03.050 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 10:54:27.711 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 10:54:27.839 INFO  [mojo]   Refactor: Committing
+2026-04-29 10:54:28.026 INFO  [mojo]   Commit: 7dfe7e081030b4148820282b81774f07221f5ca9
+2026-04-29 10:54:28.026 INFO  [mojo] 
+2026-04-29 10:54:28.026 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for TestStep Full Name/With Path Resolution [ValidateAction]
+2026-04-29 10:54:28.026 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:54:28.026 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:54:55.750 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:55:14.502 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 10:55:14.503 INFO  [mojo]   Red: Completed maven (00:00:46)
+2026-04-29 10:55:14.503 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 10:55:14.608 INFO  [mojo]   Red: Committing
+2026-04-29 10:55:14.761 INFO  [mojo]   Commit: 180e436d5593e6e4c8cd5fdd961a68351cb2ea2a
+2026-04-29 10:55:14.761 INFO  [mojo] 
+2026-04-29 10:55:14.761 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for TestStep Full Name/Without Path Resolution [ValidateAction]
+2026-04-29 10:55:14.761 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:55:14.761 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:55:42.119 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:56:01.311 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 10:56:01.312 INFO  [mojo]   Red: Completed maven (00:00:46)
+2026-04-29 10:56:01.312 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 10:56:01.412 INFO  [mojo]   Red: Committing
+2026-04-29 10:56:01.545 INFO  [mojo]   Commit: 74986914366cc51ec7f4df14c83c50c2e147cd8e
+2026-04-29 10:56:01.561 INFO  [mojo] 
+2026-04-29 10:56:01.561 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object doesn't exist validation [ValidateAction]
+2026-04-29 10:56:01.565 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 10:56:01.567 INFO  [mojo]   Red: Running maven...
+2026-04-29 10:56:29.099 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 10:56:47.432 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 10:56:47.432 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 10:56:47.532 INFO  [mojo]   Red: Committing
+2026-04-29 10:56:47.611 INFO  [mojo]   Green: Running...
+2026-04-29 11:04:41.326 INFO  [mojo]   Green: Completed (00:07:53)
+2026-04-29 11:04:41.326 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 11:04:41.398 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 11:04:41.398 INFO  [mojo]   Green: Verify running...
+2026-04-29 11:05:04.845 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 11:06:30.084 INFO  [mojo]   Refactor: Running...
+2026-04-29 11:12:40.330 INFO  [mojo]   Refactor: Completed (00:06:10)
+2026-04-29 11:12:40.331 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 11:12:40.407 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 11:12:40.407 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 11:13:05.129 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 11:13:05.252 INFO  [mojo]   Refactor: Committing
+2026-04-29 11:13:05.489 INFO  [mojo]   Commit: cfd6a8646995078c803918b697ed0165dde4aa96
+2026-04-29 11:13:05.490 INFO  [mojo] 
+2026-04-29 11:13:05.491 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object step definition doesn't exist validation [ValidateAction]
+2026-04-29 11:13:05.492 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 11:13:05.493 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:13:33.578 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 11:13:53.494 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 11:13:53.494 INFO  [mojo]   Red: Completed maven (00:00:48)
+2026-04-29 11:13:53.590 INFO  [mojo]   Red: Committing
+2026-04-29 11:13:53.685 INFO  [mojo]   Green: Running...
+2026-04-29 11:14:58.179 INFO  [mojo]   Green: Completed (00:01:04)
+2026-04-29 11:14:58.180 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 11:14:58.249 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 11:14:58.249 INFO  [mojo]   Green: Verify running...
+2026-04-29 11:15:22.012 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 11:15:48.377 INFO  [mojo]   Refactor: Running...
+2026-04-29 11:16:06.113 INFO  [mojo]   Refactor: Completed (00:00:17)
+2026-04-29 11:16:06.113 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 11:16:06.195 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 11:16:06.195 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 11:16:31.895 INFO  [mojo]   Refactor: Verify passed (00:00:25)
+2026-04-29 11:16:32.016 INFO  [mojo]   Refactor: Committing
+2026-04-29 11:16:32.215 INFO  [mojo]   Commit: 12600673e2f42564759ae1bc816360de2b529311
+2026-04-29 11:16:32.217 INFO  [mojo] 
+2026-04-29 11:16:32.218 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object step definition parameter set doesn't exist validation [ValidateAction]
+2026-04-29 11:16:32.219 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 11:16:32.221 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:16:59.697 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 11:17:19.407 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 11:17:19.407 INFO  [mojo]   Red: Completed maven (00:00:47)
+2026-04-29 11:17:19.502 INFO  [mojo]   Red: Committing
+2026-04-29 11:17:19.601 INFO  [mojo]   Green: Running...
+2026-04-29 11:21:21.390 INFO  [mojo]   Green: Completed (00:04:01)
+2026-04-29 11:21:21.390 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 11:21:21.461 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 11:21:21.461 INFO  [mojo]   Green: Verify running...
+2026-04-29 11:21:44.635 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 11:23:05.201 INFO  [mojo]   Refactor: Running...
+2026-04-29 11:25:14.718 INFO  [mojo]   Refactor: Completed (00:02:09)
+2026-04-29 11:25:14.718 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 11:25:14.781 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 11:25:14.781 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 11:25:38.563 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 11:25:38.660 INFO  [mojo]   Refactor: Committing
+2026-04-29 11:25:38.912 INFO  [mojo]   Commit: 602a172fc3cadafc3feac2dbfda8ce10fa0b268d
+2026-04-29 11:25:38.912 INFO  [mojo] 
+2026-04-29 11:25:38.912 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object step definition text parameter exists validation [ValidateAction]
+2026-04-29 11:25:38.912 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 11:25:38.912 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:26:05.654 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 11:26:23.566 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 11:26:23.576 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 11:26:23.576 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 11:26:23.662 INFO  [mojo]   Red: Committing
+2026-04-29 11:26:23.789 INFO  [mojo]   Commit: 4022376d75686bb9c27e12ad9c537b50c0ddaf2f
+2026-04-29 11:26:23.804 INFO  [mojo] 
+2026-04-29 11:26:23.805 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object step definition text parameter exists with other parameters validation [ValidateAction]
+2026-04-29 11:26:23.805 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 11:26:23.805 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:26:50.311 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 11:27:07.697 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 11:27:07.697 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 11:27:07.697 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 11:27:07.791 INFO  [mojo]   Red: Committing
+2026-04-29 11:27:07.924 INFO  [mojo]   Commit: 1bc54ff13b6890ddd70bfd6503f47474c78b1b2d
+2026-04-29 11:27:07.924 INFO  [mojo] 
+2026-04-29 11:27:07.940 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object exists validation [ValidateAction]
+2026-04-29 11:27:07.940 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 11:27:07.940 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:27:35.268 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 11:27:52.521 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 11:27:52.521 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 11:27:52.522 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 11:27:52.626 INFO  [mojo]   Red: Committing
+2026-04-29 11:27:52.759 INFO  [mojo]   Commit: c42ce73e1bacafb97df145c4eb67a82b1f963d5a
+2026-04-29 11:27:52.759 INFO  [mojo] 
+2026-04-29 11:27:52.775 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object step definition exists validation [ValidateAction]
+2026-04-29 11:27:52.775 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 11:27:52.775 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:28:20.064 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 11:28:37.965 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 11:28:37.965 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 11:28:37.965 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 11:28:38.060 INFO  [mojo]   Red: Committing
+2026-04-29 11:28:38.227 INFO  [mojo]   Commit: 27b05c6c7facf349a70d32ddd3033e9bfcf30159
+2026-04-29 11:28:38.228 INFO  [mojo] 
+2026-04-29 11:28:38.230 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object step definition parameter set exists validation [ValidateAction]
+2026-04-29 11:28:38.232 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 11:28:38.233 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:29:06.235 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 11:29:24.088 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 11:29:24.088 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 11:29:24.088 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 11:29:24.182 INFO  [mojo]   Red: Committing
+2026-04-29 11:29:24.322 INFO  [mojo]   Commit: f2a83cff54cddc9a0ef35814ef164a9d13bcf193
+2026-04-29 11:29:24.322 INFO  [mojo] 
+2026-04-29 11:29:24.322 INFO  [mojo] Processing Scenario: Language Definition/Issues/Validation for Workspace Issues/This object step definition text parameter doesn't exist validation [ValidateAction]
+2026-04-29 11:29:24.322 DEBUG [mojo]   Added tag @ValidateAction to file
+2026-04-29 11:29:24.325 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:29:50.741 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ValidateActionTest.java
+2026-04-29 11:30:08.786 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 11:30:08.786 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 11:30:08.890 INFO  [mojo]   Red: Committing
+2026-04-29 11:30:08.999 INFO  [mojo]   Green: Running...
+2026-04-29 11:33:33.428 INFO  [mojo]   Green: Completed (00:03:24)
+2026-04-29 11:33:33.428 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 11:33:33.507 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 11:33:33.507 INFO  [mojo]   Green: Verify running...
+2026-04-29 11:33:56.547 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 11:35:02.207 INFO  [mojo]   Refactor: Running...
+2026-04-29 11:36:41.107 INFO  [mojo]   Refactor: Completed (00:01:38)
+2026-04-29 11:36:41.107 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 11:36:41.202 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 11:36:41.202 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 11:37:04.683 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 11:37:04.815 INFO  [mojo]   Refactor: Committing
+2026-04-29 11:37:05.032 INFO  [mojo]   Commit: ddd8959d0f72b52891237525ed3e11148ec1e90b
+2026-04-29 11:37:05.032 INFO  [mojo] 
+2026-04-29 11:37:05.039 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Only Issues/Cell name should start with a capital letter quickfix [ListQuickfixesAction]
+2026-04-29 11:37:05.039 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 11:37:05.039 INFO  [mojo]   Red: Running maven...
+2026-04-29 11:37:30.723 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 11:37:48.882 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 11:37:48.882 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 11:37:48.993 INFO  [mojo]   Red: Committing
+2026-04-29 11:37:49.136 INFO  [mojo]   Green: Running...
+2026-04-29 11:41:19.857 INFO  [mojo]   Green: Completed (00:03:30)
+2026-04-29 11:41:19.857 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 11:41:19.944 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 11:41:19.944 INFO  [mojo]   Green: Verify running...
+2026-04-29 11:41:41.532 INFO  [mojo]   Green: Verify passed (00:00:21)
+2026-04-29 11:42:44.970 INFO  [mojo]   Refactor: Running...
+2026-04-29 11:45:20.617 ERROR [mojo] Claude failed (exit 1): You've hit your limit · resets 1:40pm (America/Toronto)
+2026-04-29 11:45:20.617 INFO  [mojo]   Refactor: Completed (00:02:35)
+2026-04-29 11:45:20.665 INFO  [mojo]   Commit: af0ddc3828fcb5286c7e2594f65c78104e91a10c
+2026-04-29 13:48:17.543 INFO  [mojo] RGR Automation Plugin (gen-from-existing)
+2026-04-29 13:48:19.144 DEBUG [mojo]   Cleanup: Deleted 0 NUL files
+2026-04-29 13:48:19.216 DEBUG [mojo]   Cleanup: Deleted target directory
+2026-04-29 13:48:19.216 INFO  [mojo] Baseline: Running maven...
+2026-04-29 13:48:42.778 INFO  [mojo] Baseline: Completed maven (00:00:23)
+2026-04-29 13:48:42.785 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Only Issues/Body row Cell names can be any case quickfix [ListQuickfixesAction]
+2026-04-29 13:48:42.789 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 13:48:42.795 INFO  [mojo]   Red: Running maven...
+2026-04-29 13:49:11.414 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 13:49:28.775 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 13:49:28.775 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 13:49:28.775 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 13:49:28.885 INFO  [mojo]   Red: Committing
+2026-04-29 13:49:29.028 INFO  [mojo]   Commit: d7cab5a6e1de5b0f0f61b5d5729226b25498e0a1
+2026-04-29 13:49:29.028 INFO  [mojo] 
+2026-04-29 13:49:29.043 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Only Issues/Test suite name should start with a capital letter quickfix [ListQuickfixesAction]
+2026-04-29 13:49:29.043 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 13:49:29.043 INFO  [mojo]   Red: Running maven...
+2026-04-29 13:49:55.207 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 13:50:12.976 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 13:50:12.976 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 13:50:13.102 INFO  [mojo]   Red: Committing
+2026-04-29 13:50:13.196 INFO  [mojo]   Green: Running...
+2026-04-29 13:52:29.519 INFO  [mojo]   Green: Completed (00:02:16)
+2026-04-29 13:52:29.519 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 13:52:29.601 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 13:52:29.601 INFO  [mojo]   Green: Verify running...
+2026-04-29 13:52:52.789 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 13:53:49.798 INFO  [mojo]   Refactor: Running...
+2026-04-29 13:56:12.242 INFO  [mojo]   Refactor: Completed (00:02:22)
+2026-04-29 13:56:12.242 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 13:56:12.332 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 13:56:12.332 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 13:56:35.795 INFO  [mojo]   Refactor: Verify passed (00:00:23)
+2026-04-29 13:56:35.899 INFO  [mojo]   Refactor: Committing
+2026-04-29 13:56:36.114 INFO  [mojo]   Commit: 13cd3060d4cbab53d1d9df3413291a3a3a67a3ef
+2026-04-29 13:56:36.114 INFO  [mojo] 
+2026-04-29 13:56:36.114 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Only Issues/Test case name should start with a capital letter quickfix [ListQuickfixesAction]
+2026-04-29 13:56:36.114 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 13:56:36.128 INFO  [mojo]   Red: Running maven...
+2026-04-29 13:57:02.493 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 13:57:19.892 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 13:57:19.892 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 13:57:19.987 INFO  [mojo]   Red: Committing
+2026-04-29 13:57:20.082 INFO  [mojo]   Green: Running...
+2026-04-29 13:59:22.795 INFO  [mojo]   Green: Completed (00:02:02)
+2026-04-29 13:59:22.805 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 13:59:22.869 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 13:59:22.885 INFO  [mojo]   Green: Verify running...
+2026-04-29 13:59:44.351 INFO  [mojo]   Green: Verify passed (00:00:21)
+2026-04-29 14:00:35.408 INFO  [mojo]   Refactor: Running...
+2026-04-29 14:03:06.786 INFO  [mojo]   Refactor: Completed (00:02:31)
+2026-04-29 14:03:06.786 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 14:03:06.865 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 14:03:06.865 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 14:03:28.010 INFO  [mojo]   Refactor: Verify passed (00:00:21)
+2026-04-29 14:03:28.117 INFO  [mojo]   Refactor: Committing
+2026-04-29 14:03:28.325 INFO  [mojo]   Commit: a21556ff395b133359f9962e64d9a745b5711968
+2026-04-29 14:03:28.325 INFO  [mojo] 
+2026-04-29 14:03:28.325 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Only Issues/Test step must have a valid object name quickfix [ListQuickfixesAction]
+2026-04-29 14:03:28.325 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:03:28.325 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:03:54.207 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:04:10.279 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 14:04:10.279 INFO  [mojo]   Red: Completed maven (00:00:41)
+2026-04-29 14:04:10.279 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 14:04:10.389 INFO  [mojo]   Red: Committing
+2026-04-29 14:04:10.531 INFO  [mojo]   Commit: d01044c1dd630191b71d13310106d6b04ee2332b
+2026-04-29 14:04:10.531 INFO  [mojo] 
+2026-04-29 14:04:10.547 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Only Issues/Test step must have a valid step definition name quickfix [ListQuickfixesAction]
+2026-04-29 14:04:10.547 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:04:10.547 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:04:35.967 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:04:51.765 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 14:04:51.765 INFO  [mojo]   Red: Completed maven (00:00:41)
+2026-04-29 14:04:51.765 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 14:04:51.876 INFO  [mojo]   Red: Committing
+2026-04-29 14:04:52.020 INFO  [mojo]   Commit: 0e9106550bfb69e8fcbe3d46fae0b74de2f43655
+2026-04-29 14:04:52.020 INFO  [mojo] 
+2026-04-29 14:04:52.020 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for File Issues/The first step needs to have a component specified quickfix [ListQuickfixesAction]
+2026-04-29 14:04:52.020 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:04:52.020 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:05:20.160 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:05:36.049 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 14:05:36.049 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 14:05:36.049 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 14:05:36.145 INFO  [mojo]   Red: Committing
+2026-04-29 14:05:36.288 INFO  [mojo]   Commit: fc9a6952bd05021bf5b0fd3621bac39dd0ebaf2a
+2026-04-29 14:05:36.288 INFO  [mojo] 
+2026-04-29 14:05:36.288 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for File Issues/No component in the first step triggers an error quickfix [ListQuickfixesAction]
+2026-04-29 14:05:36.288 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:05:36.288 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:06:03.975 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:06:19.951 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 14:06:19.951 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 14:06:19.951 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 14:06:20.061 INFO  [mojo]   Red: Committing
+2026-04-29 14:06:20.206 INFO  [mojo]   Commit: ec1c4619cf2f259b7984692c65021cec3c9772e9
+2026-04-29 14:06:20.207 INFO  [mojo] 
+2026-04-29 14:06:20.208 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Workspace Issues/This object doesn't exist quickfix [ListQuickfixesAction]
+2026-04-29 14:06:20.208 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:06:20.208 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:06:46.196 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:07:02.147 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 14:07:02.147 INFO  [mojo]   Red: Completed maven (00:00:41)
+2026-04-29 14:07:02.242 INFO  [mojo]   Red: Committing
+2026-04-29 14:07:02.353 INFO  [mojo]   Green: Running...
+2026-04-29 14:12:46.148 INFO  [mojo]   Green: Completed (00:05:43)
+2026-04-29 14:12:46.148 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 14:12:46.223 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 14:12:46.223 INFO  [mojo]   Green: Verify running...
+2026-04-29 14:13:09.638 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 14:14:31.722 INFO  [mojo]   Refactor: Running...
+2026-04-29 14:21:14.733 INFO  [mojo]   Refactor: Completed (00:06:43)
+2026-04-29 14:21:14.733 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 14:21:14.807 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 14:21:14.807 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 14:21:38.936 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 14:21:39.034 INFO  [mojo]   Refactor: Committing
+2026-04-29 14:21:39.256 INFO  [mojo]   Commit: bdcbe8a260b6f4674959bbb26e5cf58b9c454bc1
+2026-04-29 14:21:39.256 INFO  [mojo] 
+2026-04-29 14:21:39.256 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Workspace Issues/This object step definition doesn't exist quickfix [ListQuickfixesAction]
+2026-04-29 14:21:39.256 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:21:39.256 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:22:06.169 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:22:24.005 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 14:22:24.005 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 14:22:24.116 INFO  [mojo]   Red: Committing
+2026-04-29 14:22:24.211 INFO  [mojo]   Green: Running...
+2026-04-29 14:30:36.650 INFO  [mojo]   Green: Completed (00:08:12)
+2026-04-29 14:30:36.650 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 14:30:36.733 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 14:30:36.733 INFO  [mojo]   Green: Verify running...
+2026-04-29 14:31:00.908 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 14:32:14.854 INFO  [mojo]   Refactor: Running...
+2026-04-29 14:36:25.130 INFO  [mojo]   Refactor: Completed (00:04:10)
+2026-04-29 14:36:25.130 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 14:36:25.203 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 14:36:25.203 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 14:36:49.623 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 14:36:49.719 INFO  [mojo]   Refactor: Committing
+2026-04-29 14:36:49.949 INFO  [mojo]   Commit: ec8a653a02c05ee8d7d114ef28a0371bb724efb6
+2026-04-29 14:36:49.949 INFO  [mojo] 
+2026-04-29 14:36:49.949 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Workspace Issues/This object step definition exists quickfix [ListQuickfixesAction]
+2026-04-29 14:36:49.949 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:36:49.949 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:37:16.461 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:37:33.727 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 14:37:33.729 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 14:37:33.822 INFO  [mojo]   Red: Committing
+2026-04-29 14:37:33.934 INFO  [mojo]   Green: Running...
+2026-04-29 14:39:03.950 INFO  [mojo]   Green: Completed (00:01:30)
+2026-04-29 14:39:03.950 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 14:39:04.035 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 14:39:04.035 INFO  [mojo]   Green: Verify running...
+2026-04-29 14:39:28.053 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 14:40:15.324 INFO  [mojo]   Refactor: Running...
+2026-04-29 14:44:00.591 INFO  [mojo]   Refactor: Completed (00:03:45)
+2026-04-29 14:44:00.591 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 14:44:00.689 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 14:44:00.689 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 14:44:24.990 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 14:44:25.099 INFO  [mojo]   Refactor: Committing
+2026-04-29 14:44:25.273 INFO  [mojo]   Commit: e748672798a3da39d7e482f75429845bf11cc271
+2026-04-29 14:44:25.273 INFO  [mojo] 
+2026-04-29 14:44:25.273 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Workspace Issues/This object step definition parameter set doesn't exist quickfix [ListQuickfixesAction]
+2026-04-29 14:44:25.273 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:44:25.273 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:44:52.128 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:45:09.855 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 14:45:09.855 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 14:45:09.965 INFO  [mojo]   Red: Committing
+2026-04-29 14:45:10.060 INFO  [mojo]   Green: Running...
+2026-04-29 14:47:56.020 INFO  [mojo]   Green: Completed (00:02:45)
+2026-04-29 14:47:56.020 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 14:47:56.124 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 14:47:56.124 INFO  [mojo]   Green: Verify running...
+2026-04-29 14:48:20.235 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 14:49:22.152 INFO  [mojo]   Refactor: Running...
+2026-04-29 14:52:22.989 INFO  [mojo]   Refactor: Completed (00:03:00)
+2026-04-29 14:52:22.989 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 14:52:23.075 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 14:52:23.075 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 14:52:47.187 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 14:52:47.291 INFO  [mojo]   Refactor: Committing
+2026-04-29 14:52:47.505 INFO  [mojo]   Commit: ce1880400b534b9a09242e0cea685eeab7edc39b
+2026-04-29 14:52:47.505 INFO  [mojo] 
+2026-04-29 14:52:47.505 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Workspace Issues/This object step definition parameter set exists quickfix [ListQuickfixesAction]
+2026-04-29 14:52:47.505 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 14:52:47.505 INFO  [mojo]   Red: Running maven...
+2026-04-29 14:53:14.008 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 14:53:31.695 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 14:53:31.695 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 14:53:31.794 INFO  [mojo]   Red: Committing
+2026-04-29 14:53:31.889 INFO  [mojo]   Green: Running...
+2026-04-29 14:55:42.370 INFO  [mojo]   Green: Completed (00:02:10)
+2026-04-29 14:55:42.370 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 14:55:42.455 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 14:55:42.455 INFO  [mojo]   Green: Verify running...
+2026-04-29 14:56:06.680 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 14:56:51.687 INFO  [mojo]   Refactor: Running...
+2026-04-29 15:02:22.136 INFO  [mojo]   Refactor: Completed (00:05:30)
+2026-04-29 15:02:22.136 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 15:02:22.233 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 15:02:22.233 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 15:02:46.262 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 15:02:46.373 INFO  [mojo]   Refactor: Committing
+2026-04-29 15:02:46.546 INFO  [mojo]   Commit: 2279c8a477259c3a76e265335fdd40e206837e80
+2026-04-29 15:02:46.546 INFO  [mojo] 
+2026-04-29 15:02:46.546 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Workspace Issues/This object step definition text parameter doesn't exist quickfix [ListQuickfixesAction]
+2026-04-29 15:02:46.546 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 15:02:46.559 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:03:13.247 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 15:03:30.847 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 15:03:30.847 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 15:03:30.958 INFO  [mojo]   Red: Committing
+2026-04-29 15:03:31.106 INFO  [mojo]   Green: Running...
+2026-04-29 15:06:23.290 INFO  [mojo]   Green: Completed (00:02:52)
+2026-04-29 15:06:23.290 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 15:06:23.366 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 15:06:23.366 INFO  [mojo]   Green: Verify running...
+2026-04-29 15:06:47.246 INFO  [mojo]   Green: Verify passed (00:00:23)
+2026-04-29 15:07:37.757 INFO  [mojo]   Refactor: Running...
+2026-04-29 15:11:20.668 INFO  [mojo]   Refactor: Completed (00:03:42)
+2026-04-29 15:11:20.668 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 15:11:20.733 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 15:11:20.733 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 15:11:45.540 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 15:11:45.641 INFO  [mojo]   Refactor: Committing
+2026-04-29 15:11:45.863 INFO  [mojo]   Commit: 11852f52f705da63d16128ae28325e81e7cb95d6
+2026-04-29 15:11:45.863 INFO  [mojo] 
+2026-04-29 15:11:45.863 INFO  [mojo] Processing Scenario: Language Definition/Issues/Quickfixes for Workspace Issues/This object step definition text parameter exists quickfix [ListQuickfixesAction]
+2026-04-29 15:11:45.863 DEBUG [mojo]   Added tag @ListQuickfixesAction to file
+2026-04-29 15:11:45.863 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:12:12.292 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ListQuickfixesActionTest.java
+2026-04-29 15:12:29.595 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 15:12:29.595 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 15:12:29.595 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 15:12:29.689 INFO  [mojo]   Red: Committing
+2026-04-29 15:12:29.831 INFO  [mojo]   Commit: 6b18de05a66adefb6b6129b37d1e471cae90a623
+2026-04-29 15:12:29.831 INFO  [mojo] 
+2026-04-29 15:12:29.831 INFO  [mojo] Processing Scenario: Language Definition/Issues/Code Generation for Only Issues/Cell name should start with a capital letter generation [ApplyQuickfixAction]
+2026-04-29 15:12:29.831 DEBUG [mojo]   Added tag @ApplyQuickfixAction to file
+2026-04-29 15:12:29.847 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:12:55.815 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ApplyQuickfixActionTest.java
+2026-04-29 15:13:13.683 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 15:13:13.683 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 15:13:13.772 INFO  [mojo]   Red: Committing
+2026-04-29 15:13:13.899 INFO  [mojo]   Green: Running...
+2026-04-29 15:16:59.107 INFO  [mojo]   Green: Completed (00:03:45)
+2026-04-29 15:16:59.107 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 15:16:59.185 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 15:16:59.185 INFO  [mojo]   Green: Verify running...
+2026-04-29 15:17:23.689 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 15:18:26.754 INFO  [mojo]   Refactor: Running...
+2026-04-29 15:20:28.959 INFO  [mojo]   Refactor: Completed (00:02:02)
+2026-04-29 15:20:28.959 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 15:20:29.038 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 15:20:29.038 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 15:20:54.440 INFO  [mojo]   Refactor: Verify passed (00:00:25)
+2026-04-29 15:20:54.551 INFO  [mojo]   Refactor: Committing
+2026-04-29 15:20:54.729 INFO  [mojo]   Commit: 6f9758822704025fdf82ebd159aa6c54aa2c81de
+2026-04-29 15:20:54.729 INFO  [mojo] 
+2026-04-29 15:20:54.729 INFO  [mojo] Processing Scenario: Language Definition/Issues/Code Generation for Only Issues/Test suite name should start with a capital letter generation [ApplyQuickfixAction]
+2026-04-29 15:20:54.729 DEBUG [mojo]   Added tag @ApplyQuickfixAction to file
+2026-04-29 15:20:54.729 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:21:21.119 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ApplyQuickfixActionTest.java
+2026-04-29 15:21:39.302 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 15:21:39.302 INFO  [mojo]   Red: Completed maven (00:00:44)
+2026-04-29 15:21:39.318 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 15:21:39.398 INFO  [mojo]   Red: Committing
+2026-04-29 15:21:39.541 INFO  [mojo]   Commit: 2b417e93c9395e57be242d1e587497bd03e713c1
+2026-04-29 15:21:39.543 INFO  [mojo] 
+2026-04-29 15:21:39.543 INFO  [mojo] Processing Scenario: Language Definition/Issues/Code Generation for Only Issues/Test case name should start with a capital letter generation [ApplyQuickfixAction]
+2026-04-29 15:21:39.543 DEBUG [mojo]   Added tag @ApplyQuickfixAction to file
+2026-04-29 15:21:39.543 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:22:05.446 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ApplyQuickfixActionTest.java
+2026-04-29 15:22:23.164 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 15:22:23.164 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 15:22:23.164 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 15:22:23.276 INFO  [mojo]   Red: Committing
+2026-04-29 15:22:23.408 INFO  [mojo]   Commit: 68587f6bf2cb62f8d03ffbd69bb6dbeeb4d12b7e
+2026-04-29 15:22:23.408 INFO  [mojo] 
+2026-04-29 15:22:23.408 INFO  [mojo] Processing Scenario: Language Definition/Issues/Code Generation for Workspace Issues/This object doesn't exist generation [ApplyQuickfixAction]
+2026-04-29 15:22:23.408 DEBUG [mojo]   Added tag @ApplyQuickfixAction to file
+2026-04-29 15:22:23.408 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:22:58.058 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ApplyQuickfixActionTest.java
+2026-04-29 15:23:15.881 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 15:23:15.881 INFO  [mojo]   Red: Completed maven (00:00:52)
+2026-04-29 15:23:15.972 INFO  [mojo]   Red: Committing
+2026-04-29 15:23:16.084 INFO  [mojo]   Green: Running...
+2026-04-29 15:28:53.859 INFO  [mojo]   Green: Completed (00:05:37)
+2026-04-29 15:28:53.859 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 15:28:53.939 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 15:28:53.939 INFO  [mojo]   Green: Verify running...
+2026-04-29 15:29:18.577 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 15:30:28.583 INFO  [mojo]   Refactor: Running...
+2026-04-29 15:33:19.200 INFO  [mojo]   Refactor: Completed (00:02:50)
+2026-04-29 15:33:19.200 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 15:33:19.286 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 15:33:19.286 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 15:33:46.311 INFO  [mojo]   Refactor: Verify passed (00:00:27)
+2026-04-29 15:33:46.425 INFO  [mojo]   Refactor: Committing
+2026-04-29 15:33:46.599 INFO  [mojo]   Commit: fa166d1accd1a63c4f8ab9ddbbb3d0951c3c508a
+2026-04-29 15:33:46.599 INFO  [mojo] 
+2026-04-29 15:33:46.599 INFO  [mojo] Processing Scenario: Language Definition/Issues/Code Generation for Workspace Issues/This object step definition doesn't exist generation [ApplyQuickfixAction]
+2026-04-29 15:33:46.599 DEBUG [mojo]   Added tag @ApplyQuickfixAction to file
+2026-04-29 15:33:46.599 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:34:13.833 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ApplyQuickfixActionTest.java
+2026-04-29 15:34:32.520 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 15:34:32.536 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 15:34:32.615 INFO  [mojo]   Red: Committing
+2026-04-29 15:34:32.729 INFO  [mojo]   Green: Running...
+2026-04-29 15:38:54.793 INFO  [mojo]   Green: Completed (00:04:22)
+2026-04-29 15:38:54.793 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 15:38:54.855 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 15:38:54.855 INFO  [mojo]   Green: Verify running...
+2026-04-29 15:39:16.008 WARN  [mojo]   Green: Verify failed (attempt 1/3), resuming claude...
+2026-04-29 15:39:16.008 INFO  [mojo]   Green: Running...
+2026-04-29 15:40:59.993 INFO  [mojo]   Green: Completed (00:01:43)
+2026-04-29 15:40:59.993 INFO  [mojo]   Green: Verify running...
+2026-04-29 15:41:24.823 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 15:43:02.992 INFO  [mojo]   Refactor: Running...
+2026-04-29 15:43:40.146 INFO  [mojo]   Refactor: Completed (00:00:37)
+2026-04-29 15:43:40.148 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 15:43:40.209 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 15:43:40.209 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 15:44:06.132 INFO  [mojo]   Refactor: Verify passed (00:00:25)
+2026-04-29 15:44:06.228 INFO  [mojo]   Refactor: Committing
+2026-04-29 15:44:06.417 INFO  [mojo]   Commit: 603dea82c85c6dbe91d8c089bf0267dd407f08f5
+2026-04-29 15:44:06.417 INFO  [mojo] 
+2026-04-29 15:44:06.422 INFO  [mojo] Processing Scenario: Language Definition/Issues/Code Generation for Workspace Issues/This object step definition parameter set doesn't exist generation [ApplyQuickfixAction]
+2026-04-29 15:44:06.422 DEBUG [mojo]   Added tag @ApplyQuickfixAction to file
+2026-04-29 15:44:06.422 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:44:32.762 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ApplyQuickfixActionTest.java
+2026-04-29 15:44:51.788 DEBUG [mojo]   Tests are PASSING - no failing tests to fix (returning 100)
+2026-04-29 15:44:51.788 INFO  [mojo]   Red: Completed maven (00:00:45)
+2026-04-29 15:44:51.788 INFO  [mojo]   Green: Skipped (tests already passing)
+2026-04-29 15:44:51.901 INFO  [mojo]   Red: Committing
+2026-04-29 15:44:52.060 INFO  [mojo]   Commit: 76e5c58fde8cae36400fe824b270ab30a02d511f
+2026-04-29 15:44:52.062 INFO  [mojo] 
+2026-04-29 15:44:52.062 INFO  [mojo] Processing Scenario: Language Definition/Issues/Code Generation for Workspace Issues/This object step definition text parameter doesn't exist generation [ApplyQuickfixAction]
+2026-04-29 15:44:52.064 DEBUG [mojo]   Added tag @ApplyQuickfixAction to file
+2026-04-29 15:44:52.064 INFO  [mojo]   Red: Running maven...
+2026-04-29 15:45:18.426 DEBUG [mojo]   Created runner class: C:\Users\Farhan\git\sheep-dog-main\sheep-dog-core\sheep-dog-grammar/src/test/java/org/farhan/suites/ApplyQuickfixActionTest.java
+2026-04-29 15:45:36.006 DEBUG [mojo]   Tests are FAILING - ready for green phase (returning 0)
+2026-04-29 15:45:36.006 INFO  [mojo]   Red: Completed maven (00:00:43)
+2026-04-29 15:45:36.104 INFO  [mojo]   Red: Committing
+2026-04-29 15:45:36.199 INFO  [mojo]   Green: Running...
+2026-04-29 15:49:42.734 INFO  [mojo]   Green: Completed (00:04:06)
+2026-04-29 15:49:42.734 INFO  [mojo]   Green: Allowlist check running...
+2026-04-29 15:49:42.839 INFO  [mojo]   Green: Allowlist check passed, proceeding
+2026-04-29 15:49:42.839 INFO  [mojo]   Green: Verify running...
+2026-04-29 15:50:07.285 INFO  [mojo]   Green: Verify passed (00:00:24)
+2026-04-29 15:51:05.151 INFO  [mojo]   Refactor: Running...
+2026-04-29 15:53:26.183 INFO  [mojo]   Refactor: Completed (00:02:21)
+2026-04-29 15:53:26.183 INFO  [mojo]   Refactor: Allowlist check running...
+2026-04-29 15:53:26.278 INFO  [mojo]   Refactor: Allowlist check passed, proceeding
+2026-04-29 15:53:26.278 INFO  [mojo]   Refactor: Verify running...
+2026-04-29 15:53:50.789 INFO  [mojo]   Refactor: Verify passed (00:00:24)
+2026-04-29 15:53:50.891 INFO  [mojo]   Refactor: Committing
+2026-04-29 15:53:51.091 INFO  [mojo]   Commit: 556eaa230e390519d9ea4136f172a7bad782aac8
+2026-04-29 15:53:51.091 INFO  [mojo] 
+2026-04-29 15:53:51.091 INFO  [mojo] RGR Automation Complete!
+2026-04-29 15:53:51.091 INFO  [mojo] Total scenarios processed: 21

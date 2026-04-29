@@ -1,0 +1,325 @@
+timestamp,git_branch,commit,scenario,phase_red_ms,phase_green_ms,phase_refactor_ms,phase_total_ms
+2026-04-20T15:26:20.572,Rebuild30,cc76d7fd097cb47b103f893c4bc77b2bebde0298,No component no existing,31866,666929,319526,1018823
+2026-04-20T15:34:52.887,Rebuild30,eb7b03ed3e863a69d518493c58f96f6e98527344,No component no existing has background,28460,261440,190702,481105
+2026-04-20T15:45:21.063,Rebuild30,68f6828e5c1cd90ae73e45248ed10257723b6aa6,No component no existing,28731,260518,338424,628174
+2026-04-20T15:56:35.551,Rebuild30,6b16566f60a039a8e4b44c4d926647bff47c96e3,No component has existing,28717,334950,310322,674487
+2026-04-20T16:15:11.194,Rebuild30,ebb41bc5d729f75f87f7e6595d5ff33eba496321,Has component has existing step definition,29665,546831,360694,937711
+2026-04-20T16:24:48.594,Rebuild30,081c004f845acb1dcf46a3329b445d1feda69852,Has component has existing step definition and step object proposals,27077,261749,288115,577399
+2026-04-20T16:31:45.492,Rebuild30,9b4856125c040637544b5d5f59fa4305025f8c61,Has existing step definition with parameters,28622,260630,15752,305486
+2026-04-20T16:40:37.495,Rebuild30,59345463432b7e0c9672b5f7c3e8d231043357af,Has existing step definition with Content parameter,27996,181409,322110,532003
+2026-04-20T16:52:18.976,Rebuild30,6ff1999bc969c3504bb77a36ad818e78bfb01826,Header row Cell names should start with a capital letter validation,45025,288297,367608,701479
+2026-04-20T17:05:07.965,Rebuild30,c4c1d5f154ceef723c1773d6f605c4ca51be5033,Body row Cell names can be any case validation,26474,416351,325675,768987
+2026-04-20T17:13:35.021,Rebuild30,d3f1be7bf672cb6abbcef0bbf180ed4bb87e237c,Test suite name should start with a capital letter validation,28038,275431,203062,507056
+2026-04-20T17:19:05.720,Rebuild30,2484c638cfc4cc5e9c6a3f80d023eb29ca6896e4,Test case name should start with a capital letter validation,28811,281699,19663,330699
+2026-04-20T17:33:38.685,Rebuild30,2c650d39892c68aa147b3bd3c76266695ee0f4a5,Test step must have a valid object name validation,27357,403817,441273,872961
+2026-04-20T17:49:19.231,Rebuild30,58e8318d3508c94296832f0034327d76a53a6f24,Test step must have a valid step definition name validation,28455,561352,350074,940546
+2026-04-20T18:00:17.908,Rebuild30,42559f0ec7f1bac24cdf347898a30f3622ba7b05,No component in the first step triggers an error validation,29846,306133,290871,627374
+2026-04-20T18:06:42.577,Rebuild30,4bd6db7debccb0ea369b831570403a88d2d2ec82,With Path Resolution,28131,249337,106719,384669
+2026-04-20T18:24:57.409,Rebuild30,fab3013d59a5d5fe305c80928baec67076053865,This object doesn't exist validation,30450,531701,503236,1065919
+2026-04-20T18:30:13.611,Rebuild30,e7746c6276934a05841610bfa2a82c779b60ddfe,This object step definition doesn't exist validation,28597,211684,75412,316202
+2026-04-20T18:37:50.392,Rebuild30,deda275641001b99773b099df9d13138b5d16388,This object step definition parameter set doesn't exist validation,26880,230571,198822,456781
+2026-04-20T18:49:48.469,Rebuild30,ae0d8c51152fed00b5ea9c472d2b9aac0022f795,This object step definition text parameter doesn't exist validation,28535,423259,122389,574698
+2026-04-20T19:03:11.965,Rebuild30,c492283bb8927a907f703e8b525179006155c9cf,Cell name should start with a capital letter quickfix,43657,433909,325369,803491
+2026-04-20T19:04:41.346,Rebuild30,1dcc66feb525249e6718484dd904eecf7bbc2d83,Body row Cell names can be any case quickfix,84944,0,0,85628
+2026-04-20T19:11:11.535,Rebuild30,4cf93cb3a17ff146cbb778faed9e6e6ef7930419,Test suite name should start with a capital letter quickfix,37560,174782,177292,390173
+2026-04-20T19:15:11.415,Rebuild30,d39a00301c4dc871fd6948de96e845391e1036a4,Test case name should start with a capital letter quickfix,34651,185765,18938,239864
+2026-04-20T19:15:47.257,Rebuild30,a5bb054e494cd8d58b736591263dc174b9b84807,Test step must have a valid object name quickfix,35534,0,0,35842
+2026-04-20T19:16:25.432,Rebuild30,fc98bf5bb09170e3f7c6ba1ac303a65d5caa3367,Test step must have a valid step definition name quickfix,37781,0,0,38159
+2026-04-20T19:17:03.202,Rebuild30,42e883762b5b8b022393c5a7904774ef3f1de82e,The first step needs to have a component specified quickfix,37406,0,0,37770
+2026-04-20T19:17:33.002,Rebuild30,ff19f595fd38eff57c6f3e827e3e4f8f59ef554f,No component in the first step triggers an error quickfix,29495,0,0,29800
+2026-04-20T19:26:56.708,Rebuild30,218f916092e06f35fb692cabf05e5a3684d3346f,This object doesn't exist quickfix,31034,329129,202988,563706
+2026-04-20T19:35:09.566,Rebuild30,c81b006d9e28e6c94d5219396c279c1b3f678303,This object step definition doesn't exist quickfix,32054,206120,254163,492858
+2026-04-20T19:41:17.951,Rebuild30,fb7500cc78487686e85de79725703d573687cd13,This object step definition exists quickfix,31912,293919,42068,368385
+2026-04-20T19:46:43.129,Rebuild30,731492b5f481498541ed65e098f99beb6a00eb86,This object step definition parameter set doesn't exist quickfix,34970,267667,22014,325178
+2026-04-20T19:57:14.817,Rebuild30,816800a550c61809a117281daaa72057145366f0,This object step definition parameter set exists quickfix,33392,364110,233668,631683
+2026-04-20T19:57:46.387,Rebuild30,e98b69003bef27b29ef55a24d2d6474f9b9cfeff,This object step definition text parameter doesn't exist quickfix,31240,0,0,31570
+2026-04-20T19:58:18.294,Rebuild30,c2a33f214268a6ef2e0cde9511e4afc310c2d3e9,This object step definition text parameter exists quickfix,31597,0,0,31907
+2026-04-20T20:15:12.181,Rebuild30,e3c20569a835deb4a051ff9f2f6a887fd0a7d6ba,Cell name should start with a capital letter generation,46803,254796,711809,1013885
+2026-04-20T20:15:41.064,Rebuild30,36674db24f1c1c6385ba5342632b245c667aabd3,Test suite name should start with a capital letter generation,28547,0,0,28882
+2026-04-20T20:16:10.504,Rebuild30,625cccfb42efde4a3229018c312044442681baa1,Test case name should start with a capital letter generation,29138,0,0,29438
+2026-04-20T20:31:01.354,Rebuild30,1cc2f9f05583c22606edf843dc2b1021da31c7a0,This object doesn't exist generation,30121,380955,479278,890848
+2026-04-20T20:43:45.345,Rebuild30,745455038a0dceba55a649228f5d57064cb2edce,This object step definition doesn't exist generation,29567,415345,318653,763988
+2026-04-20T20:56:12.036,Rebuild30,7e9232b4b06bb428606f122a868c21d200160ee2,This object step definition parameter set doesn't exist generation,30163,299031,417038,746691
+2026-04-21T21:02:47.233,Rebuild31,07f92ff64810dfadfd30806a82b8f07896ee1cc8,This object step definition text parameter doesn't exist generation,30691,266780,97280,395197
+2026-04-21T07:18:55.414,Rebuild31,c5f3043a73ba14bc460b5513ff3746a645099d96,No component no existing,49497,547742,85935,683762
+2026-04-21T07:19:24.372,Rebuild31,40ef34fe4a695883e0cbfb24d4cf4e2f9c80866e,Has component no existing,28668,0,0,28935
+2026-04-21T07:26:21.665,Rebuild31,c8d3de9fd1d7ece9e37d12eac3a22f27fb132a40,No component no existing has background,31879,0,0,32255
+2026-04-21T07:35:54.853,Rebuild31,1b893e5e1c4bbcec46165eeaa2609e590b899110,No component no existing,30920,253356,288343,573162
+2026-04-21T07:46:53.155,Rebuild31,40f5c1e504f1bcae84b8b904347c651611f89227,No component has existing,29943,368273,259556,658302
+2026-04-21T07:47:23.287,Rebuild31,e591fbeeaf300c0b810a439713b11142664a010c,Has component no existing,29837,0,0,30132
+2026-04-21T07:47:53.005,Rebuild31,8dcdb0e608faf08b87614951ed40d425b4332754,Has component has existing,29437,0,0,29718
+2026-04-21T07:48:23.513,Rebuild31,12c0dbe85f9b70b6294a695845228456010cfdad,No component has existing,30215,0,0,30508
+2026-04-21T07:48:54.291,Rebuild31,a82f5f852228858f7d8b2b86e4aa59c2aa98ff35,Has component has existing,30505,0,0,30778
+2026-04-21T07:49:24.587,Rebuild31,8d5a388b37d514f35bd42b86f468375a30e09cbc,Has component no existing step object,30011,0,0,30296
+2026-04-21T07:49:55.934,Rebuild31,3714d1c06c67e03bb83f7251fe78cd99660f882d,Has component no existing step definition,31044,0,0,31347
+2026-04-21T08:03:48.215,Rebuild31,02d2595415bde61944feccf83cfe00d42750630f,Has component has existing step definition,30824,418837,382111,832277
+2026-04-21T08:04:18.629,Rebuild31,628f9bd9f5856b85a518d99e2865f801ad1d085c,Has component has existing step definition and step object proposals,30128,0,0,30414
+2026-04-21T08:04:49.447,Rebuild31,0eda3ff19a6c9de0e0aee0e52059522abbeca773,No component has existing step definition,30516,0,0,30818
+2026-04-21T08:05:20.513,Rebuild31,6667b541fec0dbcdf9b364a6bd11f6ac1aed2f1f,No existing step object,30787,0,0,31066
+2026-04-21T08:05:50.856,Rebuild31,4cf79a01964d7b884a5368489cfef022a42c63fb,No existing step definition,30049,0,0,30327
+2026-04-21T08:06:21.716,Rebuild31,b7ea3e2a3b996a2fe19348128cb236bc1d9316c1,Has existing step definition without parameters,30542,0,0,30860
+2026-04-21T08:16:50.851,Rebuild31,c6a8997da4d48e61a7dd522ea4f28b2978f54f9e,Has existing step definition with parameters,30184,456256,142189,629135
+2026-04-21T08:26:21.863,Rebuild31,d6abece21896775f89c7a29763339fe5966b1b87,Has existing step definition with Content parameter,30447,246456,293543,570998
+2026-04-21T08:34:56.122,Rebuild31,2db25f82a92fae69c499c8c04bc3e357ef892f2d,Header row Cell names should start with a capital letter validation,47303,368317,98096,514259
+2026-04-21T08:44:58.696,Rebuild31,a6b67d0cadc3cc323e0e6c28ab33e9fb38fecacd,Body row Cell names can be any case validation,29616,324450,248023,602574
+2026-04-21T08:49:20.677,Rebuild31,25ddc36cd9600f52fe50805e724aa50fab3a38b5,Test suite name should start with a capital letter validation,29683,201978,29752,261981
+2026-04-21T08:55:48.667,Rebuild31,1887ed2b0d9f46e79bb156fd3c3272a54ec6704a,Test case name should start with a capital letter validation,29921,159472,198067,387975
+2026-04-21T09:05:44.862,Rebuild31,f323bb5646cff513c4f7c5e590e4a63b46f53ae6,Test step must have a valid object name validation,29368,392014,174291,596195
+2026-04-21T09:15:53.639,Rebuild31,76add64040ba976a24bf19161a8d1ac9090130f8,Test step must have a valid step definition name validation,29366,271528,307353,608766
+2026-04-21T09:16:23.170,Rebuild31,ace08e12eb0722049261ba4b9e448f5a678b99f4,The first step needs to have a component specified validation,29189,0,0,29531
+2026-04-21T09:26:31.019,Rebuild31,37f008deae6a0e14d4d03afba80a28c95e9de8c3,No component in the first step triggers an error validation,29250,445171,132889,607844
+2026-04-21T09:36:08.404,Rebuild31,35c649f6834f580af438508f92ff926394437de6,With Path Resolution,31247,257687,287939,577385
+2026-04-21T09:36:37.887,Rebuild31,2554de48f6a754a4bf787f2d84ceed481ee91325,Without Path Resolution,29203,0,0,29483
+2026-04-21T09:54:40.606,Rebuild31,bf16f6b2716dacbc03678097d8cf82439bc94c80,This object doesn't exist validation,30892,558800,492508,1082719
+2026-04-21T10:35:40.285,Rebuild31,8ad97605a69c6ce4c0a1184c4bf5aa935692309e,This object step definition doesn't exist validation,34604,254829,426241,716178
+2026-04-21T10:41:30.759,Rebuild31,67d5ce5761903fcdefb8ded47e808300a989d6a6,This object step definition parameter set doesn't exist validation,31770,301586,16645,350462
+2026-04-21T10:42:00.984,Rebuild31,6f3381b0070782f906864f686835a1600023e3be,This object step definition text parameter exists validation,29946,0,0,30219
+2026-04-21T10:42:36.253,Rebuild31,a814583082a2d5165b184e26a50c425035a73943,This object step definition text parameter exists with other parameters validation,34952,0,0,35269
+2026-04-21T10:43:10.068,Rebuild31,471486432730009b92e48b081d7b069dca11f491,This object exists validation,33542,0,0,33815
+2026-04-21T10:43:42.202,Rebuild31,f15d038b2cd1d51a260f36a6da3bbf9b17e3a055,This object step definition exists validation,31845,0,0,32134
+2026-04-21T10:44:16.200,Rebuild31,fdd4d913eaafa0bbe88565ac1ce87b6def996873,This object step definition parameter set exists validation,33725,0,0,33996
+2026-04-21T10:54:57.386,Rebuild31,e06691b8c8bf370fa49e1ec733c00eb0101f1385,This object step definition text parameter doesn't exist validation,33730,383997,222978,641186
+2026-04-21T11:09:57.100,Rebuild31,ba4d3e6904cf2ba8df2a7cd6670c0682736d9f4e,Cell name should start with a capital letter quickfix,30100,634294,234814,899714
+2026-04-21T11:10:26.929,Rebuild31,dfcce8cffb73eac4991643b6a2929eaa5ae317d1,Body row Cell names can be any case quickfix,29541,0,0,29829
+2026-04-21T11:18:46.207,Rebuild31,e16a63e725eab5dd06a79dc02cd0634337ffee77,Test suite name should start with a capital letter quickfix,30122,210882,257800,499278
+2026-04-21T11:23:05.107,Rebuild31,8c5b8c5cf823236f816892c5aa3c5de13d7b98e9,Test case name should start with a capital letter quickfix,29809,189863,38710,258896
+2026-04-21T11:23:34.402,Rebuild31,42b869af9325a4b469e5a62355d2d8b3289f6757,Test step must have a valid object name quickfix,28997,0,0,29284
+2026-04-21T11:24:03.964,Rebuild31,3b562544c461cb59ff90de715d7430aa36468ba6,Test step must have a valid step definition name quickfix,29295,0,0,29562
+2026-04-21T11:24:33.514,Rebuild31,cbff5af35f2e3161a8c5ba5f47a64bda32ec21fa,The first step needs to have a component specified quickfix,29304,0,0,29546
+2026-04-21T11:25:01.677,Rebuild31,5a4da18555a83e279f2d39f1a0b943b0d8d2612c,No component in the first step triggers an error quickfix,27914,0,0,28160
+2026-04-21T11:25:31.828,Rebuild31,44b5992f40c4649cde844428f68acdc085c57665,This object doesn't exist quickfix,29919,0,0,30148
+2026-04-21T11:26:02.295,Rebuild31,48c113accda84683bd7bb3243580d9a7fac4bef2,This object step definition doesn't exist quickfix,30203,0,0,30467
+2026-04-21T11:26:34.226,Rebuild31,64e7af16ca4a546fb7eee5e1a9e70f33cce92d96,This object step definition exists quickfix,31652,0,0,31931
+2026-04-21T11:27:08.138,Rebuild31,bb9eb282455e51a7f10d41ee62c0791b35bd3ee1,This object step definition parameter set doesn't exist quickfix,33648,0,0,33912
+2026-04-21T11:27:40.223,Rebuild31,61d17c5cd1caeb146afa050bc26042a3b820b85a,This object step definition parameter set exists quickfix,31826,0,0,32083
+2026-04-21T11:28:19.784,Rebuild31,79fec5cc5f9d82824b060448e5dcb4fc1510bbdc,This object step definition text parameter doesn't exist quickfix,39309,0,0,39561
+2026-04-21T11:28:51.225,Rebuild31,41534c71ce849d25c38887598755641831f4f128,This object step definition text parameter exists quickfix,31196,0,0,31440
+2026-04-21T11:52:29.780,Rebuild31,858dfd43f81f68b4fc8ec6d689a742d7b5d23b63,Cell name should start with a capital letter generation,31927,856416,529701,1418555
+2026-04-21T12:10:23.791,Rebuild31,af20f8276734f3eb6043357754593000dd1f7774,Test suite name should start with a capital letter generation,37384,490554,262653,791157
+2026-04-21T12:20:01.080,Rebuild31,9ff5576f130e8d88c15897ac6ff69eb389f92e8b,Test case name should start with a capital letter generation,29244,244860,302698,577278
+2026-04-21T12:20:28.790,Rebuild31,034ee76b3f43b71fce7a9180907b00a081b5220e,This object doesn't exist generation,27453,0,0,27707
+2026-04-21T12:20:58.687,Rebuild31,95b4ef6724b2d2d021f5ae08786023dd1dee01ec,This object step definition doesn't exist generation,29627,0,0,29897
+2026-04-21T12:21:29.605,Rebuild31,803b182abb8ae8e4c1160013027ac7f3370672b0,This object step definition parameter set doesn't exist generation,30651,0,0,30916
+2026-04-21T12:21:59.870,Rebuild31,67fe73840348c3739b1da96464248a7ef28d3446,This object step definition text parameter doesn't exist generation,30005,0,0,30263
+2026-04-22T00:34:59.390,Rebuild32,5575130e4c1de519f2bac95bb49d5c5cc061e726,No component no existing,42860,236469,384166,663989
+2026-04-22T00:35:41.086,Rebuild32,32573d7e153e19785593e8193829dda0f534fbe7,Has component no existing,41436,0,0,41683
+2026-04-22T00:36:22.954,Rebuild32,ca5e7e1440a88a86e507d5e33fe862b21dad8e0f,No component no existing has background,41540,0,0,41868
+2026-04-22T00:37:06.598,Rebuild32,c4be9267032121ab5b6d690591d4e417340d5c7d,No component no existing,43365,0,0,43642
+2026-04-22T00:51:08.905,Rebuild32,d970fe801c6f826211393305ac4e03246c53cee9,No component has existing,41937,483249,316692,842307
+2026-04-22T00:51:50.707,Rebuild32,82e5d44966cc11a90a28fe90c7c9d1ef2026ab50,Has component no existing,41529,0,0,41802
+2026-04-22T00:52:32.559,Rebuild32,ca35fcc3004b01897e0ec3364ef809d00e03c59b,Has component has existing,41579,0,0,41850
+2026-04-22T00:53:14.526,Rebuild32,f0485a40d36e38e9674b989575cd222712fb4ae5,No component has existing,41709,0,0,41967
+2026-04-22T00:53:56.960,Rebuild32,81c215296200b16ec35d6a116ec95d216619eeb9,Has component has existing,42167,0,0,42434
+2026-04-22T00:54:38.665,Rebuild32,8bb01c0f6ac48d9da9f7dfe14a74e6755643024d,Has component no existing step object,41436,0,0,41705
+2026-04-22T00:55:20.996,Rebuild32,8f9f9804975d070bbfbaf26f8f0a87d8bc9bd985,Has component no existing step definition,42032,0,0,42320
+2026-04-22T01:03:42.874,Rebuild32,55ef46a95eaa57e095e378ff70adeb359636cb4c,Has component has existing step definition,42214,421650,37509,501878
+2026-04-22T01:22:41.648,Rebuild32,2a6bad96ad5b313470983a00b0ffb8d2b4a67667,Has component has existing step definition and step object proposals,42184,329714,766438,1138774
+2026-04-22T01:23:23.687,Rebuild32,e757cda2960bf24fe5325326a60c0498bef15100,No component has existing step definition,41774,0,0,42029
+2026-04-22T01:24:06.088,Rebuild32,612e71c8f331428dbb43d48e29e4f4a142e2a744,No existing step object,42116,0,0,42401
+2026-04-22T01:24:48.807,Rebuild32,eea2bc1ce7201e8939a0ab19606576e83e2029d0,No existing step definition,42440,0,0,42719
+2026-04-22T01:25:39.951,Rebuild32,4d942c6657a00ebd84de704b9b98cae39abb3cab,Has existing step definition without parameters,50875,0,0,51144
+2026-04-22T01:42:08.982,Rebuild32,9e8c325d70c8ab85685e2662ad86d1e87fa0ccfc,Has existing step definition with parameters,43271,767454,177828,989031
+2026-04-22T01:52:25.003,Rebuild32,a318c605352eda59541a5d0870880a708e642bb8,Has existing step definition with Content parameter,44390,301285,269852,616021
+2026-04-22T01:59:28.527,Rebuild32,086a6143a7df783737b3d6a26659f8360a184037,Header row Cell names should start with a capital letter validation,42298,342678,37958,423524
+2026-04-22T02:06:08.259,Rebuild32,e87c860a22b4ae9fe114cd1a132040afda7d7020,Body row Cell names can be any case validation,42160,317332,39741,399732
+2026-04-22T02:13:37.370,Rebuild32,e1fcc7d605d6dc01ea12f81cd4526d821747355a,Test suite name should start with a capital letter validation,42500,264244,141869,449111
+2026-04-22T02:21:37.842,Rebuild32,31587a43f5a2526b61b29363e5f873c31f0a0161,Test case name should start with a capital letter validation,41862,247867,190266,480472
+2026-04-22T02:32:34.735,Rebuild32,f07ee51318b7e7ed816536a49f94a32f991815d9,Test step must have a valid object name validation,43039,422167,191158,656886
+2026-04-22T03:00:34.138,Rebuild32,3c41da96d45954226f388a385b9e856cf3380e38,Test step must have a valid step definition name validation,1181287,253862,243771,1679403
+2026-04-22T03:01:27.412,Rebuild32,b0be5e33b1edbd1e78bc9f0a8dac8a74d46e7db8,The first step needs to have a component specified validation,52989,0,0,53258
+2026-04-22T03:11:18.808,Rebuild32,f1f710d32109dda83124a42d081110b8c493f39c,No component in the first step triggers an error validation,47781,325833,217309,591396
+2026-04-22T03:12:06.869,Rebuild32,dfc00cdf4399a902bd33cf0b831764b5a082002c,With Path Resolution,47744,0,0,48061
+2026-04-22T03:12:53.664,Rebuild32,19a8053f6c21f32f5235b656611b9f0d7d7e37c6,Without Path Resolution,46528,0,0,46795
+2026-04-22T03:26:22.962,Rebuild32,4bdb73048d5f8515b12639c68cb841e9c4b6d3a7,This object doesn't exist validation,47049,571704,190042,809298
+2026-04-22T03:34:23.802,Rebuild32,c952b5bcc7d68f28b816963728cf3ba730e0f3e3,This object step definition doesn't exist validation,46479,246456,187348,480840
+2026-04-22T03:46:17.521,Rebuild32,4a9642ea281c1889f1a52eac8487c7aabf5086f6,This object step definition parameter set doesn't exist validation,45812,265303,402050,713703
+2026-04-22T03:47:03.122,Rebuild32,9f01b13671e6529721b8e5a8acd6b4afaf92c1eb,This object step definition text parameter exists validation,45332,0,0,45600
+2026-04-22T03:47:48.438,Rebuild32,3d391865231b0361d6dbfa3b5276547aff568b8a,This object step definition text parameter exists with other parameters validation,45046,0,0,45316
+2026-04-22T03:48:35.385,Rebuild32,dc36676c1dc91fc01f4acbdebb60f71f4ed86f4e,This object exists validation,46679,0,0,46947
+2026-04-22T03:49:19.719,Rebuild32,0618c1cc72ebc3038fc8ac2df80cadd1ff78f432,This object step definition exists validation,44050,0,0,44319
+2026-04-22T03:50:04.386,Rebuild32,4a8c998e089b06f537f6f7974e4b9a469e315b3d,This object step definition parameter set exists validation,44400,0,0,44667
+2026-04-22T04:01:38.669,Rebuild32,72d60a0c93dffd336e14db0d5575d32f210c597d,This object step definition text parameter doesn't exist validation,44556,522524,126742,694283
+2026-04-22T04:20:00.816,Rebuild32,d1033342b597a29bbfa1ab615f8f41c074f3f536,Cell name should start with a capital letter quickfix,43289,769011,289328,1102147
+2026-04-22T04:20:43.575,Rebuild32,8622476e36ef55016349b08e963ec95497e15b17,Body row Cell names can be any case quickfix,42456,0,0,42759
+2026-04-22T04:26:33.282,Rebuild32,8c666f0c3f3250ac80094ee671ef7657fbcaa058,Test suite name should start with a capital letter quickfix,42340,268160,38710,349701
+2026-04-22T04:33:31.360,Rebuild32,d262cb2352a0486e7f962d6a31fc7f2b5a9b19af,Test case name should start with a capital letter quickfix,42244,183739,191620,418078
+2026-04-22T04:34:14.544,Rebuild32,a73f246a7b1bf25c79aeefd820e751b7e24f4eae,Test step must have a valid object name quickfix,42882,0,0,43168
+2026-04-22T04:34:57.307,Rebuild32,e0378951685022a78ce2e45e77fc360476ef683d,Test step must have a valid step definition name quickfix,42447,0,0,42763
+2026-04-22T04:35:39.673,Rebuild32,70f0f9c4d0cefe70cef05aa24fe1bcad0d3cd23d,The first step needs to have a component specified quickfix,42096,0,0,42366
+2026-04-22T04:36:22.711,Rebuild32,445723649278f24b60ad62fe79ea7eb46f0a075f,No component in the first step triggers an error quickfix,42785,0,0,43038
+2026-04-22T04:50:09.646,Rebuild32,8e9845f1070f286dbc9985535a828e258238fe64,This object doesn't exist quickfix,42558,452855,331041,826935
+2026-04-22T05:01:03.993,Rebuild32,b00a969a3914211bfb7abbf5c9072dad84d9a051,This object step definition doesn't exist quickfix,42556,290050,321273,654347
+2026-04-22T05:09:46.788,Rebuild32,444bbc9ad45d341e62c415518a39b81f92904b08,This object step definition exists quickfix,42206,196318,283820,522795
+2026-04-22T05:20:47.228,Rebuild32,9f62ae0eaca3b2da77c5dff868def87a974e47c2,This object step definition parameter set doesn't exist quickfix,43928,241066,374923,660440
+2026-04-22T05:21:29.782,Rebuild32,f2b35df45f77a7028a00d185ec690d149c225331,This object step definition parameter set exists quickfix,42239,0,0,42554
+2026-04-22T05:28:08.721,Rebuild32,e397edfaeabf923b9f244ab761bec7d8bd0a9124,This object step definition text parameter doesn't exist quickfix,42713,311375,44358,398939
+2026-04-22T05:28:52.530,Rebuild32,e1c2caef9b2736f9c731dead6023e8a4a7514d0a,This object step definition text parameter exists quickfix,43542,0,0,43809
+2026-04-22T06:52:20.208,Rebuild32,0922c39164a533dc285c83d3c353c17a2f54e28a,Cell name should start with a capital letter generation,41826,300272,720088,5007678
+2026-04-22T07:00:31.855,Rebuild32,0d03570c264bfbf34d4336c4a69aefc985e15114,Test case name should start with a capital letter generation,45266,0,0,45550
+2026-04-22T07:18:33.134,Rebuild32,929e828dff819a10874afb52a8c0a02f79250c28,This object doesn't exist generation,46020,365643,669128,1081269
+2026-04-22T07:29:13.533,Rebuild32,c66f93ebde0cb97551730e78245ee09e3e1bdc50,This object step definition doesn't exist generation,44676,393554,201697,640399
+2026-04-22T07:41:55.032,Rebuild32,cec5623d349da69eb6a81909bd48dc6ecfafb772,This object step definition parameter set doesn't exist generation,48224,421396,291417,761497
+2026-04-22T07:51:37.059,Rebuild32,e7c5f2b12bcdf68d60217b91f9b1c8b0e1f01bec,This object step definition text parameter doesn't exist generation,42697,331091,207734,5820241
+2026-04-24T00:16:34.513,main,37ce2b6f92dcf466a7588033cc7708f179bd401d,Green allowlist passes on the first attempt,38492,826692,269767,1135608
+2026-04-24T00:17:16.157,main,5185dc7e716c70f7c4c9a70038c3823b808c19c1,Refactor allowlist passes on the first attempt,41346,0,0,41634
+2026-04-24T00:31:12.325,main,cd58a2a72c0c97a32f106777515db529ea947af7,Green allowlist fails once then succeeds after revert and resume,37238,371940,426413,836168
+2026-04-24T00:31:49.964,main,e6975cfd8f851b8a5f0ce746f1b6ddf8f78a0a51,Green allowlist fails for every attempt,37369,0,0,37639
+2026-04-24T00:44:57.561,main,596855ba017e8ba4493ad5c27efa37ea5c4049b1,Refactor allowlist fails once then succeeds after revert and resume,36281,286923,463836,787597
+2026-04-24T00:45:35.141,main,1c78840b6dc479f1ca57fdc9a80c813ffe2e7409,Refactor allowlist fails for every attempt,37307,0,0,37580
+2026-04-24T14:26:32.095,main,9d1c68b160c732b95d5a05b0a77c15e21233db90,Green initial call carries the injected session ID,38161,0,0,38413
+2026-04-24T14:27:09.653,main,44c210fb1b985a3a5cfe30dec7cb5e22b03161d6,Green verify-fail resume reuses the captured session ID,37263,0,0,37558
+2026-04-24T14:27:48.652,main,61c887927d15fd39db878ee41df15d0dcd1fc507,Refactor initial call carries a different session ID from green,38727,0,0,38995
+2026-04-24T17:54:49.085,main,c3e530a2e47db7578eaa6716f5a76daeb5f1547f,Timestamp is written in timezone-aware ISO format when flag is on,33550,419886,143461,597259
+2026-04-24T20:06:28.043,main,9c8a4107066d61ba47cf7d29fa9c2e2810302de8,Continue mode refactor verify-fail resume stays on green session,44120,0,0,44396
+2026-04-25T11:38:16.225-04:00,main,0857d6c15e9496beef57ffd19b9368cb5d9eae04,Refactor allowlist runs before scenarios-list mod under stage true,44637,0,0,44913
+2026-04-25T14:08:15.664-04:00,main,4af310acaceb9229b983da84595c464dea177b3e,Baseline build passes and scenario loop proceeds,38278,0,0,38614
+2026-04-25T14:08:54.524-04:00,main,c82ffe54cdd13d7ab5738834f1bd3410295d4b16,Baseline build failure aborts the run,38572,0,0,38856
+2026-04-26T19:42:24.013-04:00,main,f96166863d2b01be55586d2cd7531524838104a2,Green emits full paths when greenFullPathsEnabled is true,91973,326313,42617,511321
+2026-04-26T19:58:05.486-04:00,main,95c84cbd7b4648ae1ead744cbcb0a9c93bddc7be,Green emits full paths when greenFullPathsEnabled is true,40504,343496,137824,588207
+2026-04-26T20:40:41.294-04:00,main,24ce081470d0000bab98c6f8f6534ae2cbb8d7a1,Green verify passes on the first attempt,48351,0,0,48673
+2026-04-26T21:10:36.165-04:00,main,b79d65d15d3c4e22122b48e99e26f962241fbf93,Green verify passes on the first attempt,44137,0,0,44409
+2026-04-26T21:11:20.177-04:00,main,366f2bc9628bb430582b5cbdfa817bdb2aa303e0,"Comparison skill runs, then the normal RGR cycle completes",43730,0,0,44000
+2026-04-26T21:12:03.108-04:00,main,2e8c834e2acb98bfba1eec4e3e1228bfac420bab,Green initial call carries the injected session ID,42640,0,0,42929
+2026-04-26T21:12:44.379-04:00,main,a7af155b18ecc5f178de04b4deb53a78843c61d7,Green verify-fail resume reuses the captured session ID,40989,0,0,41271
+2026-04-26T21:13:26.815-04:00,main,3d7fe128209a6041d25c53b6b9625bd01f1c8d40,"Green claude killed and install passes, refactor unaffected",42135,0,0,42436
+2026-04-26T21:14:09.276-04:00,main,5b16ee44a25ba54ed2dc6ba419589e5056ce938d,"Green killed, install fails, resumed claude fixes it",42172,0,0,42461
+2026-04-26T21:14:50.687-04:00,main,395a4be46f256f85ba11707a30f3da10496499a1,Continue mode runs compact then starts refactor on green session,41114,0,0,41411
+2026-04-26T21:15:33.228-04:00,main,d4ea856c8104a48e8a9fc085a7dc31f60fc7fc14,Continue mode refactor verify-fail resume stays on green session,42214,0,0,42537
+2026-04-26T21:16:15.383-04:00,main,23f71798a2abb67a7821e0403946fe7506d542fc,"Red fails, green and refactor succeed, one commit per phase",41879,0,0,42155
+2026-04-26T21:16:57.192-04:00,main,1db933ed29063dac24f1c61cf92a8ecff57a6637,"Red fails, green and refactor succeed, single combined commit",41529,0,0,41798
+2026-04-26T21:17:39.429-04:00,main,2239ea74eef6d0fd179515bc29b8effe7bd7256f,Refactor allowlist runs before scenarios-list mod under stage true,41935,0,0,42237
+2026-04-26T21:18:21.009-04:00,main,46525f0f7bb4e5a1d869ec5ad0eaafe12b7322fd,Scenarios-list deletion survives refactor allowlist gate under stage true,41289,0,0,41580
+2026-04-26T21:19:03.826-04:00,main,75bbf12dd9ff71367a378b2f81cd87c3382450a9,Green allowlist passes on the first attempt,42529,0,0,42812
+2026-04-26T21:19:48.645-04:00,main,43e963ab865d42593ee34da6c0ca57cdf3cb59d7,Refactor allowlist passes on the first attempt,44518,0,0,44819
+2026-04-26T21:20:30.631-04:00,main,be0a199445dd48e86c3770825eab536ae1a628c7,Green allowlist fails once then succeeds after revert and resume,41673,0,0,41986
+2026-04-26T21:21:13.699-04:00,main,4f899f0cf1dee0bea49f84e50cc8685b9c1d5663,Green allowlist fails for every attempt,42797,0,0,43068
+2026-04-26T21:21:56.397-04:00,main,07ab1db82deb4b09524a960193f772d8e3a34277,Refactor allowlist fails once then succeeds after revert and resume,42397,0,0,42698
+2026-04-26T21:22:39.201-04:00,main,72153e9bc4515d3c2f4d78dfa2a241dda0d90d77,Refactor allowlist fails for every attempt,42526,0,0,42804
+2026-04-26T21:23:21.265-04:00,main,73106c109a8692fae4961450890e55fa07d0fd48,Green allowlist passes when an extra path is added via allowlistAdditionalPaths,41734,0,0,42064
+2026-04-26T21:24:03.446-04:00,main,176b1b75bfe96cad4a397e0bb995b27cd12c4ff3,Green allowlist fails when allowlistBasePaths narrows below default,41903,0,0,42181
+2026-04-26T23:52:01.166-04:00,main,331169d0dcc48e8a1c64612618f89765ce92768b,Green phase invokes claude with rendered template path,37049,256251,42943,400370
+2026-04-27T19:01:10.407-04:00,main,8a8f1dc59fbde0a7819a9a9f6d51341fa908b1aa,Green failure still records a metrics row with red SHA,50811,727648,108539,973111
+2026-04-27T19:21:58.631-04:00,main,2df5211c157b776cbbacc6cf47bc62b3421af381,Refactor failure still records a metrics row with red SHA,45279,709075,170816,991185
+2026-04-28T12:00:59.921-04:00,main,79ea356b6642521e49143308dad79a3c2fb152fb,Active scenarios-list file is allowlisted automatically,37077,0,0,1106925
+2026-04-28T13:03:16.871-04:00,main,25d946319bb7fb32547b2ea6df798a74b54ac264,Active scenarios-list file is allowlisted automatically,35451,582932,146712,824257
+2026-04-28T13:14:41.560-04:00,main,6d810e9a592e941e8848dce5209f2a916ea55403,Non-matching scenarios-list-shaped file is treated as a violation,45006,574767,2107,684676
+2026-04-28T17:03:42.028-04:00,Rebuild33,6da74cc113b784be63084ae0ee69f0aafc006feb,No component no existing,44577,384110,132491,653974
+2026-04-28T17:04:26.648-04:00,Rebuild33,f923725cd2089a0484e8bd14fedee29464b46a76,Has component no existing,44334,0,0,44605
+2026-04-28T17:05:10.700-04:00,Rebuild33,afb04dd3080d764ea5a4d23ab0adcfa1694c1bfc,No component no existing has background,43742,0,0,44052
+2026-04-28T17:05:55.886-04:00,Rebuild33,0d62ab3d8c42fee048d31b40513093caa6c1f3e7,No component no existing,44864,0,0,45184
+2026-04-28T17:20:10.380-04:00,Rebuild33,ebbd7d8aac2cb131411a85ebeeae8df3a72454a7,No component has existing,45852,490761,228528,854494
+2026-04-28T17:20:54.356-04:00,Rebuild33,18d5b5e8c2c5c0141a74aa401a10a0a5a59e28f8,Has component no existing,43706,0,0,43976
+2026-04-28T17:21:38.447-04:00,Rebuild33,12e19206c5cdc764f4e487a9bdeebbdd2c5d11f6,Has component has existing,43788,0,0,44091
+2026-04-28T17:22:22.353-04:00,Rebuild33,69106f3d1647ac81f76814cd8c72c0ab3bc726a4,No component has existing,43604,0,0,43906
+2026-04-28T17:23:06.577-04:00,Rebuild33,47598b07241a38e72f4239af839cd80edace1ce2,Has component has existing,43944,0,0,44224
+2026-04-28T17:23:50.814-04:00,Rebuild33,d184b69523d0d04c914706edc364935e8855b963,Has component no existing step object,43948,0,0,44232
+2026-04-28T17:24:35.961-04:00,Rebuild33,7390fb5f05cd222af36d949752c6acaa1c95d778,Has component no existing step definition,44871,0,0,45147
+2026-04-28T17:37:38.075-04:00,Rebuild33,651b9da813673ade542ac02fa5d9e2c2c0f599c2,Has component has existing step definition,44517,613000,52515,782108
+2026-04-28T17:38:24.054-04:00,Rebuild33,7c31ffccb705eaa3024553945b14698a69f37f89,Has component has existing step definition and step object proposals,45664,0,0,45972
+2026-04-28T17:39:09.038-04:00,Rebuild33,098f3677452d9bdbfbdbfff66cfb5a5bcc77e7c3,No component has existing step definition,44667,0,0,44984
+2026-04-28T17:39:55.536-04:00,Rebuild33,5bf7d1fdd1032871571978c2e7f392e615b0a667,No existing step object,46182,0,0,46498
+2026-04-28T17:40:41.920-04:00,Rebuild33,60ddef1b8ff8eddf7f39385f0a59fcb8fba16d53,No existing step definition,46114,0,0,46384
+2026-04-28T17:41:26.645-04:00,Rebuild33,f7e39f4ce9a364af330dcb37246d9fdaa5e3b2bf,Has existing step definition without parameters,44437,0,0,44709
+2026-04-28T17:51:21.655-04:00,Rebuild33,02cad6f3c4f9bb39e31558994006f31b39293a84,Has existing step definition with parameters,47472,242781,234901,595010
+2026-04-28T18:03:39.450-04:00,Rebuild33,1a7017a5bc5bdee532fa71ebfc6355d142c02141,Has existing step definition with Content parameter,46249,106215,543052,737793
+2026-04-28T18:12:34.093-04:00,Rebuild33,13169ca13003a39f792fc919d5cf0eda8b2fcb60,Header row Cell names should start with a capital letter validation,40776,231386,206169,534626
+2026-04-28T18:19:59.764-04:00,Rebuild33,b7bc8f7ecdab09513616c241bf8f7d974a3648b7,Body row Cell names can be any case validation,44634,160840,198959,445671
+2026-04-28T18:26:41.582-04:00,Rebuild33,1f3967cc8ea3d9f3cea13005bc1eb90677ee7db1,Test suite name should start with a capital letter validation,42478,179026,120795,401818
+2026-04-28T18:33:21.462-04:00,Rebuild33,46b6b6553b8cb1910b1e2d6a464d72ca9e26b67f,Test case name should start with a capital letter validation,44800,161694,137968,399878
+2026-04-28T18:45:56.875-04:00,Rebuild33,a41edfd5503e8774f896f4061596d0bf8b318f30,Test step must have a valid object name validation,45086,400941,225297,755412
+2026-04-28T18:55:00.159-04:00,Rebuild33,a343671d116c0a80e57949728fed6f17692507f8,Test step must have a valid step definition name validation,45721,204642,246588,543281
+2026-04-28T18:55:48.125-04:00,Rebuild33,e4dd88557bd22e8bfb4441016144c4c62cc56c1d,The first step needs to have a component specified validation,47673,0,0,47965
+2026-04-28T19:03:15.958-04:00,Rebuild33,11d5803bf2e04e62eba39380aeee2026f43b8a71,No component in the first step triggers an error validation,46945,205891,144268,447833
+2026-04-28T19:04:02.409-04:00,Rebuild33,bc791761b650422d1d027c23274676bf2acda0c3,With Path Resolution,46160,0,0,46451
+2026-04-28T19:04:46.396-04:00,Rebuild33,fd73c8f804d22aaa3b56da3071ef90686515f8ac,Without Path Resolution,43706,0,0,43987
+2026-04-28T19:16:43.188-04:00,Rebuild33,f6ce6a31c5deb1574c88e84b241aec3a5f5bef6f,This object doesn't exist validation,44075,321451,287722,716792
+2026-04-28T19:21:10.973-04:00,Rebuild33,c2a9b0c1f60a3970aed192ed96a166ba13dd6c4d,This object step definition doesn't exist validation,44724,93857,90097,267784
+2026-04-28T19:29:59.309-04:00,Rebuild33,bf43ed437d9a6d9744fe5a26f99bc91e193e32b6,This object step definition parameter set doesn't exist validation,46359,226288,180779,528334
+2026-04-28T19:30:45.677-04:00,Rebuild33,0e9204157203d12711d8746d9df97ecb56e8f213,This object step definition text parameter exists validation,46047,0,0,46362
+2026-04-28T19:31:32.513-04:00,Rebuild33,57f9df4b1ecb7b818079a95492c5425d6c48a1eb,This object step definition text parameter exists with other parameters validation,46540,0,0,46834
+2026-04-28T19:32:20.771-04:00,Rebuild33,dec8ce01ecc32d5e9a61c48aeec4ae212649fdc7,This object exists validation,47978,0,0,48258
+2026-04-28T19:33:08.050-04:00,Rebuild33,fe57486d09a3e2f347ce79ed17fcdec64171c304,This object step definition exists validation,46989,0,0,47279
+2026-04-28T19:33:53.900-04:00,Rebuild33,ba93a0ce5dcc3342386b97925574897b306e6884,This object step definition parameter set exists validation,45533,0,0,45850
+2026-04-28T19:43:49.457-04:00,Rebuild33,35a1585ae3306c3018a015605081b1b92cc79204,This object step definition text parameter doesn't exist validation,47853,294356,181528,595556
+2026-04-28T19:56:39.842-04:00,Rebuild33,d3850c1d1eae0ee6f91ed9b94c145901d41aef61,Cell name should start with a capital letter quickfix,63427,240537,372437,770385
+2026-04-28T19:57:24.043-04:00,Rebuild33,f806e0c8327522e319797205256461d59db3b136,Body row Cell names can be any case quickfix,43929,0,0,44201
+2026-04-28T20:06:00.014-04:00,Rebuild33,045d69fb131144f36eada386d0024a6c8798202d,Test suite name should start with a capital letter quickfix,44823,185586,230541,515966
+2026-04-28T20:10:33.622-04:00,Rebuild33,24002ebb2251f9b160fecd414127115e5b7d5655,Test case name should start with a capital letter quickfix,47521,132215,41546,273607
+2026-04-28T20:11:19.123-04:00,Rebuild33,a81f40f058980eb19ef5de039ffb6972434315cb,Test step must have a valid object name quickfix,45208,0,0,45498
+2026-04-28T20:12:11.585-04:00,Rebuild33,64826325ac34cc4f5b646c498c4cfe1998ff4c19,Test step must have a valid step definition name quickfix,52170,0,0,52462
+2026-04-28T20:12:56.813-04:00,Rebuild33,47d1e812da2ab360d5a1f79f4dfb629fe13eaeca,The first step needs to have a component specified quickfix,44921,0,0,45228
+2026-04-28T20:13:43.097-04:00,Rebuild33,00fc334e2f61337046c0382d88ec8cde8580160e,No component in the first step triggers an error quickfix,46014,0,0,46284
+2026-04-28T20:24:20.545-04:00,Rebuild33,9e28fd5a09876c748d83cf87e9d7219592e803d0,This object doesn't exist quickfix,44204,315714,212879,637448
+2026-04-28T20:33:28.649-04:00,Rebuild33,268cd7bf339a0b3c7bcb5998329c67a205103bb9,This object step definition doesn't exist quickfix,45675,277357,161055,548103
+2026-04-28T20:43:11.590-04:00,Rebuild33,cfdff6a7dfac5dd5c857c3bc3f7dc47ee051fd41,This object step definition exists quickfix,43720,213527,275068,582940
+2026-04-28T20:53:37.844-04:00,Rebuild33,a8d1b3cb5e5a48b26ef33c928486ed3ceb247ff4,This object step definition parameter set doesn't exist quickfix,49291,252665,260573,626254
+2026-04-28T21:02:32.415-04:00,Rebuild33,737f74ebdd8f3cd999b505449ef3bc38d929e105,This object step definition parameter set exists quickfix,204792,143517,131484,534571
+2026-04-28T22:00:45.948-04:00,Rebuild33,36203b31506b3e571b5ce2e5c7065e55e687afef,This object step definition text parameter doesn't exist quickfix,71351,258617,302572,695235
+2026-04-28T22:01:39.208-04:00,Rebuild33,2946fec49abba9ead1b234c5f377224bcc08e46a,This object step definition text parameter exists quickfix,52981,0,0,53246
+2026-04-28T22:14:42.530-04:00,Rebuild33,e7963a94fc993e2d0bd6eb586cdf755730204a73,Cell name should start with a capital letter generation,52765,394003,262733,783322
+2026-04-28T22:15:26.961-04:00,Rebuild33,1dc0dfbee6ce6ab6444537acabab5f9e26e28c53,Test suite name should start with a capital letter generation,44138,0,0,44431
+2026-04-28T22:16:13.432-04:00,Rebuild33,63727188d3842e07fac010df2a87a06bbd2dc65e,Test case name should start with a capital letter generation,46197,0,0,46471
+2026-04-28T22:28:07.044-04:00,Rebuild33,e04cec4636fe2f4051196f9f95634fab40308293,This object doesn't exist generation,47762,356979,246381,713612
+2026-04-28T22:37:26.620-04:00,Rebuild33,d765df6a35017c05c7972ace962e314030acc0b5,This object step definition doesn't exist generation,49787,236570,199552,559576
+2026-04-28T22:38:14.465-04:00,Rebuild33,7a3f0b3f027565b689ec3104548680d21bf162b6,This object step definition parameter set doesn't exist generation,47560,0,0,47845
+2026-04-28T22:46:50.682-04:00,Rebuild33,ed676f22453d33be879ebdc5b529a2ebae2a1e5a,This object step definition text parameter doesn't exist generation,46929,166998,238718,516217
+2026-04-29T08:58:23.323-04:00,Rebuild34,c16759f8423442e4028bdcb3d56c4ee8c501e785,No component no existing,47579,594554,133835,849352
+2026-04-29T08:59:09.760-04:00,Rebuild34,ac143f72cab99b91200a97078593a0751dad9b8e,Has component no existing,46180,0,0,46421
+2026-04-29T08:59:54.694-04:00,Rebuild34,dc0e9c20e79c0f79942d5ef7cde7edab6a8829b0,No component no existing has background,44509,0,0,44918
+2026-04-29T09:00:38.966-04:00,Rebuild34,e456fc72c689247fe73ef0faec196129ec7ee9dd,No component no existing,44034,0,0,44272
+2026-04-29T09:10:54.351-04:00,Rebuild34,75059d2675090b93aeb7ff0e77651d48c35d51f3,No component has existing,47117,325996,167754,615385
+2026-04-29T09:11:39.019-04:00,Rebuild34,01f94eabf1dd9cdd444d0173c95cf31e6c05afb6,Has component no existing,44413,0,0,44666
+2026-04-29T09:12:23.683-04:00,Rebuild34,2d86086f2fbb36c51ed3b4db4198e48bd9b94f4c,Has component has existing,44410,0,0,44664
+2026-04-29T09:13:09.744-04:00,Rebuild34,b05504e32eddef27fa74d3be49d8e126e6a888a4,No component has existing,45808,0,0,46061
+2026-04-29T09:13:57.097-04:00,Rebuild34,b4328eb70208081aad1eaa79ac38b10f2952e576,Has component has existing,47096,0,0,47349
+2026-04-29T09:14:43.115-04:00,Rebuild34,cf220e635fa9522f3af7e3470113366139c58e27,Has component no existing step object,45650,0,0,46018
+2026-04-29T09:15:28.334-04:00,Rebuild34,5ba1d830d29f438773c25fbc2330b6af23e7ae35,Has component no existing step definition,44977,0,0,45219
+2026-04-29T09:26:45.123-04:00,Rebuild34,8939c399f1ab2b8aab67c44d4667e45561d4a78c,Has component has existing step definition,45295,339826,225255,676789
+2026-04-29T09:27:30.588-04:00,Rebuild34,04f9d1a06def5e81baa27867189c042180e24eaf,Has component has existing step definition and step object proposals,45224,0,0,45463
+2026-04-29T09:28:16.401-04:00,Rebuild34,179b7b1f5775587d2e2f400630fdb74210de2a81,No component has existing step definition,45574,0,0,45813
+2026-04-29T09:29:03.269-04:00,Rebuild34,9718a0adab665d01cf3ab95c1404beedf8db5294,No existing step object,46616,0,0,46868
+2026-04-29T09:29:49.731-04:00,Rebuild34,a2e6429e9931821fe0427c9a720f5964fdedb4c6,No existing step definition,46223,0,0,46446
+2026-04-29T09:30:35.394-04:00,Rebuild34,7814de8a4f201d052ad1c544e6010f0cd53e60f0,Has existing step definition without parameters,45410,0,0,45633
+2026-04-29T09:43:43.050-04:00,Rebuild34,e0d1a2317138121c1e10cd3a68114970936508ec,Has existing step definition with parameters,45650,544843,138784,787656
+2026-04-29T09:49:13.778-04:00,Rebuild34,befc0b7c7c326d65aa32cfdacf91985367b14650,Has existing step definition with Content parameter,45213,108525,130083,330728
+2026-04-29T10:01:04.986-04:00,Rebuild34,73b1b2ffe6d6b760d0c85732c43b4c029a401b6e,Header row Cell names should start with a capital letter validation,42948,367556,206744,711191
+2026-04-29T10:10:05.767-04:00,Rebuild34,b5ac0e3a3d29c6c4cd543198fbdc207e778e5732,Body row Cell names can be any case validation,41386,157660,286913,540781
+2026-04-29T10:18:12.488-04:00,Rebuild34,e38e36e381c1cb304cc83b9d4b4e35d3b86ac588,Test suite name should start with a capital letter validation,43977,220008,152320,486719
+2026-04-29T10:25:13.201-04:00,Rebuild34,ea55868b06a08155a77347db5207cf6d1758a112,Test case name should start with a capital letter validation,44098,213087,116146,420713
+2026-04-29T10:36:42.527-04:00,Rebuild34,c315c36a76f004a2541f8b05eb28068765e68b5d,Test step must have a valid object name validation,43766,447694,116676,689326
+2026-04-29T10:45:44.642-04:00,Rebuild34,43b66fa278579f77a2bdbb51807434a39361fdad,Test step must have a valid step definition name validation,46187,205575,235587,542112
+2026-04-29T10:46:29.466-04:00,Rebuild34,3b6ba0dfdb9101dcc23938d8a2adfacf8aae131d,The first step needs to have a component specified validation,44569,0,0,44824
+2026-04-29T10:54:28.026-04:00,Rebuild34,7dfe7e081030b4148820282b81774f07221f5ca9,No component in the first step triggers an error validation,45098,243688,133604,478560
+2026-04-29T10:55:14.761-04:00,Rebuild34,180e436d5593e6e4c8cd5fdd961a68351cb2ea2a,With Path Resolution,46476,0,0,46735
+2026-04-29T10:56:01.561-04:00,Rebuild34,74986914366cc51ec7f4df14c83c50c2e147cd8e,Without Path Resolution,46550,0,0,46784
+2026-04-29T11:13:05.490-04:00,Rebuild34,cfd6a8646995078c803918b697ed0165dde4aa96,This object doesn't exist validation,45865,497234,395045,1023928
+2026-04-29T11:16:32.216-04:00,Rebuild34,12600673e2f42564759ae1bc816360de2b529311,This object step definition doesn't exist validation,48001,88327,43518,206724
+2026-04-29T11:25:38.912-04:00,Rebuild34,602a172fc3cadafc3feac2dbfda8ce10fa0b268d,This object step definition parameter set doesn't exist validation,47186,265034,153362,546694
+2026-04-29T11:26:23.789-04:00,Rebuild34,4022376d75686bb9c27e12ad9c537b50c0ddaf2f,This object step definition text parameter exists validation,44654,0,0,44877
+2026-04-29T11:27:07.924-04:00,Rebuild34,1bc54ff13b6890ddd70bfd6503f47474c78b1b2d,This object step definition text parameter exists with other parameters validation,43892,0,0,44119
+2026-04-29T11:27:52.759-04:00,Rebuild34,c42ce73e1bacafb97df145c4eb67a82b1f963d5a,This object exists validation,44581,0,0,44819
+2026-04-29T11:28:38.228-04:00,Rebuild34,27b05c6c7facf349a70d32ddd3033e9bfcf30159,This object step definition exists validation,45190,0,0,45452
+2026-04-29T11:29:24.322-04:00,Rebuild34,f2a83cff54cddc9a0ef35814ef164a9d13bcf193,This object step definition parameter set exists validation,45855,0,0,46092
+2026-04-29T11:37:05.032-04:00,Rebuild34,ddd8959d0f72b52891237525ed3e11148ec1e90b,This object step definition text parameter doesn't exist validation,44461,227548,122476,460710
+2026-04-29T11:45:20.665-04:00,Rebuild34,af0ddc3828fcb5286c7e2594f65c78104e91a10c,Cell name should start with a capital letter quickfix,43843,232396,155647,495626
+2026-04-29T13:49:29.028-04:00,Rebuild34,d7cab5a6e1de5b0f0f61b5d5729226b25498e0a1,Body row Cell names can be any case quickfix,45980,0,0,46243
+2026-04-29T13:56:36.114-04:00,Rebuild34,13cd3060d4cbab53d1d9df3413291a3a3a67a3ef,Test suite name should start with a capital letter quickfix,43933,159593,165997,427071
+2026-04-29T14:03:28.325-04:00,Rebuild34,a21556ff395b133359f9962e64d9a745b5711968,Test case name should start with a capital letter quickfix,43764,144269,172602,412211
+2026-04-29T14:04:10.531-04:00,Rebuild34,d01044c1dd630191b71d13310106d6b04ee2332b,Test step must have a valid object name quickfix,41954,0,0,42206
+2026-04-29T14:04:52.020-04:00,Rebuild34,0e9106550bfb69e8fcbe3d46fae0b74de2f43655,Test step must have a valid step definition name quickfix,41218,0,0,41473
+2026-04-29T14:05:36.288-04:00,Rebuild34,fc9a6952bd05021bf5b0fd3621bac39dd0ebaf2a,The first step needs to have a component specified quickfix,44029,0,0,44268
+2026-04-29T14:06:20.206-04:00,Rebuild34,ec1c4619cf2f259b7984692c65021cec3c9772e9,No component in the first step triggers an error quickfix,43663,0,0,43918
+2026-04-29T14:21:39.256-04:00,Rebuild34,bdcbe8a260b6f4674959bbb26e5cf58b9c454bc1,This object doesn't exist quickfix,41939,367285,427214,919048
+2026-04-29T14:36:49.949-04:00,Rebuild34,ec8a653a02c05ee8d7d114ef28a0371bb724efb6,This object step definition doesn't exist quickfix,44749,516697,274770,910693
+2026-04-29T14:44:25.273-04:00,Rebuild34,e748672798a3da39d7e482f75429845bf11cc271,This object step definition exists quickfix,43778,114119,249666,455324
+2026-04-29T14:52:47.505-04:00,Rebuild34,ce1880400b534b9a09242e0cea685eeab7edc39b,This object step definition parameter set doesn't exist quickfix,44582,190175,205035,502232
+2026-04-29T15:02:46.546-04:00,Rebuild34,2279c8a477259c3a76e265335fdd40e206837e80,This object step definition parameter set exists quickfix,44190,154791,354575,599041
+2026-04-29T15:11:45.863-04:00,Rebuild34,11852f52f705da63d16128ae28325e81e7cb95d6,This object step definition text parameter doesn't exist quickfix,44288,196140,247783,539317
+2026-04-29T15:12:29.831-04:00,Rebuild34,6b18de05a66adefb6b6129b37d1e471cae90a623,This object step definition text parameter exists quickfix,43732,0,0,43968
+2026-04-29T15:20:54.729-04:00,Rebuild34,6f9758822704025fdf82ebd159aa6c54aa2c81de,Cell name should start with a capital letter generation,43836,249790,147686,504898
+2026-04-29T15:21:39.541-04:00,Rebuild34,2b417e93c9395e57be242d1e587497bd03e713c1,Test suite name should start with a capital letter generation,44573,0,0,44812
+2026-04-29T15:22:23.408-04:00,Rebuild34,68587f6bf2cb62f8d03ffbd69bb6dbeeb4d12b7e,Test case name should start with a capital letter generation,43621,0,0,43865
+2026-04-29T15:33:46.599-04:00,Rebuild34,fa166d1accd1a63c4f8ab9ddbbb3d0951c3c508a,This object doesn't exist generation,52473,362493,197728,683191
+2026-04-29T15:44:06.417-04:00,Rebuild34,603dea82c85c6dbe91d8c089bf0267dd407f08f5,This object step definition doesn't exist generation,45921,412094,63140,619818
+2026-04-29T15:44:52.060-04:00,Rebuild34,76e5c58fde8cae36400fe824b270ab30a02d511f,This object step definition parameter set doesn't exist generation,45366,0,0,45638
+2026-04-29T15:53:51.091-04:00,Rebuild34,556eaa230e390519d9ea4136f172a7bad782aac8,This object step definition text parameter doesn't exist generation,43942,271086,165637,539029
