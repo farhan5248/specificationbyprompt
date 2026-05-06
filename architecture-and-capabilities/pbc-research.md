@@ -9,12 +9,32 @@ title: PBC for Claude Code - Research
 
 # Context
 
-This page is the detailed companion to [A Process Behavior Chart for Claude Code][1]. The post argues that variation across Claude Code runs, when measured against a deterministic harness, becomes a control chart for specification quality rather than a measure of model noise. This page shows the data behind that claim.
+This page is the detailed companion to [A Process Behavior Chart for Claude Code][1]. The post proposes that variation across Claude Code runs, when measured against a deterministic harness, can become a control chart for specification quality rather than a measure of model noise. This page shows the data and method behind that hypothesis.
 
-The research has two parts, each detecting a different kind of specification problem:
+---
 
-1. **Ambiguous test detection**, by studying *pairs* of Claude runs against the same input.
-2. **Contradiction detection**, by studying *individual* runs.
+# Two Failure Modes, Two Charts
+
+There are two distinct ways a test specification can be wrong, and they show up as different patterns in the data.
+
+**Ambiguity** — the specification admits more than one valid implementation. Two independent Claude runs against the same test will both pass it, but they'll arrive at "passing" through different code. The signature is in *runtime*: each guess at the tester's intent costs about 45 seconds to evaluate, because Claude has to run all the tests after each attempt. The more complex the spec, the more guesses, and the more 45-second taxes accumulate. Wall-clock time on each run looks normal individually; the divergence shows up only when you put a *pair* of runs side by side and look at the *range* between their times.
+
+This 45-second tax is what makes the approach work. Without a deterministic, dominant per-iteration cost, paired runs would vary mainly by Claude's own response time and network latency — both small in absolute terms, but large relative to each other once the tax is removed. The runtime range would be noise, not signal. The harness builds the floor; the chart reads what stands above it.
+
+**Contradiction** — the specification conflicts with existing behavior, so no implementation can satisfy both the new test and the tests that already pass. A single Claude run reveals it: Claude pays the 45-second tax over and over, fixing the new test, breaking an old one, fixing that one, breaking the new one. The runtime balloons.
+
+The two charts are independent gates:
+
+|                       | within UCL on single-run chart | crosses UCL on single-run chart                                |
+|-----------------------|--------------------------------|-----------------------------------------------------------------|
+| **narrow pair range** | clean — spec is good           | **contradiction** alone                                         |
+| **wide pair range**   | **ambiguity** alone            | **ambiguity and contradiction** — resolve contradiction first  |
+
+The load-bearing observation: a test that sits *within* UCL on the single-run chart is not necessarily clean. If its pair-range is wide, it's still flagged — as ambiguity rather than contradiction. The single-run chart can't see ambiguity, because the cost of ambiguity isn't paid in *total* time — it's paid in the *wrong code being written, on time*.
+
+That is why the research needs both experiments. If the single-run UCL alone were enough, you'd only need one. The pair-range chart catches a class of specification defect that the single-run chart cannot, and the two together produce the reverse-prompt the tester needs: *contradiction* sends them to the existing-behavior conflict, *ambiguity* sends them to a choice between two valid implementations.
+
+The remaining sections walk through each chart in turn — Part 1 (pair-range) and Part 2 (single-run) — and close with how to read them together when both fire on the same scenario.
 
 ---
 
@@ -26,8 +46,6 @@ Planned content:
 
 - The setup: two independent Claude sessions, same GitHub issue, same tests, isolated work-trees.
 - The metric: wall-clock time delta between paired runs.
-- The control limits: how the average and standard deviation are computed across the historical pair set.
-- The signal: pairs whose time delta exceeds three standard deviations.
 - Worked example: a pair where the signal fired, the functional difference Claude expressed as a test, and which work-tree passed it.
 - Charts from Google Sheets and Grafana panel screenshots.
 - Logs from the two runs side-by-side.
@@ -45,6 +63,28 @@ Planned content:
 - The signal that distinguishes "Claude is struggling" from "the specification is contradictory."
 - Worked example with logs.
 - Charts.
+
+---
+
+# Reading the Two Charts Together
+
+For each new test run, three actionable outcomes:
+
+1. **Within UCL on the single-run chart, narrow pair-range** — spec is good, no action.
+2. **Wide pair-range, within UCL** — ambiguity. The tester sees the two work-trees from the paired runs plus a test case that distinguishes them. The test passes against one work-tree and fails against the other; the tester picks which implementation they meant.
+3. **Crosses UCL** — contradiction. The tester reviews what existing behavior the new spec conflicts with. If the pair-range is also wide, fix the contradiction first; re-run; if pair-range is still wide on the resolved spec, treat it as ambiguity from there.
+
+The reverse-prompt the tester sees is different in each case, and that's the point. A single "your test failed" message would conflate the two failure modes and waste the tester's time chasing the wrong fix. Contradiction sends them to the *existing* tests; ambiguity sends them to the *new* one. Picking the right question is the chart pair's job — it's what neither chart can do alone.
+
+---
+
+# Data
+
+- [metrics_313233.tsv](metrics_313233.tsv)
+- [metrics_353637.tsv](metrics_353637.tsv)
+- [metrics_383940.tsv](metrics_383940.tsv)
+- [metrics_combined_3540.tsv](metrics_combined_3540.tsv)
+- [metrics_main.tsv](metrics_main.tsv)
 
 ---
 
