@@ -7,23 +7,7 @@ title: A Process Behavior Chart for Claude Code
 
 ---
 
-# LinkedIn Post
-
-I finished listening to Goldratt's *Beyond the Goal* this week. I was hooked as soon as I heard his opening statement: a technology only delivers benefits if it diminishes a real limitation, and capturing those benefits means changing the rules you adopted to live with the limitation in the first place. 
-
-That made me think of Claude Code. The power is natural-language-to-code translation in both directions, like the universal translator in Star Trek :). The limitation it diminishes is the rule that has organized software work for as long as I've been doing it: if you don't speak code, you don't change the code. Reflecting on my time at Telus Health, we had all these processes to capture information and narrow down the scope of work to the most important that was then assigned to developers. 
-
-Goldratt's fourth question is the hard one: what new rules should we use now? If we treat Claude as a developer productivity tool, we keep all the old rules and capture maybe a fraction of the benefit. If we treat it as a system-of-work lever, the developer's job shifts toward a platform engineer, building guardrails and the people closest to the domain start contributing directly through the ubiquitous language they already use.
-
-That said, I wouldn't be comfortable with letting a non-programmer modify a code base (even indirectly) unless I had a way to monitor it deterministically. For the past few weeks I've been running some Process Behavior Charts over Claude Code to see whether variation in the process could be used as a signal to ask the tester clarifying questions. A pattern is showing up that I'm watching and continuing to validate.
-
-Pairs of independent runs against the same input mostly take similar amounts of time when the test is clear. When the run-to-run range for a given test is much wider than the rest, the cases I've inspected so far have looked like *ambiguous* tests — specifications that admit two valid implementations. Studying these runs made me think of the red bead game. When a pair of agents produces different implementations for a passing test, it points at a problem in my harness, not the agent.
-
-If the chart proves it can reliably detect ambiguity in the specifications derived from those tests, the next investment is layering a BPMN model on top, where BPMN drives changes to the GraphWalker model. The longer arc, conditional on each step holding up, is to use Claude to connect the developer's tools, the tester's tools, and the business's tools into a single chain. As more time goes by I think the companies that get the most out of this new translator are the ones that enable more people to speak through it.
-
-I have more research to do; but for now I've captured what I have here: [link to page]
-
----
+![Main — independent runs across the same scenarios](metrics_main.png)
 
 # Beyond the Goal
 
@@ -54,7 +38,7 @@ When I think about Claude Code through Goldratt's lens, the answers come out lik
 
 ---
 
-# Refresher: Testers Driving the Development
+# Testers Driving the Development
 
 I've written about the new-rules half of this argument in detail in [Testers Driving the Development][1], so I won't rebuild the whole case here. The short version, for anyone who read that piece weeks or months ago and wants the refresher:
 
@@ -64,29 +48,25 @@ Testers are skilled at two things: inspection (verifying after the fact that wha
 
 The IaaS-to-platform-engineering arc is the precedent. Before Infrastructure as Code, operations teams owned infrastructure and developers raised tickets. After IaC, operations didn't disappear — they became platform engineers, building the templates and paved roads that developers self-serve from. I think developers are about to make the same move with respect to testers and other domain contributors.
 
-The piece I want to add here, on top of that argument, is the part that I think makes it possible.
-
 ---
 
-# Why I Wasn't Comfortable Recommending This Yet
+# Understanding Variation
 
-I would not have been comfortable telling a real QA team to start contributing to a real codebase through Claude Code without a way to monitor the process deterministically. In the worst case, I'd have to redo all the code. If they don't understand code, how would they know that what was just implemented was what they intended? Specifically: I wanted the system to be able to give the tester or BSA feedback — a reverse prompt, in effect — when their request wasn't clear enough for Claude to act on it without making things up. 
+I would not be comfortable telling a QA team to start contributing to a codebase through Claude Code using an unstable process. In the worst case, I'd have to redo all the code. If they don't understand code, how would they know that what was just implemented was what they intended? Specifically: I wanted the system to be able to give the tester or BSA feedback — a reverse prompt, in effect — when their request wasn't clear enough for Claude to act on it without making things up. I can use two claude code instances per test and compare outputs but I wanted something more deterministic than that rather than relying on AI to audit itself.
 
-A couple of weeks ago I was on John Willis's [Profound][3] podcast (which, as a nerd, I'm very proud of :)). At the time I was eyeballing Plan-Do-Study-Act cycles to see whether a Process Behavior Chart could be used on Claude's runs the same way it gets used on a manufacturing line. My hunch was that special cause variation in run-to-run behavior would be a reliable indicator of when a human is needed in the loop.
+A couple of weeks ago I was on John Willis's [Profound][3] podcast (which, as a nerd, I'm very proud of :)). At the time I was eyeballing Plan-Do-Study-Act cycles to see whether a Process Behavior Chart could be used on Claude's runs the same way it gets used on a manufacturing line. My hunch was that special cause variation in run-to-run behavior would be a reliable indicator of when a human is needed in the loop. 
 
-Since the podcast I've been running the experiment myself. The setup is deliberately constrained: I use only GitHub issues and tests as inputs, I let Claude run for a few hours, and I only look at the code afterward. What surprised me most was the similarity between independent runs. Two separate sessions, given the same issue and a clear test, mostly produce comparable output and take comparable amounts of time. That row-level consistency for the clear tests is what makes the wide-range tests stand out — and iterating on the chart is itself how I'm bringing the harness into control.
+Since the podcast I've been running more experiments. The setup is deliberately constrained: I use only GitHub issues and tests as inputs, I let Claude run for a few hours, and I only look at the code afterward. What surprised me most was the similarity between independent runs. That's the chart at the top of the page.  Two separate sessions, given the same issue and a clear test, mostly produce comparable output and take comparable amounts of time. That row-level consistency for the clear tests is what makes the wide-range tests stand out — and iterating on the chart is itself how I'm bringing the harness into control. 
 
-![Rebuild 31, 32, 33 — independent runs across the same scenarios](metrics_313233.png)
-
-![Rebuild 35–40 — independent runs across the same scenarios](metrics_combined_3540.png)
+![Rebuild 35-40— independent runs across the same scenarios](metrics_3540.png)
 
 Two charts I'm running surface what look like two distinct kinds of problem — patterns I'm continuing to validate.
 
-The first chart works on **pairs of runs** and detects ambiguous test expectations. For clear tests, two separate Claude sessions take a similar amount of time to implement against. When the run-to-run range for a test is much wider than the rest, the two resulting work-trees have so far had *functional* differences — different behavior, not just different code. The correlation I'm leaning on is wider range, more variation, less stable, worse specification. Once I know that, I can ask Claude to express the functional difference as a test case, and that test case will pass in one work-tree and fail in the other. The natural assumption would be that the worker (the agent or the model) is the source of variation, but in my case it's been the system: the testing harness, the quality of the tests, and the order in which I provided them. It feels a bit like the red bead game. The variation lives in the system, not in the worker. By detecting this, Claude can raise it and the tester can be prompted to select which implementation they intended.
+The first chart works on **pairs of runs** and detects ambiguous test expectations. For clear tests, two separate Claude sessions take a similar amount of time to implement against. When the run-to-run range for a test is much wider than the rest, the two resulting work-trees have so far had *functional* differences — different behavior, not just different code. The correlation I'm leaning on is wider range, more variation, less stable, worse specification. What seems to be happening is that if it trips, like picking the wrong OS or version of python, it goes in unpredictable directions, scanning files that pollute its context, basically down a rabbit hole. The natural assumption would be that the worker (the agent or the model) is the source of variation, but in my case it's been the system: the testing harness, the quality of the tests, and the order in which I provided them. It feels a bit like the red bead game. The variation lives in the system, not in the worker. By detecting this, Claude can express the functional difference as a test case, raise it and the tester can be prompted to select which implementation they intended.
 
-The second chart works on **individual runs** and looks for contradictions — tests that conflict with existing functionality and can't be implemented as written. The signal here is different in shape but the principle is the same. So far the cases I've looked at suggest the specification is wrong, not Claude. One example needed the tester to review the test because the change had downstream impacts that would have required significant existing test expectations to be updated. The other was more for a developer; I don't let Claude add libraries/dependencies on the fly so it'll spend minutes trying to build them from scratch.
+The second chart works on **individual runs** and looks for contradictions — tests that conflict with existing functionality and can't be implemented as written. The signal here is different in shape but the principle is the same. So far the cases I've looked at suggest the specification is wrong, not Claude. One example needed the me to review the test because the change had downstream impacts that would have required significant existing test expectations to be updated. The other was more for a developer; I don't let Claude add libraries/dependencies on the fly so it'll spend minutes trying to build them from scratch.
 
-I've published a detailed walkthrough of both techniques, with the actual data, in [PBC for Claude Code: Research][2]. The short summary is that, after the iterative work to identify and exclude the assignable causes, run-to-run variation can become a control chart for *specification quality*.
+I've published a detailed walkthrough of both techniques, with the actual data, in [PBC for Claude Code: Research][2]. The short summary is that, after the iterative work to identify and exclude the assignable causes, run-to-run variation can become a control chart for *specification quality*. 
 
 ---
 
