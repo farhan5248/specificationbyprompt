@@ -9,7 +9,7 @@ title: PBC for Claude Code - Research
 
 # Context
 
-This page is the detailed companion to [A Process Behavior Chart for Claude Code][1]. The post proposes that variation across Claude Code runs, when measured against a deterministic harness, can become a control chart for specification quality rather than a measure of model noise. This page shows the data and method behind that hypothesis.
+This page is the detailed companion to [A Process Behavior Chart for Claude Code][1]. The post proposes that variation across Claude Code runs, when measured against a deterministic harness, can become a control chart for system-input quality (specification, prompt, harness) rather than a measure of model noise. This page shows the data and method behind that hypothesis.
 
 ---
 
@@ -18,6 +18,8 @@ This page is the detailed companion to [A Process Behavior Chart for Claude Code
 There are two distinct ways a test specification can be wrong, and they show up as different patterns in the data.
 
 **Ambiguity** — the specification admits more than one valid implementation. Two independent Claude runs against the same test will both pass it, but they'll arrive at "passing" through different code. The signature is in *runtime*: each guess at the tester's intent costs about 45 seconds to evaluate, because Claude has to run all the tests after each attempt. The more complex the spec, the more guesses, and the more 45-second taxes accumulate. Wall-clock time on each run looks normal individually; the divergence shows up only when you put a *pair* of runs side by side and look at the *range* between their times.
+
+The cause can sit in the specification (the test admits more than one valid implementation) or in the prompt that drives the worker (the diagnosis path isn't forced, so the model arrives at a different valid implementation). Both produce the same wide-pair-range signature; the chart doesn't distinguish them, the run inspection does. See [pbc-4445][4] for a case where the assignable cause was in the prompt template, not the spec.
 
 This 45-second tax is what makes the approach work. Without a deterministic, dominant per-iteration cost, paired runs would vary mainly by Claude's own response time and network latency — both small in absolute terms, but large relative to each other once the tax is removed. The runtime range would be noise, not signal. The harness builds the floor; the chart reads what stands above it.
 
@@ -75,6 +77,8 @@ For each new test run, three actionable outcomes:
 3. **Crosses UCL** — contradiction. The tester reviews what existing behavior the new spec conflicts with. If the pair-range is also wide, fix the contradiction first; re-run; if pair-range is still wide on the resolved spec, treat it as ambiguity from there.
 
 The reverse-prompt the tester sees is different in each case, and that's the point. A single "your test failed" message would conflate the two failure modes and waste the tester's time chasing the wrong fix. Contradiction sends them to the *existing* tests; ambiguity sends them to the *new* one. Picking the right question is the chart pair's job — it's what neither chart can do alone.
+
+If inspection traces the wide range to the prompt or harness rather than to the spec, the remediation goes to the maintainer of those, not the tester. The reverse-prompt is for the spec case; the prompt-case yields a fix to the orchestration. Same chart signal, different audience.
 
 ---
 
@@ -152,7 +156,9 @@ The honest answer to "how do you know you're not chasing common cause" is: you d
 - Common cause variation is mostly unexplored. The width of the common-cause band may itself be a measure of how tight the specification language is.
 - How does the chart behave when the underlying harness changes (new DSL grammar, new test automation patterns)? Is there a re-baselining protocol?
 - Can the reverse-prompt be generated automatically when a special-cause point is detected, so the tester gets feedback without a developer in the loop?
+- When the wide-range signal fires, how do we cheaply distinguish spec-ambiguity from prompt-ambiguity from harness-ambiguity? Today the answer is manual JSONL inspection; the candidate cheap signal is whether the two work-trees diverged in the **same file** (spec) vs. **different files reaching the same observable** (prompt/harness).
 
 ---
 
 [1]: pbc-for-claude-code
+[4]: pbc-4445
