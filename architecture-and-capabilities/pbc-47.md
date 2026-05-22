@@ -1,0 +1,125 @@
+---
+title: PBC for Claude Code - Rebuild47 #384 Remediation Check
+---
+
+* TOC
+{:toc}
+
+---
+
+# Context
+
+This page is the follow-up to [pbc-4445][3]. That investigation traced a wide pair-range in Rebuild44 vs Rebuild45 to a single assignable cause in the green-phase prompt: the original `green.md` said "examine the failing code path" without specifying *how*, so Claude satisfied that step inconsistently — sometimes mining JaCoCo cross-references, sometimes running `ls` on the coverage dir and pivoting away.
+
+[Issue #384][4] split `green.md` into an `identify.md` + `fix.md` pair, made red invoke `mvn verify -Dtest=<runner>` so jacoco-with-tests is populated before green starts, and spelled out the cross-reference steps literally in identify.md. After the three-pass flag rollout completed (May 12), Rebuild47 (May 13) was the first full Darmok run on `sheep-dog-grammar` against the unconditional new behavior.
+
+This page asks: **did the prompt change actually drive Claude to use JaCoCo?** The investigation method is the same as pbc-4445 — JSONL transcripts and the runner log, minute by minute — but the question is forward-looking. The pair-range chart still hasn't been built, so this is again a manual inspection.
+
+---
+
+# What We Observed
+
+Rebuild47 ran 45 scenarios on `sheep-dog-grammar`. 33 of those short-circuited via the red-exit-100 path (impl already existed, green skipped). The remaining **12 scenarios reached the green phase** and got identify+fix's full treatment. Each one has a JSONL transcript under `~/.claude/projects/-home-farhan-git-sheep-dog-main/<session-id>.jsonl`.
+
+For each session I counted tool invocations that touched `target/site/jacoco-with-tests/` — `Read` (direct file reads), `Grep` (in-IDE grep tool against jacoco paths), and `Bash` (shell commands referencing jacoco). Tool-call counts are an indirect proxy for "did the model actually use JaCoCo?" but they're concrete and gradable; a session with zero of all three did not use the report.
+
+| # | Scenario | Session | Read | Grep | Bash | Verdict |
+|---|---|---|---|---|---|---|
+| 1 | Test suite name should start with a capital letter validation | `12f6e1a5` | 0 | 0 | 1 | ⚠️ ran the grep, didn't continue |
+| 2 | Test case name should start with a capital letter validation | `ce8659ef` | 4 | 1 | 0 | ✅ used |
+| 3 | No component in the first step triggers an error validation | `b7d6207d` | 4 | 0 | 4 | ✅ used heavily |
+| 4 | Test step must have a valid object name validation | `443c718c` | 0 | 0 | 7 | ✅ used (via bash) |
+| 5 | Test step must have a valid step definition name validation | `dce24ae5` | 4 | 0 | 4 | ✅ used heavily |
+| 6 | Header row Cell names should start with a capital letter validation | `80d602af` | 0 | 0 | 7 | ✅ used (via bash) |
+| 7 | Body row Cell names can be any case validation | `f7602aa5` | 0 | 0 | 4 | ✅ used (via bash) |
+| 8 | This object doesn't exist validation | `a56ac8b8` | 0 | 0 | 0 | ❌ skipped JaCoCo (correctly, per compile-error fallback) |
+| 9 | This object step definition doesn't exist validation | `840cfcc8` | 0 | 1 | 2 | ✅ used |
+| 10 | This object step definition parameter set doesn't exist validation | `a68a95e3` | 3 | 0 | 6 | ✅ used heavily |
+| 11 | This object step definition text parameter doesn't exist validation | `4175af83` | 0 | 0 | 3 | ✅ used |
+| 12 | This object step definition text parameter exists with other parameters validation | `4710a933` | 2 | 0 | 3 | ✅ used |
+
+**Headline: 10/12 used JaCoCo unambiguously. 1/12 ran the prompted grep but didn't follow through. 1/12 had zero JaCoCo references — and that one is the interesting case.**
+
+The remediation `green.md` → `identify.md`/`fix.md` worked on the dimension it was designed for: every session in the table executed step 1 of identify.md (the log.txt error grep) and then went looking for templates. The variance from pbc-4445 — `ls` vs cross-reference — does not recur in this sample of 12.
+
+---
+
+# Deep Dive — `a56ac8b8` (the one with zero JaCoCo references)
+
+`a56ac8b8` is the session for scenario 8, "This object doesn't exist validation." Tool-call counts say it never touched jacoco-with-tests. The natural read is "the prompt failed here." It didn't.
+
+## Identify phase reasoned correctly
+
+The first two assistant turns trace the decision in plain text:
+
+1. **Step 1 of identify.md executed**: `Grep "FAILED|ERROR|Tests run.*Failures|BUILD FAILURE" → log.txt`
+2. **Result**:
+
+   ```
+   [ERROR] COMPILATION ERROR :
+   [ERROR] /.../InputFileAsciidocFileImpl.java:[16,8]
+   org.farhan.impl.InputFileAsciidocFileImpl is not abstract and does not
+   override abstract method setAbsent(java.util.HashMap<...>) in
+   org.farhan.objects.specprj.src.test.resources.asciidoc.stepdefs.dailybatchjob.InputFileAsciidocFile
+   [INFO] BUILD FAILURE
+   ```
+
+3. **Claude's next assistant message (verbatim)**:
+
+   > Compilation failure — `InputFileAsciidocFileImpl` doesn't override `setAbsent(HashMap<String,String>)` from the `InputFileAsciidocFile` interface. **Since compilation fails, JaCoCo has no output**; falling back to source-tree grep per the identify instructions.
+
+This is the right call. JaCoCo records coverage during test execution; a compilation failure means the test never ran, so the grep against `**/*.java.html` would return zero matches for the scenario name. Identify.md's clause "Source-tree grep is a fallback only when JaCoCo produces zero hits" was meant for exactly this case, and the model correctly inferred the branch without having to run the grep just to prove the negative.
+
+So the "0 / 0 / 0" row in the table is not a failure of identify.md — it's an opt-out that identify.md authorised. The conclusion the tool-call counts wanted us to reach is wrong; the *reasoning* the JSONL shows is right.
+
+## Fix phase went off-script in a different way
+
+The actual problem with `a56ac8b8` shows up after identify hands off to fix. The fix.md prompt resumes the session and asks Claude to make `${runnerClassName}` pass. The one-line override fix landed at message [73] (`Edit InputFileAsciidocFileImpl.java` adding the missing `setAbsent` method). At that point the test would pass.
+
+It kept going for 200+ more messages:
+
+- [187, 189, 249] **Three invocations of** `python3 .claude/skills/rgr-refactor/scripts/validate_main.py sheep-dog-core/sheep-dog-grammar` — an **rgr-refactor** validator script that scans for style/compliance violations across all of `src/main/java/`.
+- [144, 146, 148, 238, 289, 298] Six edits to `src/main/java/.../TestStepIssueDetector.java` and `TestStepIssueTypes.java` — production code with no obvious connection to `InputFileAsciidocFileImpl`'s missing override.
+- [151, 153, 241, 243] Four more edits to `ValidateActionImpl.java` — another test impl class.
+
+11 Edit/Write tool calls in fix-phase, only **1** of which was strictly required to make the failing runner pass. The other 10 came from running a refactor-phase validator inside the green-phase fix step and then chasing every compliance finding it surfaced.
+
+The unstated assumption fix.md leaned on was "modify only the files Identify named." Identify only named `InputFileAsciidocFileImpl.java`. Fix went well beyond.
+
+---
+
+# Mapping to the Research
+
+The pbc-4445 framing was: *wide pair-range → look for an assignable cause in the system, not the worker.* Rebuild47 doesn't have a pair to range against yet (Rebuild48 will), but the JSONL inspection still produced two findings on the system-side:
+
+| Finding | Site | Severity | Fix |
+|---|---|---|---|
+| Identify+fix's JaCoCo step is now reliably executed on green-phase failures | prompt | resolved | — (validated by the table above) |
+| Fix-phase runs rgr-refactor scripts and edits compliance-only files past the test-passing point | prompt | newly surfaced | scope fence in fix.md (commit `569383e`) |
+| identify.md's framing of JaCoCo as "what did the failing test touch" misses the purpose — finding **similar passing tests as templates** | prompt | latent in the table's "✅ used (via bash)" rows | rewrite identify.md step 2 with explicit template-finder framing (commit `569383e`) |
+
+The third finding came from a question worth quoting: *"jacoco is used to see how similar tests which are currently passing work to narrow claude's focus. Is that clear in the prompt?"* The original `green.md` and the post-#384 identify.md both framed JaCoCo from the failing-test angle (which coverage the failing test left). The actual value is the opposite angle — which **passing** tests left coverage on the same classes, so Claude can read those tests as templates for what the failing test should look like. Both prompt versions miss this. The rewrite in `569383e` adds an explicit "Why this step matters" paragraph that names the template-finder purpose.
+
+---
+
+# What This Validates
+
+1. **#384's identify+fix split removed the original assignable cause.** Of 12 green-phase scenarios in Rebuild47, 10 used JaCoCo unambiguously; the 11th ran the prompted grep but didn't continue; the 12th correctly opted out for a compile-error case. The `ls`-vs-cross-reference variance that drove pbc-4445's 5.6 min and 4.2 min pair-ranges did not recur.
+2. **Tool-call counts alone are not enough to grade a session.** The "0 / 0 / 0" verdict for `a56ac8b8` looked like a regression and was actually a correct fallback. The grading rule needs a text-search step: did the assistant explain why it skipped, and does that reasoning align with the prompt's conditional structure?
+3. **A new assignable cause surfaced in fix.md — scope creep into refactor concerns.** Without an explicit fence, fix.md trusted the model to stop at the test-passing point. The model interpreted "make `${runnerClassName}` pass" liberally, ran `validate_main.py` from rgr-refactor, and chased compliance violations across unrelated production files. Fix-phase remediation: explicit "stop when that test passes" guidance plus a fence on `.claude/skills/rgr-refactor/scripts/*`.
+4. **Prompt purpose statements matter more than step lists.** identify.md's step 2 had clear *what to do* instructions but the *why* was missing. The user-facing clarification ("similar passing tests as templates") changes how Claude prioritises grep results — read the OTHER test names in the coverage annotations, not just the failing one. This was the user's contribution to this investigation, not mine.
+5. **Wheeler's "tampering with common cause" warning still applies.** The Rebuild47 sample is 12 sessions, not 60. The "10/12 used JaCoCo" reading is suggestive, not statistically settled. Both prompt patches in `569383e` are reactive to specific observed sessions, which is safer than reactive to summary statistics, but the next several rebuilds need to confirm that the table tightens further and the fix-phase scope creep does not recur.
+
+---
+
+# Open Questions From This Case
+
+- Will the reframed identify.md (template-finder purpose) actually change behavior, or did the model already infer it from context? Compare the same-scenario sessions in Rebuild48 against Rebuild47's a68a95e3 / b7d6207d / dce24ae5 (the "used heavily" rows) — if the template-test names show up in the assistant's reasoning text more explicitly, the reframe is doing work.
+- The "✅ used (via bash)" rows — scenarios 4, 6, 7 — all have **zero direct `Read` calls** against jacoco files. Bash-only usage usually means `ls`-ing the dir or grepping for a path; without a direct Read of a `.java.html`, the line-level cross-reference can't happen. These rows might be the next variance source the chart catches once it exists.
+- Fix-phase scope creep is unlikely to be unique to `a56ac8b8`. Pre-#384 sessions where Claude ran `mvn clean install` after the actual fix landed are the same shape — the scope creep was just less visible because there was only one prompt. A retro grep across all Rebuild47 JSONLs for `validate_main` or similar would surface other affected sessions.
+- The 33 scenarios that short-circuited red-exit-100 are out of scope here, but they're also the cheapest cases to over-fix. If fix-phase scope creep happens there, the metrics row would still show 0 ms in green/refactor, hiding the extra work. Worth a future inspection.
+
+---
+
+[3]: pbc-4445
+[4]: https://github.com/farhan5248/sheep-dog-main/issues/384
