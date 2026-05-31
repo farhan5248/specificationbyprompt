@@ -1,0 +1,148 @@
+---
+title: PBC for Claude Code - Rebuild77 Repeated-Run Control Study
+---
+
+* TOC
+{:toc}
+
+---
+
+# Context
+
+The earlier studies ([pbc-4445][3], [pbc-4849][4], [pbc-6970][6], [pbc-7576][7]) compare *two* runs to ask "is this gap signal or noise?" This page does something different: it runs the **same scenario six times back-to-back** on one branch (`Rebuild77`) with the **same** post-fix `darmok-maven-plugin` version, and treats the six green-phase times as an individuals series — an XmR control chart — to ask "is the process stable, and where does the remaining variation live?"
+
+Scoping note: `Rebuild77` actually has ten runs of this scenario, but the first four used earlier plugin versions. **Only the last six (runs 5–10) share the current version**, so only those are analyzed here — mixing versions would contaminate the control limits.
+
+The scenario is `Test suite name should start with a capital letter validation` — the first test case of the run, which creates two new `src/main` classes plus impls and Guice bindings (≈10 files). It is the same scenario whose pair (R75/R76) was Case B in [pbc-7576][7], where two assignable prompt causes were found and fixed:
+
+1. the `.m2`/jar hunt — green-compile now reads `uml-package.md` + the interaction specs before the log; green-verify File-IO Rule 1 now forbids `Bash` jar inspection and states *spec'd ⇒ create*; and
+2. the build-as-regression framing — green-verify now runs the scoped test first and forbids pre-simulating the fixture.
+
+Plus the green-compile trigger was widened to grep `Guice configuration errors` as well as `COMPILATION ERROR`, so the first-appearance binding case is handled in compile. This study asks what is *left* after those fixes.
+
+| | Value |
+|---|---|
+| Branch | `Rebuild77` |
+| Scenario | `Test suite name should start with a capital letter validation` |
+| Runs analyzed | 6 consecutive (runs 5–10), same scenario, same plugin version |
+| Green mean | 7.04 min |
+| Green observed range | 6.10 – 7.82 min (Δ 1.72 min) |
+| XmR natural process limits | 5.41 – 8.68 min (all 6 points inside) |
+| Verdict | **in statistical control — common-cause variation, no assignable signal** |
+
+---
+
+# What We Observed
+
+The study scopes to green. Refactor is ignored (its variation, including occasional token-budget exhaustion, is not tracked here). Green totals are the authoritative `PhaseGreenMs` from metrics.csv; the compile/verify split is from the mojo-log brackets (split at the `Writing jacoco-shortlist.md` line). The mojo bracket runs slightly short of `PhaseGreenMs` because the latter also includes the ~20 s post-completion allowlist+verify check.
+
+| Run | Commit | green-compile | green-verify | **green (metrics)** |
+|---|---|---|---|---|
+| 5 | `d9f96ce` | 129 s | 319 s | 7.82 min |
+| 6 | `34750ca` | 141 s | 289 s | 7.51 min |
+| 7 | `7148a2c` | 132 s | 240 s | 6.55 min |
+| 8 | `44997ac` | 122 s | 222 s | **6.10 min** |
+| 9 | `59293f6` | 151 s | 238 s | 6.83 min |
+| 10 | `45ad4d8` | 149 s | 277 s | 7.45 min |
+
+---
+
+# The Control Chart
+
+Treating the six green totals as an XmR individuals series:
+
+- Mean (centre line): **422,620 ms** (7.04 min)
+- Mean moving range (MR̄): **36,856 ms** (0.61 min)
+- Upper natural process limit: mean + 2.66·MR̄ = **520,657 ms** (8.68 min)
+- Lower natural process limit: mean − 2.66·MR̄ = **324,583 ms** (5.41 min)
+
+All six points (365,939 – 469,404 ms) sit inside [324,583, 520,657]. No point is outside the limits, and the largest moving range (57,521 ms) is well under the MR chart's upper limit (3.27·MR̄ = 120,519 ms). **The process is in statistical control.**
+
+This is the key result. The prior pair study ([pbc-7576][7] Case B) found *two* assignable causes in this exact scenario; both are now fixed, and what remains is a stable common-cause process. The success condition is not zero variation — it is variation with no special cause. Acting on any single point now (e.g. tuning the prompt because one run hit 7.82 min) would be tampering. More samples did not widen the spread: runs 8–10 added a new low (6.10 min) but stayed inside the limits established by the earlier runs.
+
+---
+
+# Where The Variation Lives
+
+With the plugin version held constant, the two green sub-phases behave very differently:
+
+| Sub-phase | Range across 6 runs | Behaviour |
+|---|---|---|
+| green-compile | 122 – 151 s (Δ 29 s) | **stable; every run creates the Guice stub + 1 `mvn`** |
+| green-verify | 222 – 319 s (Δ 97 s) | **the variable phase** |
+
+**green-compile is monomodal and consistent.** The widened trigger does its job the same way every run: the first appearance of `ValidateAction` produces a Guice missing-binding (a runtime error, not a compile error — see [pbc-7576][7]), compile recognizes it, creates the stub + binding, and re-runs the scoped build. There is no fast-exit cluster among same-version runs.
+
+> Correction to an interim reading. An earlier snapshot of three runs reported green-compile as bimodal (a 46–60 s "fast exit" cluster vs a ~130 s "create-stub" cluster). Those fast-exit runs were **runs 3–4, on an older plugin version**. Once the analysis is scoped to a single version, the bimodality disappears — compile is uniformly ~122–151 s. Lesson for the methodology: hold the plugin version constant before computing a range, and beware estimating a range from a handful of points that silently span versions.
+
+**green-verify carries all the variation**, and it is the same axis [pbc-7576][7] Case A identified: did this run get the implementation right on the first attempt, or did it explore/retry? The fast verify (run 8, 222 s) wrote the `setTestSuiteName` call correctly first try; the slow ones (runs 5–6, 289–319 s) got the setter signature wrong, hunted it 2–3 ways, and ran a second `mvn`. That is irreducible model nondeterminism — there is no instruction that tightens it without risking under-exploration.
+
+## What green-compile's ~130 s is actually spent on (not reads)
+
+Walking run 9's compile session, the ~2.5 min breaks down roughly as: spec reads ~15–20 s; grep to locate the `ValidateAction` interface ~40 s; **write the stub impl + edit the `TestConfig` binding ~20 s**; **run `mvn verify -Dtest=RGRTest` ~22–25 s**; check result + write shortlist ~10 s. The old 30 s compile grepped the log and exited — it did none of the middle three. So the extra ~90 s is dominated by **real work the old version skipped** (one full build + writing the Guice stub), not by over-reading. This is why deferring the stub to verify would *move* the cost, not delete it — the work still happens, just in a different phase.
+
+---
+
+# Root Cause
+
+Common cause. After the [pbc-7576][7] fixes removed the assignable causes, the residual green-phase variation is the run-to-run nondeterminism of how many exploration probes the model samples before converging on the same ~6 edits. green-compile, once version is held constant, is stable; green-verify is where the first-try-right-vs-retry coin lands. Neither has a removable special cause.
+
+---
+
+# The Fix, or Why No Fix
+
+**No further scenario-level or prompt change is warranted.** The process is in control. Continuing to edit the prompts to chase the remaining green-verify spread would be tampering — adding rules to an already-stable process, which also risks *increasing* variance, since (as observed in the working sessions) every added instruction is another thing the model weighs and can act on. The create-vs-reuse instinct that drove the original jar hunt is itself reasonable engineering behavior; the fix was to point it at the spec, not to suppress judgment, and that fix has landed.
+
+**The harness frontier is closed; the remaining levers are per-project inputs.** With the process in control, there is nothing left to tweak in Darmok itself without tampering. Further variation reduction has to come from the two inputs the harness consumes — the UML specs and the test cases — discussed below. Both are legitimate *work on the system* (improving an input shifts the whole distribution) rather than tampering (reacting to a single point).
+
+Measurement-level follow-ups remain the only open items, unchanged from [pbc-7576][7]:
+
+1. Rank the pair-range sheet on **active** (idle-stripped) time per [pbc-7374][5], so common-cause wall-clock pairs stop surfacing.
+2. Apply XmR limits to the selection so only out-of-control points trigger a divergence walk — exactly the discipline this study demonstrates.
+
+---
+
+# The Two Remaining Levers (Per-Project Inputs, Not the Harness)
+
+## 1. UML spec richness — targeted, not "paste the whole codebase"
+
+A long green-verify means the scenario was either **too vague or asking too much**: the spec didn't pin a contract the worker then had to discover. The retry we observed is exactly this — the `setTestSuiteName` signature wasn't in the spec, so the model hunted it. The fix is to add **the specific signatures/contracts the worker currently discovers**, identified from each retry's JSONL — *not* to paste the entire codebase. The blunt version trades exploration variation for a new uncontrollable source: a much larger context means more per-request prefill/TTFT, which is server-side noise you cannot control (the [pbc-7374][5] warning). So: examine the retry → enrich the spec with just the missing contract. Empirical and targeted.
+
+## 2. Test-case quality and path generation — an MBT lever, on its own metric
+
+Test quality and ordering affect the output, so a model-based-testing tool that controls graph traversal is the lever for the test-side variation:
+
+- **Path-size homogeneity.** "Fewest paths to cover the graph" (minimal path cover) deliberately yields paths of wildly unequal length — that *is* the source of subgroup heterogeneity. Generating instead a set of **similar-sized paths**, or **bounding assertions-per-test**, makes the work units uniform. In SPC terms this is rational subgrouping — redesigning the work so the population is homogeneous, which is system work, not tampering. Caveat: aim for *bounded*, not *identical*, or you risk splitting one coherent behavior across artificial paths that test nothing on their own.
+- **Traversal order is itself a prompt.** Because the green session is shared, each earlier scenario teaches the model a generalization; a bad order teaches the wrong one, and the model writes code that passes the *visible* tests for the wrong reason. Order control is therefore correctness control, not just speed.
+
+## 0-green times are a distinct failure mode, not fast successes
+
+A 0 ms green means green did **nothing**: the test passed without forcing any new code because an earlier scenario already implemented its path — a **free-rider / test-passing-for-the-wrong-reason**. Two consequences:
+
+- **For the control chart:** 0-green points are a *different population*, not low outliers. Including them understates the mean and pollutes the limits with a separate mechanism. They should be **excluded from the green XmR (or charted separately)** and flagged as coverage/order defects — a 0 is a red flag, not a green checkmark.
+- **For metrics:** each lever needs its **own** chart, not green-time XmR. Path uniformity → the distribution of per-test size; order/free-rider → the count of 0-green scenarios, driven toward zero. Green-time XmR stays the harness chart; these are separate systems.
+
+---
+
+# What This Validates
+
+1. **"In control" is the target, not "fast."** Six same-version runs with no point outside the natural limits is the success condition. The prompt fixes converted an assignable-cause scenario into a stable common-cause one; that is the win, even though the mean did not drop.
+2. **Hold the variable (plugin version) constant before charting.** Mixing versions produced a false "bimodal compile" reading; scoping to six same-version runs reversed it. A control chart is only meaningful over a fixed process.
+3. **The compile/verify split is not the cost driver.** Compile is now the stable phase; variation is in verify, on the first-try-right-vs-retry axis that spans the implementation, not on which phase does the stub.
+4. **Adding prompt rules has diminishing — possibly negative — returns.** Once a process is in control, more instructions are tampering and can widen variation. The next gains are in the inputs (specs, test cases), not the harness.
+
+---
+
+# Open Questions From This Case
+
+- **Is green-compile creating the stub the cheapest option?** It is stable, but it adds ~130 s every run (one build + the stub write). A future prompt could defer the Guice missing-binding stub to verify (fixing only true `COMPILATION ERROR`s in compile), which might lower the compile mean — but the work moves to verify rather than disappearing, so total may be net-neutral. Test on a fixed version before committing; it is a candidate, not a clear win.
+- **Where do the active-time / XmR follow-ups get anchored?** Still no GH issue; needed before the sheet's ranking column changes.
+- **The two input levers (spec enrichment, MBT path/order control) each need their own study and metric** — they will not show up on the green-time chart and should not be measured with it.
+
+---
+
+[3]: pbc-4445
+[4]: pbc-4849
+[5]: pbc-7374
+[6]: pbc-6970
+[7]: pbc-7576
