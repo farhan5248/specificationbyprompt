@@ -1,0 +1,12 @@
+scenario	green73	green74
+Test suite name should start with a capital letter validation	74459	78079
+Test case name should start with a capital letter validation	42855	49152
+No component in the first step triggers an error validation	38758	42753
+Test step must have a valid object name validation	48978	48324
+Test step must have a valid step definition name validation	81460	50564
+Header row Cell names should start with a capital letter validation	51083	43285
+Body row Cell names can be any case validation	43289	53435
+This object doesn't exist validation	46262	51119
+This object step definition doesn't exist validation	51641	64915
+This object step definition parameter set doesn't exist validation	61861	47489
+This object step definition text parameter doesn't exist validation	45121	56711
