@@ -17,21 +17,42 @@ This page defines that experiment: *which* charts to put on Claude's runs and *w
 
 # What We Measure
 
-Every test case is run **twice**. A single run's wall-clock time is not very useful on its own; the useful quantity is the **pair-range** — the absolute difference between the two runs' green-phase times for the same test. Two Claudes implementing the same clear, well-sized test should take roughly the same time; when they don't, the gap is the signal.
+Every test case is run **twice** — two git worktrees, A and B, running concurrently from the same parent commit ([#153](https://github.com/farhan5248/sheep-dog-main/issues/153)) so the two halves share everything but the worker's nondeterminism. From the two green-phase times we derive a small set of variables. Naming them precisely matters, because *green time*, its *moving range*, the *pair range*, and the *pair range's moving range* are easy to confuse.
 
-The pair-range is charted **pooled across all the scenarios**, on one chart, even though the scenarios have very different absolute durations. That is legitimate because the *range* strips the per-scenario baseline out — it is a difference, so the scenario's inherent size cancels, leaving only the run-to-run reproducibility of the harness. (Charting the raw *times* this way would not work; those are heterogeneous and would have to be charted per scenario.)
+| Variable | Definition | In control / stable | Above the UCL |
+|---|---|---|---|
+| **green a / green b time** | green-phase wall-clock in worktree A / B | *raw inputs* | — |
+| **green tokens** | output tokens emitted in the green phase | feeds the `scale`; equal tokens across a pair ⇒ a wide pair range is real input variance, not server | — |
+| **scale** | per-test factor (from tokens) normalizing green time for the day's server decode rate; starts at 1, set once a run is reviewed | comparable runs map to ~the same scale | — |
+| **green min time** | min(green a, green b) — the cleaner of the pair | *intermediate* | — |
+| **green time** | scaled green min time (green min × scale); charted as individuals **over the ordered sequence** | a normal-sized step for its place in the sequence | **under the timeout → too big / under-specified test** (Claude has to infer — e.g. a Given/When/Then needing more than ~3 steps it wasn't given); **at the timeout → contradiction, or — likelier now — Claude building a forbidden dependency in-project** because a tester can't change project deps |
+| **green time moving range** | \|green time₍ₙ₎ − green time₍ₙ₋₁₎\| | consecutive tests step up by a similar amount — a well-graded sequence | this test was **too big a leap** from the previous one |
+| **green time pair range** | \|green a − green b\| (raw — server cancels) | the two worktrees agree — a **clear / well-specified** test | the worktrees diverged — a **vague / ambiguous** test (or one run got lucky) |
+| **green time pair range moving range** | \|pair range₍ₙ₎ − pair range₍ₙ₋₁₎\| | run-to-run jitter is **consistent** — the steady noise floor for the project at that time of day | jitter **jumped** for this test — flags it even if its raw pair range looked acceptable |
 
-For the pair-range to measure only reproducibility, the two runs must share everything but the worker's nondeterminism — same parent commit, same harness version, and ideally the same wall-clock window, so a slow-server night can't inflate one half (see Open Questions / [#153](https://github.com/farhan5248/sheep-dog-main/issues/153)).
+Two things to fix in your head before the charts:
 
-# Two Signals, One Source: the Input
+- **`green time` is the *scaled* lower of the pair.** Take `green min time` = min(green a, green b) — the cleaner run — and multiply by the per-test `scale` derived from `green tokens`, which normalizes for the server's decode rate that day so green times are comparable across runs.
+- **The pair range needs no scaling.** Because A and B run concurrently on the same commit, the server is identical for both, so `green time pair range` is pure run-to-run reproducibility — the server cancels. (This is what [#153](https://github.com/farhan5248/sheep-dog-main/issues/153) bought: the slow-server-night confound is gone from the pair.)
 
-Two charts that look like two different problems but point at the same place — the input.
+The pair range is charted **pooled across all the scenarios** — the *range* strips each scenario's inherent duration out (it's a difference), leaving only reproducibility, so heterogeneous scenarios sit on one chart. The green time, by contrast, is charted in **sequence order** (next section).
 
-- **The pair chart** flags a test whose two runs diverge far more than the rest. The cause can be an **ambiguous** test — the spec admits more than one valid implementation, both runs pass, but they build different things — or a test that is perfectly **clear and simply too big**: more to infer, more to search, more judgement, and that extra solution space is what makes the two runs wander apart. Either way the lever is the *test*: disambiguate it, or split it smaller.
+# Two Charts, One Source: the Input
 
-- **The single-run chart** flags a test whose one run balloons past the upper limit — **contradiction or thrash**: the new test conflicts with what already passes, so Claude goes back and forth, fix the new test and break an old one, paying the per-iteration build tax over and over. This signal is **defined but not yet exercised**: the test suite is deliberately cleaned so no test contradicts existing behavior, so the situation can't currently arise (the one contradiction I saw happened before I started tracking data). It is here for completeness, to be revisited once the model-based-testing tool can generate test cases on demand and create the situation deliberately.
+The variables feed two control charts, both indexed by the **test sequence** — tests are ordered shortest-to-longest (today by hand, walking `sheep-dog-grammar/scenarios-graph.graphml`).
 
-The unifying point that makes the whole approach worth it: **a point outside the limits is a signal to change the input, not the worker.** A too-big, ambiguous, contradictory, or badly-ordered test creates more variation than any amount of tuning the harness could remove.
+**1. The green-time chart** plots `green time` (the scaled minimum) as individuals plus its moving range. It asks *is any single test asking too much?*
+
+- A point **over the UCL but under the max timeout** is a **too-big / under-specified** test: the spec is thin enough that Claude has to infer its way to an answer (a Given/When/Then short of the ~3 steps it needs). A model-based-testing tool can prevent outright contradictions, but if the model isn't detailed enough it can't stop Claude inferring from a thin test — so this signal persists.
+- A point **at the max timeout** is a **contradiction** (the new test fights one that already passes and Claude plays whack-a-mole) or — likelier now, given the checks in place — **Claude trying to build a dependency it isn't allowed to add**, constructing the library inside the project from scratch.
+- A spike in the **moving range** is a **too-big leap** between consecutive tests. Counterintuitively the short early tests take the longest and the long later ones the least (they reuse established patterns), and the very first is a **warm-up** that builds the scaffolding — stratify it out. Past the warm-up the moving range should be flat; keeping it flat means sequencing each test to differ by a similar amount (≈x steps), which is how you catch a test that demands too big a jump in understanding.
+
+**2. The pair-range chart** plots `green time pair range` as individuals plus its moving range. It asks *is any single test ambiguous?*
+
+- A high **pair range** means the two worktrees diverged — a **vague** test that admits more than one implementation (or one run got lucky; a low pair range on a big test can be luck, not clarity, which is exactly why the green-time chart is needed alongside it).
+- The **moving range** of the pair range should be stable — the ordinary jitter is roughly constant for a project at a given time of day; a jump flags a test whose reproducibility is off relative to its neighbours.
+
+The unifying point that makes the whole approach worth it: **a point outside the limits is a signal to change the input, not the worker.** A too-big, ambiguous, contradictory, or badly-ordered test creates more variation than any amount of tuning the harness could remove. The worked examples — real points crossing these limits, traced back to their inputs — live in [Darmok - Harness for Claude Code][8].
 
 # Why the Moving Range, Not the Standard Deviation
 
@@ -73,8 +94,8 @@ The chart only ever says "the process worked harder here." *Which* input lever t
 
 # Open Questions
 
-- **The common-cause band itself.** Its width may be a measure of how tight the specification language is. The remaining floor is the model's sampling nondeterminism plus server-side time-to-first-token / decode-rate noise — uncontrollable from any input. (Thinking time *does* scale with the input — a bigger test means more to infer — but within a pair the input is identical, so that cancels; what doesn't cancel is the decode-rate swing between two runs taken at different times of day.) The fix is to kill that confound at the source rather than normalize it out afterward: run the two halves of a pair **concurrently from the same commit** ([#153](https://github.com/farhan5248/sheep-dog-main/issues/153)), so a slow-server night hits both equally and cancels in the range.
-- **Exercising the single-run chart.** The contradiction signal can't be triggered with the current cleaned test suite; generating tests on demand to create it is part of the model-based-testing work below.
+- **The common-cause band itself.** Its width may be a measure of how tight the specification language is. The remaining floor is the model's sampling nondeterminism plus server-side decode-rate noise — uncontrollable from any input. The time-of-day confound is already handled: [#153](https://github.com/farhan5248/sheep-dog-main/issues/153) (done) runs the pair concurrently from the same commit so a slow-server night hits both halves equally and cancels in the pair range; the `scale` (from green tokens) is what normalizes the *individuals* across runs/days.
+- **The contradiction extreme is rare by construction.** The cleaned test suite means an outright contradiction almost never arises (that was the early hand-authored era); a green-time timeout today is far more often Claude building a forbidden dependency in-project. Deliberately producing contradictions to exercise that end of the chart is part of the on-demand test generation below (rgr-gen-from-comparison, being integrated into Darmok).
 - **Can the reverse-prompt be generated automatically** when a point crosses the limit, so the tester gets "your test admits two implementations / is too big" feedback without a developer in the loop?
 - **Rational subgrouping of the inputs.** A model-based-testing tool (GraphWalker) that controls path size and ordering would make the work units uniform by construction — generating bounded, similar-sized paths instead of the wildly unequal ones a minimal path cover yields. That is system work on the *inputs* (redesigning the input population), not tampering with the harness. The controlled length-vs-thinking-time data this assumes doesn't exist yet; producing it is exactly what that work is for. Today the relationship is only observational (the order/size effect in [Deming - Building Quality In][1] and the net-new-logic ranges in [Darmok - Harness for Claude Code][8]).
 
