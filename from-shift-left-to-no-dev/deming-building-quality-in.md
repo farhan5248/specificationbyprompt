@@ -27,17 +27,17 @@ This inspired me to have Claude Code go through the same process, building quali
 [Darmok][7] puts the junior developer's process into a loop. It iterates through a sequence of test cases going through the red-green-refactor cycle for each one:
 - **Red**: Test automation is generated from the DSL using model-based code generation — no AI needed
 - **Green**: Claude is given the failing test along with similar passing tests and told to fix it, only modifying main code
-- **Refactor**: Claude removes duplication, guided by the patterns in the markdown files
+- **Refactor**: Claude ensures the code conforms to patterns in the UML markdown files
 
 Just like the junior developer, Claude works best when given **one failing test at a time** with similar successful tests as reference. If given too many tests at once, it bounces between failures without fixing anything — the same way any junior developer would struggle if handed an entire project at once instead of debugging one test at a time.
 
-The order and size of the test cases matter too. Tests sequenced so that each is slightly different from the previous one result in smaller code changes, less variation, and faster cycles. When I've experimented with random ordering or large jumps between test cases, it can take almost 15 minutes per test compared to the average 4 minutes. I suspect there's [common cause and special cause variation][8] to study here — some short tests take longer than long ones, and understanding why could feed back into improving the test sequence or the examples Claude uses.
+The order and size of the test cases matter too. Tests sequenced so that each is slightly different from the previous one result in smaller code changes, less variation, and faster cycles. When I've experimented with random ordering or large jumps between test cases, it can take almost 15 minutes per test compared to the average 4 minutes. I suspected there's [common cause and special cause variation][8] to study here — some short tests take longer than long ones, and understanding why feeds back into improving the test sequence or the examples Claude uses.
 
 # Why Deming Still Matters
 
 Deming's core insight was that you don't improve quality by inspecting harder — you improve it by reducing variation in the process itself. That's what we did before AI with SPC, jidoka, poka yoke, and JIT. And it's what Darmok does now: controlling the sequence, size, and similarity of test cases to reduce variation in Claude's output. The approach scales because it's built into the process, not bolted on as inspection afterward.
 
-Your QA team are the key supporting characters in this story. Most of the work they do around inspection is non-value added and easier to automate. Automating that work creates space for them to learn and pay it forward. Even if your devs can write the tests themselves like I can, you probably don't want your technical resources doing non-technical work. I'd rather a tester work with the business analysts to write the specifications while I focus on reducing the variation — basically being an industrial engineer like Ohno. The faster the system moves, the more you need that [feedback and control system][1] Gene Kim described. Deming's approach gives you one.
+Testers are the key supporting characters in this story. Most of the work they do around inspection is non-value added and easier to automate. Automating that work creates space for them to learn and pay it forward. Even if your devs can write the tests themselves like I can, you probably don't want your technical resources doing non-technical work. I'd rather a tester work with the business analysts to write the specifications while I focus on reducing the variation — basically being an industrial engineer like Ohno. The faster the system moves, the more you need that [feedback and control system][1] Gene Kim described. Deming's approach gives you one.
 
 [1]: https://open.spotify.com/episode/2oJPAPHKGJ9LlfMiBvBobq
 [2]: /demingdriventesting/migrating-from-defect-inspection-to-prevention/jidoka

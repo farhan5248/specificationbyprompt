@@ -9,11 +9,11 @@ title: Wheeler - Understanding Variation
 
 # The Hunch
 
-A harness that lets a tester drive Claude has to give a *reverse prompt* — feedback when an input is too vague, too big, or contradictory — without crying wolf on ordinary noise ([Goldratt - Diminishing A Limitation][9] is why that matters). I wanted that signal to be more deterministic than running two Claudes and eyeballing the difference, rather than relying on AI to audit itself.
+A harness that lets a tester drive Claude has to give a *reverse prompt* — feedback when an input is too vague, too big, or contradictory — without crying wolf on ordinary noise ([Goldratt - Diminishing A Limitation][9] is why that matters). I wanted that signal to be more deterministic than running two Claudes and eyeballing the difference, rather than relying solely on AI to audit itself.
 
-A couple of weeks ago I was on John Willis's [Profound][3] podcast. At the time I was eyeballing Plan-Do-Study-Act cycles to see whether a Process Behavior Chart — Wheeler's tool, the same one used on a manufacturing line — could be put on Claude's runs. The bet is that a clear, well-sized test, run twice, produces comparable work both times, so a *wide* gap between the two is a signal — and, like the red bead game, that the variation lives in the **system** (the harness, the tests, the order they're given in) rather than in the worker.
+When I started, I was eyeballing Plan-Do-Study-Act cycles to see whether a Process Behavior Chart could be put on Claude's runs. The bet is that a clear, well-sized test, implemented twice, produces comparable work both times, so a *wide* gap between the two is a signal — and, like the red bead game, that the variation lives in the **system** (the harness, the tests, the order they're given in) rather than in the worker.
 
-This page defines that experiment: *which* charts to put on Claude's runs and *why those* rather than the obvious alternatives — mapping Wheeler's method onto this setup. It deliberately holds no results. The worked examples, where a real run crosses a limit and gets diagnosed, live in [Darmok - Harness for Claude Code][8]. This page is the approach; that one is the evidence.
+This page defines that experiment: *which* charts to put on Claude's runs and *why those* rather than other alternatives — mapping Wheeler's method onto this setup. It deliberately holds no results. The worked examples, where a real run crosses a limit and gets diagnosed, live in [Darmok - Harness for Claude Code][8]. This page is the approach; that one is the evidence.
 
 # What We Measure
 

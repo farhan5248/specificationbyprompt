@@ -9,7 +9,7 @@ title: Goldratt - Diminishing A Limitation
 
 # Beyond the Goal
 
-I recently finished Goldratt's *Beyond the Goal*. His central argument is that a new technology delivers benefits only to the extent that it diminishes a real limitation, and that capturing those benefits requires four questions to be answered honestly:
+In *Beyond the Goal* Goldratt's central argument is that a new technology delivers benefits only to the extent that it diminishes a real limitation, and that capturing those benefits requires four questions to be answered honestly:
 
 1. What is the power of the technology?
 2. What limitation does it diminish?
@@ -24,7 +24,7 @@ I decided to apply those four questions to Claude Code.
 
 **The power of the technology** is that it translates between natural language and code in both directions. It is, in the most literal sense, a universal translator between the people who understand the business and the machines that run it.
 
-**The limitation it diminishes** is the natural-language-to-code translation bottleneck that has historically forced every contribution to a codebase to route through a developer. For decades, the rule has been: if you don't speak code, you can't change the code. Every other role in the system of work has been organized around accommodating that constraint.
+**The limitation it diminishes** is the natural-language-to-code translation bottleneck that has historically forced every contribution to a codebase to route through a developer. For decades, the rule has been: if you don't speak code, you can't change the code. Other roles in the system of work have been organized around accommodating that constraint.
 
 **The rules we adopted to accommodate the limitation** are everywhere once you start looking for them. Only developers touch the codebase. Testers inspect after the fact instead of specifying upfront. Service desk agents file tickets, they don't contribute fixes. Business analysts write requirements documents that get re-translated into code by someone else. Code review is a developer-to-developer ritual. Even "shift left" somehow has come to mean shifting work earlier *within the development team*, not outside of it.
 
@@ -42,7 +42,7 @@ The IaaS-to-platform-engineering arc is the precedent. Before Infrastructure as 
 
 # But Only With a Harness
 
-The lever only works if it is safe to pull. I would not tell a QA team to start contributing to a codebase through Claude Code on faith — if they don't read code, they have no way to know whether what was implemented is what they meant. So the harness has to give a non-programmer *useful feedback*: a reverse prompt that says when a request was too vague, too big, or contradictory for Claude to implement without guessing. And it earns that trust only by **not crying wolf** — a harness that flags ordinary run-to-run noise as a problem is as useless as one that flags nothing. Useful feedback without the false alarms is the whole requirement.
+The lever only works if it is safe to pull. I would not tell a QA team to start contributing to a codebase through Claude Code on faith — if they don't read code, they have no way to know whether what was implemented is what they intended. So the harness has to give a non-programmer *useful feedback*: a reverse prompt that says when a request was too vague, too big, or contradictory for Claude to implement without guessing. And it earns that trust only by **not crying wolf** — a harness that flags ordinary run-to-run noise as a problem is as useless as one that flags nothing. Useful feedback without the false alarms is the whole requirement.
 
 Building that control system — a process behavior chart on Claude's runs that separates a genuine bad-input signal from the noise of a stochastic worker — is the subject of [Wheeler - Understanding Variation][2]. It is the precondition for everything above: without it, "let the tester drive" is a hope; with it, it's a process.
 
@@ -50,7 +50,7 @@ Building that control system — a process behavior chart on Claude's runs that 
 
 The platform I want to build makes it easier for non-programmers to contribute to the codebase earlier in the process. I'm starting with testers because they already write specifications in a DSL, but the argument generalizes. Instead of augmenting how developers alone work with Claude Code, I'm experimenting with re-assigning the work upstream and augmenting the existing tools that the upstream roles already use.
 
-I'm currently integrating GraphWalker into the flow as part of this research, so Claude updates the test model and GraphWalker generates tests from it instead of Claude writing tests directly. If the chart proves it can reliably detect ambiguity in the specifications derived from those tests, the next investment is layering a BPMN model on top so the BPMN drives changes to the GraphWalker model and the GraphWalker model drives Claude. The longer arc, conditional on each step holding up, is to use Claude to connect the developer's tools, the tester's tools, and the business's tools into a single chain — which is, I think, what answering Goldratt's fourth question actually looks like in practice.
+I'm currently integrating graph models into the flow as part of this research, so Claude updates the test model and GraphWalker can generate tests from it instead of Claude writing tests directly. If the chart proves it can reliably detect ambiguity in the specifications derived from those tests, the next investment is layering a BPMN model on top so the BPMN drives changes to the graph model and the graph model drives Claude. The longer arc, conditional on each step holding up, is to use Claude to connect the developer's tools, the tester's tools, and the business's tools into a single chain — which is, I think, what answering Goldratt's fourth question actually looks like in practice.
 
 ---
 
