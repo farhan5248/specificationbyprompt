@@ -27,27 +27,33 @@ Every test case is run **twice** — two git worktrees, A and B, running sequent
 | **green min time** | min(green a, green b) — the lower of the pair | *intermediate* | — |
 | **green time** | scaled green min time (green min × scale); charted as individuals **over the ordered sequence** | a normal-sized step for its place in the sequence | **under the timeout → too big / under-specified test** (Claude has to infer — e.g. a Given/When/Then needing more than ~3 steps it wasn't given); **at the timeout → contradiction, or — likelier now — Claude building a new dependency in-project** because a tester can't change project deps. A developer would be needed in the loop |
 | **green time moving range** | \|green time₍ₙ₎ − green time₍ₙ₋₁₎\| | consecutive tests step up by a similar amount — a well-graded sequence | this test was **too big a leap** from the previous one for the given project |
-| **green time pair range** | \|green a − green b\| (raw — server cancels) | the two worktrees agree — a **clear / well-specified** test | the worktrees diverged — a **vague / ambiguous** test (or one run got lucky) |
+| **green time pair range** | \|green a − green b\|, ranked **token-scaled** (slower half re-expressed at the faster half's per-token rate) so a low range means equal *work*, not just equal time | the two worktrees agree — a **clear / well-specified** test | the worktrees diverged — a **vague / ambiguous** test (or one run got lucky) |
 | **green time pair range moving range** | \|pair range₍ₙ₎ − pair range₍ₙ₋₁₎\| | run-to-run jitter is **consistent** — the steady noise floor for the project at that time of day | jitter **jumped** for this test — flags it even if its raw pair range looked acceptable. |
 
 The pair range is charted **pooled across all the scenarios** — the *range* strips each scenario's inherent duration out (it's a difference), leaving only reproducibility, so heterogeneous scenarios sit on one chart. The green time, by contrast, is charted in **sequence order** (next section).
 
 # Two Charts, One Source: the Input
 
-The variables feed two control charts, both indexed by the **test sequence** — tests are ordered shortest-to-longest (today by hand, walking `sheep-dog-grammar/scenarios-graph.graphml`).
+The variables feed two control charts, both indexed by the **test sequence** (ordered shortest-to-longest, today by hand from `sheep-dog-grammar/scenarios-graph.graphml`). They are **not co-equal**: the **pair range is the primary signal, and it belongs to the tester**; the **green time adds the one thing the pair range can't see, and it belongs to the developer who set the project up**.
 
-**1. The green-time chart** plots `green time` (the scaled minimum) as individuals plus its moving range. It asks *is any single test asking too much?*
+**The pair-range chart — the tester's signal.** `green time pair range` plotted as individuals plus its moving range. It answers the question the tester owns: *is the test clear?* Two runs of a clear, well-specified test land close together; a wide pair means they **diverged** — an under-specified test that admits more than one implementation (`Test step must have a valid object name validation` is an example), or, on a small base, one run that got lucky. Its moving range is expected to widen *gradually* as the tests get bigger; a sudden jump — not the gradual rise — is what to investigate. Because the chart is ranked on the **token-scaled** pair range — the slower half re-expressed at the *faster half's* per-token rate, a factor that runs either side of 1 — a low range already means the two halves did equivalent **work**, not merely that they finished at similar times; a fast-decode day can't fake agreement (see *The Pair Range Has Two Axes* below).
 
-- A point **over the UCL but under the max timeout** is a **too-big / under-specified** test: the spec is thin enough that Claude has to infer its way to an answer. A model-based-testing tool can prevent outright contradictions, but if the model isn't detailed enough it can't stop Claude inferring from a thin test — so this signal persists. What was observed is that Claude will start exploring more of the code base to get more information to answer questions that the test doesn't provide, this adds randomness that results in different implementations that can make the test pass.
-- A point **at the max timeout** is a **contradiction** (the new test fights one that already passes and Claude plays whack-a-mole) or — likelier now, given the checks in place — **Claude trying to build a dependency it isn't allowed to add**, constructing the library inside the project from scratch.
-- A spike in the **moving range** is a **too-big leap** between consecutive tests. Counterintuitively the short early tests take the longest and the long later ones the least (they reuse established patterns), and the very first is a **warm-up** that builds the scaffolding — stratify it out. Past the warm-up the moving range should be flat; keeping it flat means sequencing each test to differ by a similar amount (≈x steps), which is how you catch a test that demands too big a jump in understanding.
+**The green-time chart — what the pair range can't see, the developer's signal.** `green time` (the scaled minimum) plotted as individuals plus its moving range. The pair range goes quiet whenever the two runs **agree** — but they can agree and both still be slow, and that shared, undivergent cost is what green time measures and what the developer who set up the project controls:
 
-**2. The pair-range chart** plots `green time pair range` as individuals plus its moving range. It asks *is any single test ambiguous?*
+- High green **with a wide pair** is just the bad-test signal again: an under-specified test makes Claude explore the codebase for answers the test doesn't give, which both lengthens the run *and* sends the two halves toward different implementations. The pair range already caught it; green time only corroborates, and the fix is the test (tester).
+- High green **with a narrow pair** is the reading only green time carries — both runs did the *same* heavy work, so it isn't ambiguity, it's the project. Every test has a ~3–4 minute floor just to understand the test and modify the code, set by how much the UML/design specs spell out the *how* rather than leaving Claude to infer it; the **first** test runs nearly double because it must also absorb the existing code and its rules and stand up the scaffolding the rest reuse. At the **timeout** it's a contradiction, or a dependency Claude isn't allowed to add. A model-based-testing tool that generates the tests from a model is the developer's lever here — a detailed-enough model prevents outright contradictions and shrinks the inference, while too thin a model can't, and the signal persists.
+- A spike in green time's **moving range** is a **too-big leap** between consecutive tests; past the warm-up first scenario it should stay flat (sequence each test to differ by a similar amount).
 
-- A high **pair range** means the two worktrees diverged — a **under-specified** test that admits more than one implementation (or one run got lucky; a low pair range on a big test can be luck, not clarity, which is exactly why the green-time chart is needed alongside it). The `Test step must have a valid object name validation` test case is an example of this. Sometimes the pair have a narrow range and finish within seconds of each other but both their green times are really high. They both did the same extra searches. Typically a wide `green time pair range` correlates with a high `green time`. When the `green time pair range` is narrow but the `green time` is high, that means there's something about the markdown design specs or the project setup that is slowing down Claude. 
-- The **moving range** of the pair range should be stable — the ordinary jitter is roughly constant for a project at a given time of day; a jump flags a test whose reproducibility is off relative to its neighbours. The tests are processed from shortest to longest. It's expected that the pair range will widen the bigger the test. However a larger jump instead of a more gradual one is a signal to investigate. 
+**Reading the two charts together.** A test can cross one chart's limit, both, or neither — and the *combination* says what's wrong and who to loop in:
 
-The unifying point that makes the whole approach worth it: **a point outside the limits is a signal to loop in a human, typically a tester**. A too-big, ambiguous, contradictory, or badly-ordered test creates more variation than any amount of tuning the harness could remove. Not setting up the project with the right dependencies can also push a point outside the limit, in this case the human in the loop is a developer. In The worked examples — real points crossing these limits, traced back to their inputs — live in [Darmok - Harness for Claude Code][8]. 
+| green time pair range | green time | What it means | Loop in |
+|---|---|---|---|
+| **High** | **High** | The runs disagreed *and* it was hard — the test is ambiguous *and* demanding: Claude has to infer, and the inference led the halves apart. The typical, correlated case and the strongest input signal. | **Tester** — disambiguate and/or split the test |
+| **High** | **Low** | The runs disagreed but each was quick — a genuinely ambiguous test that isn't big: two valid cheap readings. | **Tester** — disambiguate the spec |
+| **Low** | **High** | The runs agreed but both were slow — same heavy work, so *not* ambiguity: the design specs / project setup leave Claude inferring the *how*; at the timeout, a contradiction or a dependency Claude can't add. | **Developer** — fill in the spec's *how*, fix project setup / the missing dependency |
+| **Low** | **Low** | The runs agreed and it was quick — a clear, well-sized, reproducible test. | **Nobody** — in control |
+
+Whatever the quadrant, the response is the same shape: **a point outside the limits is a signal to loop in a human, not to tune the harness** — the pair range routes to the **tester** (the test's clarity), the green time to the **developer** (the project's setup). A too-big, ambiguous, contradictory, or badly-ordered test — or a project missing the right dependencies — creates more variation than any harness change could remove. The worked examples live in [Darmok - Harness for Claude Code][8]. 
 
 # The Pair Range Has Two Axes: Time and Work
 
@@ -96,6 +102,16 @@ Once the chart shows the harness is in control (the evidence for that is in [Dar
 # The Chart Detects; the Transcript Diagnoses
 
 The chart only ever says "the process worked harder here." *Which* input lever to pull — disambiguate the spec, split a too-big test, fix the ordering, or enrich the UML spec where the test says *what* but not *how* — is a root-cause question answered by reading the run's JSONL transcript, not by the timing. The division is strict: **chart = detector, transcript = diagnosis.** The case studies in [Darmok - Harness for Claude Code][8] are that diagnosis worked through, one run at a time.
+
+# The Metrics
+
+The per-run numbers behind the charts live in three Google Sheets, split by model and pairing era:
+
+- **Opus — run 65 onward** (the current era; in-run `_a`/`_b` pairs from run 83): [opus metrics](https://docs.google.com/spreadsheets/d/1KcIrn1Cils0cyFS_E2aekstF82zo2_SIhjKqwmQruCA/edit)
+- **Sonnet pairs**: [sonnet-pairs metrics](https://docs.google.com/spreadsheets/d/1r9fSfFvhzAYuYETWkfgxbUYJ5W6OTzddQePzU65spSE/edit)
+- **Older sonnet triples**: [sonnet-triples metrics](https://docs.google.com/spreadsheets/d/1hA78Mxuy_1kqFpMhsYSlBeH0aZi9R-Kb-5UOxqusFno/edit)
+
+Charts are drawn only for the opus era (run 65 onward); the sonnet runs stay in the sheets for anyone who wants them.
 
 # Open Questions
 

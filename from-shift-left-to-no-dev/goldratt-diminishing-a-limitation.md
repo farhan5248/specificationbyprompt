@@ -30,7 +30,7 @@ I decided to apply those four questions to Claude Code.
 
 **The new rules** are that testers, BSAs, and even service desk agents should be able to contribute pull requests directly, expressing their changes in the ubiquitous language they already use. Developers shift from writing the code to building and maintaining the guardrails — the architecture, the interfaces, the test automation framework — that make safe self-service possible for everyone else. Claude is not a productivity tool bolted onto the developer role; it is a lever that re-distributes *who gets to participate* by re-assigning the work upstream. ([Deming - Building Quality In][1] is the other half of this — *how* the code gets built once it's been specified; this page is about *who* specifies it and how far upstream that can move.)
 
-# Testers Driving the Development
+# Non-Developers Driving the Development
 
 I've written about the new-rules half of this argument in detail in [Testers Driving the Development][4], so I won't rebuild the whole case here. The short version:
 
@@ -40,7 +40,7 @@ Testers are skilled at two things: inspection (verifying after the fact that wha
 
 The IaaS-to-platform-engineering arc is the precedent. Before Infrastructure as Code, operations teams owned infrastructure and developers raised tickets. After IaC, operations didn't disappear — they became platform engineers, building the templates and paved roads that developers self-serve from. I think developers are about to make the same move with respect to testers and other domain contributors, and the contribution doesn't stop at testers — once the interface to the problem is the specification, the BSA and product owner can drive changes from further upstream still.
 
-# But Only With a Harness
+# Preventing Unintended Interpretations
 
 The lever only works if it is safe to pull. I would not tell a QA team to start contributing to a codebase through Claude Code on faith — if they don't read code, they have no way to know whether what was implemented is what they intended. So the harness has to give a non-programmer *useful feedback*: a reverse prompt that says when a request was too vague, too big, or contradictory for Claude to implement without guessing. And it earns that trust only by **not crying wolf** — a harness that flags ordinary run-to-run noise as a problem is as useless as one that flags nothing. Useful feedback without the false alarms is the whole requirement.
 
@@ -48,7 +48,7 @@ Building that control system — a process behavior chart on Claude's runs that 
 
 # Conclusion
 
-The platform I want to build makes it easier for non-programmers to contribute to the codebase earlier in the process. I'm starting with testers because they already write specifications in a DSL, but the argument generalizes. Instead of augmenting how developers alone work with Claude Code, I'm experimenting with re-assigning the work upstream and augmenting the existing tools that the upstream roles already use.
+The platform I imagine makes it easier for non-programmers to contribute to the codebase earlier in the process. I'd start with testers because they already write specifications in a DSL, but the argument generalizes. Instead of augmenting how developers alone work with Claude Code, I'm experimenting with re-assigning the work upstream and augmenting the existing tools that the upstream roles already use.
 
 I'm currently integrating graph models into the flow as part of this research, so Claude updates the test model and GraphWalker can generate tests from it instead of Claude writing tests directly. If the chart proves it can reliably detect ambiguity in the specifications derived from those tests, the next investment is layering a BPMN model on top so the BPMN drives changes to the graph model and the graph model drives Claude. The longer arc, conditional on each step holding up, is to use Claude to connect the developer's tools, the tester's tools, and the business's tools into a single chain — which is, I think, what answering Goldratt's fourth question actually looks like in practice.
 

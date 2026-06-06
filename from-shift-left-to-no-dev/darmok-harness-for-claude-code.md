@@ -15,6 +15,8 @@ The premise throughout (from [Goldratt - Diminishing A Limitation](goldratt-dimi
 
 One thing the runs changed our minds about: we started out believing every wide gap was a defect to hunt down and fix. It wasn't. Many are ordinary noise, and the real fixable signal is almost always the **input** — a test that is too big, too vague, or given out of order. That shift is what the timelines below show.
 
+The raw numbers live in three metrics sheets, one per model/era: [opus](https://docs.google.com/spreadsheets/d/1KcIrn1Cils0cyFS_E2aekstF82zo2_SIhjKqwmQruCA/edit) (run 65 onward), [sonnet pairs](https://docs.google.com/spreadsheets/d/1r9fSfFvhzAYuYETWkfgxbUYJ5W6OTzddQePzU65spSE/edit), and [older sonnet triples](https://docs.google.com/spreadsheets/d/1hA78Mxuy_1kqFpMhsYSlBeH0aZi9R-Kb-5UOxqusFno/edit). The charts in the per-run reports cover the **opus era — run 65 onward**; the earlier sonnet runs aren't charted here, but their data is in the sheets if you want to look.
+
 ---
 
 # green time pair range
