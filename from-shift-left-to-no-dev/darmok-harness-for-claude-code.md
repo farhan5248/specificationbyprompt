@@ -7,125 +7,80 @@ title: Darmok - Harness for Claude Code
 
 ---
 
-# Where This Started — The Hypothesis
+# How To Read This Page
 
-The premise, set out in [Goldratt - Diminishing A Limitation](goldratt-diminishing-a-limitation) and its method companion [Wheeler - Understanding Variation](wheeler-understanding-variation), was a bet borrowed from Deming, Wheeler, and Goldratt: that the run-to-run variation of a stochastic worker (Claude), measured against a *deterministic* harness, could be read as a **control chart for the quality of the inputs** — the specification, the prompt, the harness — rather than as a measure of model noise.
+[Wheeler - Understanding Variation](wheeler-understanding-variation) defines the handful of numbers we watch on Claude's runs. **This page is the evidence behind them.** Each section below is one of those variables, and under it are the runs — in the order they happened — that taught us what the variable means. Read a section top to bottom and you see how our understanding of that one number grew.
 
-What I believed going in:
+The premise throughout (from [Goldratt - Diminishing A Limitation](goldratt-diminishing-a-limitation) and Wheeler): when two runs of the *same* test diverge, the cause is in what they **share** — the test, the spec, the harness — not in the model having a bad night.
 
-1. **The variation lives in the system, not the worker.** Like the red-bead game: if two independent runs against the same test diverge widely, the cause is something they *share* — the spec, the prompt template, the harness — not the model having a bad night. A wide pair-range is an **assignable cause** I can name and remove.
-2. **Two charts, two failure modes.** A pair-range chart catches **ambiguity** (the spec admits more than one valid implementation; both runs pass but cost different amounts). A single-run chart catches **contradiction** (the new test conflicts with existing behavior; one run balloons). The 45-second-per-iteration test tax is what lifts the signal above network noise.
-3. **Each wide pair is a thing to fix.** Investigate the transcript, find the assignable cause, change the system, watch the variance tighten. Repeat.
-
-That third belief is the one this journey tested to destruction. It was right for a long stretch — and then it stopped being right, in a way the methodology itself predicted.
-
-What follows is one section per case study, in run order, grouped into three acts. Each names the problem it found, the fix it proposed, and whether that fix was implemented.
+One thing the runs changed our minds about: we started out believing every wide gap was a defect to hunt down and fix. It wasn't. Many are ordinary noise, and the real fixable signal is almost always the **input** — a test that is too big, too vague, or given out of order. That shift is what the timelines below show.
 
 ---
 
-# Act 1 — The Productive Hunt (Runs 44–66)
+# green time pair range
 
-Every pair surfaced a concrete assignable cause, and every cause had a home in the system. This is the methodology working exactly as hypothesized.
+*The gap between the two runs of the same test (`|green a − green b|`). Two runs of a clear, well-specified test land close together; a wide gap means something made them diverge.*
 
-## pbc-4445 — the under-specified search step
+- [Rebuild 44/45](4445) — the first wide pairs, both traced to an **under-specified prompt step**, not the worker — and the early lesson that "which file got patched" tells you about the spec, not the prompt.
+- [Rebuild 48/49](4849), [50/51](5051), [56/58](5658) — each wide pair was a **prompt/spec gap** (an annotation the report never produces; a prompt pointing at a file that doesn't exist; a silent prompt branch). The output was near-identical; the variance was all in the path the worker took.
+- [Rebuild 52/53](5253) — the first pair to break the upper limit: a point *outside* the limit is a cleaner, stronger signal than a merely wide one.
+- [Rebuild 54/55](5455) — a wide pair with **byte-identical output** exposed a *harness bug* (a coverage shortlist that never wrote a single byte). The signal catches broken infrastructure, not just the model — and CI never noticed because both runs passed.
+- [Rebuild 65/66](6566) — a wide pair meant **architecturally different code**, a fork seeded by the very first scenario.
+- [Rebuild 67/68](6768) — the turning point: a wide pair with **identical code and no findable cause**. A wide range is a signal to *investigate*, not proof of a defect — the verdict was "common cause, no action."
+- [Rebuild 69/70](6970) — same final code, one expensive tool choice (a subagent vs an inline search): same outcome, different path.
+- [Rebuild 73/74](7374), [79/80](7980) — the wide pair was **the clock, not the test**: the two runs ran hours apart and the gap was server speed (in 79/80 the *faster* run even produced *more* work). This is what forced us to control the timing.
+- [Rebuild 75/76](7576), [77/78](7778) — common-cause wide pairs; 77/78's width was simply that the **test is big**, not defective.
+- [Rebuild 83](83), [84](84), [85](85), [86](86) — once the two runs go **concurrently from the same commit**, the timing confound is gone; a wide range now points at how much each half explored, and these batches stay in control.
 
-[pbc-4445](4445) (Rebuild44/45, two cases). **Problem:** `green.md` said "examine the failing code path" without saying *how*, so Claude satisfied it inconsistently — sometimes the JaCoCo cross-reference grep, sometimes `ls` then a pivot away. Wide pair-range on both an ambiguous-file case and a same-file case, proving the cause was the *prompt*, not just the spec. **Fix:** split `green.md` into `identify.md` + `fix.md`, have red populate JaCoCo, spell out the cross-reference ([#384](https://github.com/farhan5248/sheep-dog-main/issues/384)). **Implemented.**
+# green time pair range moving range
 
-## pbc-47 — the remediation check that found two more gaps
+*How much the pair range jumps from one test to the next. Because tests are ordered shortest-to-longest, the pair range is expected to widen **gradually**; a sudden jump — not the gradual rise — is the signal.*
 
-[pbc-47](47) (Rebuild47, a 12-scenario audit, no pair). **Problem:** #384 worked (10/12 used JaCoCo), but the audit surfaced two new prompt gaps — `fix.md` scope-creep (running refactor validators and editing compliance-only files past the test-passing point) and `identify.md` framing JaCoCo as "what the failing test touched" rather than "find similar *passing* tests as templates." **Fix:** scope fence in `fix.md` + template-finder reframe in `identify.md` (commit `569383e`). **Implemented.**
+- No run has produced a finding here yet. This is a gap we'll fill as more batches come in — left visible on purpose.
 
-## pbc-4849 — mining an annotation the report never produced
+# green time
 
-[pbc-4849](4849) (Rebuild48/49). **Problem:** `identify.md` told Claude to extract a `title="<test-name>"` JaCoCo annotation that this project's pom does not emit (aggregate-only coverage, single session), so runs burned time chasing a missing attribute. A producer/consumer mismatch. **Fix:** precompute `jacoco-shortlist.md` in `GreenPhase` and reference it from the prompt ([#404](https://github.com/farhan5248/sheep-dog-main/issues/404)). **Implemented** — though, as pbc-5455 later revealed, the producer silently never ran.
+*The green-phase time of a single run (we keep the shorter of the pair). Over the limit but under the timeout = a test too big or under-specified, so Claude has to guess. At the timeout = a contradiction, or Claude trying to build a dependency it isn't allowed to add.*
 
-## pbc-5051 — the prompt pointed at a file that doesn't exist
+- [Rebuild 47](47) — green-phase **scope creep**: a run did far more editing than its failing test required (a validator run inside the fix step, then chasing every finding).
+- [Rebuild 50/51](5051), [52/53](5253), [54/55](5455), [56/58](5658), [65/66](6566) — long green times from build-retries, exploration overhead, and improvised checks. No contradictions — just extra work before the same edit.
+- [Rebuild 67/68](6768) — the long run wrote the *same* code; the length was **deliberation** (re-proving a fact the test had already pinned), not a harder scenario.
+- [Rebuild 75/76](7576) — the first scenario is intrinsically the longest (it creates ~10 files), giving any divergence more room to open up.
+- [Rebuild 77](77) — the green-time **control chart** itself: six runs all in control; the compile sub-phase is stable, the verify sub-phase carries the variance.
+- [Rebuild 77/78](7778) — the clearest "too big" case: the widest *relative* range belongs to the tests that create brand-new logic. The fix is an input fix — split them smaller.
+- [Rebuild 84](84), [86](86) — the longest scenario is the framework-founding first one; no timeouts, so no contradictions in this era.
 
-[pbc-5051](5051) (Rebuild50/51). **Problem:** `identify.md` cited `${umlDir}/uml-interaction.md`, which doesn't exist; the answer (`RowIssueDetector`, by name, with a code template) lives in `uml-interaction-main.md`, which neither run opened. One run got it right by luck of read-order. **Fix:** point the prompt at the real file (fix the path / glob both halves / add a read-ordering hint). **Proposed; no implementing commit cited.**
+# green time moving range
 
-## pbc-5253 — no guard against regressing the sibling test
+*How much the green time jumps between consecutive tests. Ordered shortest-to-longest, it should rise gradually; a leap flags a test that demanded too big a jump in understanding.*
 
-[pbc-5253](5253) (Rebuild52/53, the only out-of-UCL row on its tab). **Problem:** `fix.md` never told Claude to check the negation-paired sibling Test-Cases sharing the runner's `@RGR` tag; one run edited a path that regressed the sibling and paid a build-retry, on top of search-strategy variance. **Fix:** a `fix.md` behavioral instruction to scan the runner's `.feature` for negation pairs before submitting (no new precompute — the tag already scopes the siblings). **Proposed; no issue filed.**
+- [Rebuild 77](77) — the only run to chart it so far: the green-time series was **stable**, the largest leap well under its limit, so the process is not drifting. More data is needed before this thread says much.
 
-## pbc-5455 — the harness bug hiding behind a noisy baseline
+# scale & green tokens
 
-[pbc-5455](5455) (Rebuild54/55). **Problem:** the #404 shortlist producer **had never written a single byte** since it shipped — `DocumentBuilderFactory` tried to load JaCoCo's relative `report.dtd`, which isn't shipped, threw `FileNotFoundException`, and the exception was silently caught and returned as `null`. The narrowing artifact the prompt leaned on never existed. Both runs still passed; only the pair-range exposed it. **Fix:** disable external-DTD loading and remove the silent catch in `GreenPhase`. **Implemented.**
+*Output tokens measure how much work a run did, independent of how fast the server ran that day. They feed the `scale` that normalizes for server speed — and they tell a real work difference apart from a slow-server day.*
 
-## pbc-5658 — a silent prompt branch meets a tool quirk
+- [Rebuild 44/45](4445) → [77/78](7778) — every early study compared **two runs taken hours or days apart**, so server/time-of-day decode speed was baked into the pair range and couldn't be separated out. Tokens were usually comparable, so the variance was tool-call *count*, not text volume.
+- [Rebuild 67/68](6768) — one run produced **far more tokens for the same commit**: green cost is about how much the worker *thinks* before writing, not how much it writes.
+- [Rebuild 73/74](7374), [79/80](7980) — the canonical **server-noise** cases: the wide pair was almost entirely server decode rate (79/80's faster run even emitted more tokens). This motivated normalizing per-token rate and running pairs at the same time.
+- [Rebuild 83](83) — derived the **token-scaled pair-range**: a similarity threshold decides whether the two halves did equivalent work, and the slower half is scaled to the faster's rate to isolate real work from rate overhead.
+- [Rebuild 84](84) — tokens are a **second, orthogonal axis**: ranking by token divergence surfaced pairs the wall-clock range missed (a fast-decode day hid the extra work). Screen on both.
+- [Rebuild 85](85) — but a green token is ~70–84% tool-orchestration churn, not thinking or output: the widest token-gap pair produced **byte-identical code**. So tokens measure *exploration depth*, not divergent output — the wall-clock range stays the primary signal.
+- [Rebuild 86](86) — token-scaling can **over-promote** a tiny range; cross-check against the raw range so noise doesn't get surfaced as a top pair.
 
-[pbc-5658](5658) (Rebuild56/58). **Problem:** `identify.md` had no explicit exit for the no-COMPILATION-ERROR path, so both runs improvised a `jacoco.xml` check — and one form of the improvised `Glob` (relative pattern + `path=`) tripped Claude Code's gitignore filter on `**/target`, returning "No files found" and sending one run into a 196-second retry loop. **Fix:** explicit no-error exit in `identify.md` ([#414](https://github.com/farhan5248/sheep-dog-main/issues/414)) and a read-every-listed-class-first rule in `fix.md` ([#415](https://github.com/farhan5248/sheep-dog-main/issues/415), with [#411](https://github.com/farhan5248/sheep-dog-main/issues/411)). **Filed/implemented.**
+# warm-up position
 
-## pbc-6566 — architecture by coin-flip, then cascade
+*The first test in a run is special: it builds the test-automation scaffolding every later test reuses, so it is the longest and most variable. It's a different process and should be set apart from the rest.*
 
-[pbc-6566](6566) (Rebuild65/66). **Problem:** one run put business logic in production code and delegated; the other inlined it into the test layer. Root cause: the branch's *first* validation scenario on a clean base is a coin-flip between the two, and every later scenario copies the local precedent. A stronger model (both Opus) did not supply the architectural rule. **Fix:** a green-verify conformance check ([#425](https://github.com/farhan5248/sheep-dog-main/issues/425)) backstopped by a deterministic regex at refactor ([#423](https://github.com/farhan5248/sheep-dog-main/issues/423)). **Filed.**
-
----
-
-# Act 2 — The Turn (Runs 67–68)
-
-## pbc-6768 — the first time there was nothing to fix
-
-[pbc-6768](6768) (Rebuild67/68). **Problem:** none. Both runs produced a byte-identical 5-file commit; one re-derived from parser source a fact the other read straight off the test fixture's expected value. No spec gap, no prompt defect, no producer mismatch — **common-cause variation** in model deliberation depth. **"Fix":** not a fix — a system *experiment*, per-phase `--effort` control ([#426](https://github.com/farhan5248/sheep-dog-main/issues/426)), expected to shift the distribution, not remove the variance. **Filed as an experiment.** This case carried the first explicit "Are we in control?" reflection: *in control ≠ minimal variance*, and chasing points inside the limits is tampering.
-
----
-
-# Act 3 — Drying Up, and the Proof (Runs 73–80)
-
-The assignable causes thin out. Most wide pairs now resolve to server-side noise the system cannot touch, and the one remaining fix is the last of its kind. The act closes with the empirical proof of statistical control.
-
-## pbc-7374 — the assignable cause that dissolved
-
-[pbc-7374](7374) (Rebuild73/74). **Problem:** a 58-second green-phase spread that *looked* like a worker doing more work — and wasn't. Decomposing the JSONL showed active compute differed by −0.7s; the entire spread was server time-to-first-token. An earlier draft had wrongly blamed prompt under-specification. **Fix:** none to spec or prompt — a *measurement* fix: chart active time, not raw wall-clock. **Note:** this active-time proposal was later **abandoned** ([#419](https://github.com/farhan5248/sheep-dog-main/issues/419)) — idle is negligible and not cleanly measurable from single-timestamp events, and wall-clock *is* the work signal; the measurement thread resolved instead to XmR control charts on wall-clock.
-
-## pbc-7576 — both verdicts in one pair
-
-[pbc-7576](7576) (Rebuild75/76, two cases). **Problem:** Case A (`object doesn't exist`, 88.7s) — identical code, one passing build each; the gap was pre-run fixture simulation depth with no instruction that could resolve it → **common cause**. Case B (`suite name capital`, 47.3s) — one run spent 3.5 minutes hunting `~/.m2` and dependency jars for classes it had *already decided to create* → **assignable**. **Fix:** Case A — no scenario fix (one correctness-neutral build-as-oracle reframe applied anyway); Case B — `green-compile` now reads `uml-package.md` + the interaction specs *before* the log (the shared session carries "spec'd ⇒ create" into verify), and `green-verify` Rule 1 closes the `Bash` hole that let the jar-hunt escape. **Both applied.** This is the case that shows the classification gate cuts both ways.
-
-## pbc-77 — the control chart that ended the hunt
-
-[pbc-77](77) (Rebuild77, the same scenario run **six times** on one fixed plugin version). **Problem:** none to find — the point was to chart. Six green-phase times as an XmR individuals series: mean 7.04 min, all six points inside the natural limits [5.41, 8.68 min], the largest moving range well under its limit. **The process is in statistical control.** **Fix:** none — and that is the result. The case states it plainly: the **harness frontier is closed**; further prompt edits to chase the residual green-verify spread would be tampering and can *increase* variance. The only remaining levers are the two **inputs** the harness consumes — UML-spec richness and test-case quality (path size and ordering). It also flags that 0-green runs are a distinct free-rider failure mode, a separate population to chart on its own.
-
-## pbc-7778 — common cause, and the input lever named
-
-[pbc-7778](7778) (Rebuild77/78). **Problem:** same five files, one extra `mvn` cycle, more greps — exploration nondeterminism converging on the same spec. **Common cause.** **Fix:** none to worker/spec/prompt. The lever is the *input*: across the Opus runs this scenario carries the widest *relative* range, and the high-variance scenarios are exactly the ones that create **net-new detector/parsing logic** — the largest solution space. Splitting those net-new-logic tests into smaller single-behavior Test-Cases shrinks the space and narrows the band toward its floor. The idle/active JSONL split is also walked back here as unreliable; lean on work proxies.
-
-## pbc-7980 — the purest no-action case
-
-[pbc-7980](7980) (Rebuild79/80). **Problem:** the single widest pair on its sheet (70s), and the runs took the *same* route — same files, same tool counts, same two builds — yet the **faster run produced *more* output tokens**. You cannot do more work in less time and have the gap be about work. Pure server decode throughput (a 1 AM run decoding at roughly half the midday rate); all three phases inflated uniformly, the fingerprint of a slow-server day. **Common cause.** **Fix:** none — measurement-level only (decode-normalized / SPC-gated selection). The cleanest demonstration that "no action" is the whole answer.
-
-## pbc-83 — the token-scaled pair-range, three regimes in one batch
-
-[pbc-83](83) (Rebuild83, three cases — the first *in-run* batch, [#434](https://github.com/farhan5248/sheep-dog-main/issues/434) running the green pair as two worktrees off the same red commit minutes apart, so the model-of-the-day, red commit, and server window are held constant across the halves). **Problem:** none to fix — the batch built the **token-scaled pair-range** gate and showed all three of its regimes at once: within-threshold / small-scaled-range (`62c1749c`, rate jitter), within-threshold / large-scaled-range (`0f4deff8`, a small work-volume difference the divergence walk clears), and beyond-threshold (`6db846b9`, materially more work — plus a silent green-phase stall that became [#417](https://github.com/farhan5248/sheep-dog-main/issues/417)). All three **common cause.** **Fix:** none to spec/prompt; the gate is the deliverable — split a pair's wall-clock range into work (output tokens) versus per-token decode rate, so a wide range is attributed rather than guessed.
-
-## pbc-84 — both worst pairs within threshold, and a fixed cause that stayed fixed
-
-[pbc-84](84) (Rebuild84, two cases). **Problem:** the batch's two widest pairs both land *within* the token-similarity threshold — neither half did materially different work — resolving to rate jitter (`b9d893a`) and a small exploration-volume difference (`8383ee6`). The sharper result: `8383ee6` is the **suite-name-capital** scenario that was [pbc-7576](7576)'s *assignable* Case B (the `~/.m2` jar-hunt); under the [#415](https://github.com/farhan5248/sheep-dog-main/issues/415) green-compile-reads-specs-first fix its search now stays inside the project tree — **a fixed assignable cause confirmed still fixed by the chart.** A third lens: ranking the same batch by *token* divergence surfaces a different top-two (`7476bbb`, `1dd042e`) that the wall-clock range reads as among the most reproducible — the two-axes finding. **Common cause.** **Fix:** none — that the two worst pairs are both within-threshold is itself the in-control result.
-
-## pbc-85 — what a green token is made of
-
-[pbc-85](85) (Rebuild85, token anatomy — first batch with green tokens logged in the metrics row, [#440](https://github.com/farhan5248/sheep-dog-main/issues/440), and the first with the pair run **concurrently** at the same time of day, [#439](https://github.com/farhan5248/sheep-dog-main/issues/439)). **Problem:** the gate leans on output tokens as a work proxy, so the batch decomposed them. Across the eight widest-divergence sessions green output is **~1% thinking, ~75–84% tool-orchestration churn** (re-emitted TodoWrite lists, Grep/Read/ToolSearch args), **~14–27% artifact** — so more tokens is *not* more thinking. And token divergence is **decoupled from the artifact**: the *widest* token-gap pair (`caf4e3527`, 1718) produced **byte-identical code**; narrower-gap pairs differ only cosmetically (import cleanup), with no functional difference surfaced. **Common cause** (pair-range UCL 78,676 ms). **Fix:** none — two methodological closes: shortest-*time* winner selection is good enough (fewer tokens buys no leaner artifact, so [#435](https://github.com/farhan5248/sheep-dog-main/issues/435) stays as is), and scaling on the total green-token count is sound because decode rate is global across token types.
+- [Rebuild 65/66](6566) — the first scenario **forks** (invent-and-delegate vs inline), and every later scenario copies it: a wide range three tests later was really decided at test one.
+- [Rebuild 75/76](7576) — the first scenario ran "cold" and went **hunting for dependencies** it should have just created; fixed by having it read the specs first.
+- [Rebuild 77](77) — the framework-founding first scenario has the longest green and should carry **its own baseline**, not be pooled with the rest.
+- [Rebuild 86](86) — the lone over-limit point was the first scenario; its width is **one-time framework cost**, not a defect — stratify it out.
 
 ---
 
-# Where This Ended — In Control, Eyes on the Inputs
+# Where This Leaves Us
 
-After ~30 runs the assignable-cause hunt dried up. The shape of the ending is in the data, not in a hunch:
+Read together, the timelines say the harness is **in statistical control**: most wide pairs now resolve to ordinary noise or to the test simply being big, and the recurring near-special-cause is the warm-up scenario — a known, structural thing, not a defect. So the work has moved off the harness and onto the **inputs**: the size, ordering, and spec-detail of the test cases (see [Deming - Building Quality In](deming-building-quality-in) for who owns that, and [Wheeler - Understanding Variation](wheeler-understanding-variation) for the charts).
 
-- **The pooled pair-ranges are in control.** Across the frozen 77-80 runs, the per-scenario pair-ranges sit in-band — that is what says the harness is in statistical control (the unit is the pair-range, pooled; individual scenarios don't matter). pbc-77's six-run single-scenario XmR is one scenario examined closely, a corroborating deep-dive, not the whole basis. That in-band reading is the license to stop tuning the harness; continuing to edit prompts to chase points *inside* the limits is the textbook Deming/Wheeler tampering failure — it adds work and can widen the variance.
-- **The residual variation is largely uncontrollable.** pbc-7374, pbc-7778, and pbc-7980 all resolve to server-side time-to-first-token / decode throughput. pbc-7980's faster-run-made-more-tokens is the decisive tell: no spec, prompt, or harness change touches it.
-- **The big ranges are the big inputs.** The scenarios that stick out are precisely the ones creating net-new logic — the largest, most complex *test cases*, not a flaw in the harness. The variance tracks input size and complexity.
-
-So the answer to *"why have I stopped touching the system and am now focused on the inputs?"* is not resignation. It is the methodology reaching its designed conclusion:
-
-1. **The system is in control, so touching it is tampering.** This is read off the pooled pair-ranges over the frozen 77-80 runs, not assumed (pbc-77 corroborates it for one scenario in depth).
-2. **The remaining system-side variation is server noise**, which no *input* change can remove. The one sanctioned harness change left is measurement, not tuning: [#153](https://github.com/farhan5248/sheep-dog-main/issues/153) runs the two halves of a pair concurrently from the exact same commit, so a slow-server night (pbc-7980) hits both runs equally and cancels in the range instead of inflating it. That removes a confound; it doesn't chase a point. **This is now realized** — the in-run pair ([#434](https://github.com/farhan5248/sheep-dog-main/issues/434)) and the concurrent pair ([#439](https://github.com/farhan5248/sheep-dog-main/issues/439)) put both halves at the same time of day, running together — and the in-run batches pbc-83 through pbc-85 confirm the harness stays in control with the confound gone: same time of day, concurrent, every batch common cause.
-3. **The one class of variation still reducible is input-driven** — and pbc-77 and pbc-7778 name the levers explicitly: enrich the UML spec with the specific contracts a retry reveals (targeted, never "paste the whole codebase," which only trades exploration noise for prefill noise), and control test-case size and ordering (model-based path generation toward bounded, homogeneous work units).
-
-The hypothesis I started with — *variation against a deterministic harness is a control chart for input quality* — turned out to be true in a stronger sense than I expected. It did not just help me fix the harness. It told me, with a real control chart, **when the harness was done** — and pointed the next phase of work at the test cases and specs, exactly where the chart says the remaining signal lives.
-
-The control-chart mechanics behind this conclusion — pair-range as an XmR moving-range signal, why limits come from the moving range and not the global standard deviation, and the in-control / tampering boundary — are worked out in [Process Behavior Charts: The Approach](wheeler-understanding-variation).
-
----
-
-[1]: goldratt-diminishing-a-limitation
-[2]: wheeler-understanding-variation
+Two threads above — the two **moving ranges** — are still nearly blank. They're newer than most of these runs, so the history hasn't been written yet. As more batches come in, that's where the next understanding gets recorded.
