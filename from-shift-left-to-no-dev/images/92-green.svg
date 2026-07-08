@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320" font-family="sans-serif" font-size="12">
+<text x="58" y="20" font-size="14" font-weight="bold">Rebuild 92 — green a time vs green b time</text>
+<line x1="58" y1="34" x2="58" y2="280" stroke="#888"/>
+<line x1="58" y1="280" x2="590" y2="280" stroke="#888"/>
+<line x1="54" y1="280.0" x2="58" y2="280.0" stroke="#888"/>
+<text x="51" y="284.0" text-anchor="end" fill="#555">0</text>
+<line x1="54" y1="218.5" x2="58" y2="218.5" stroke="#888"/>
+<text x="51" y="222.5" text-anchor="end" fill="#555">120</text>
+<line x1="54" y1="157.0" x2="58" y2="157.0" stroke="#888"/>
+<text x="51" y="161.0" text-anchor="end" fill="#555">240</text>
+<line x1="54" y1="95.5" x2="58" y2="95.5" stroke="#888"/>
+<text x="51" y="99.5" text-anchor="end" fill="#555">360</text>
+<line x1="54" y1="34.0" x2="58" y2="34.0" stroke="#888"/>
+<text x="51" y="38.0" text-anchor="end" fill="#555">480</text>
+<text x="14" y="157" fill="#555" transform="rotate(-90 14 157)" text-anchor="middle">seconds</text>
+<text x="58.0" y="296" text-anchor="middle" fill="#555">1</text>
+<text x="102.3" y="296" text-anchor="middle" fill="#555">2</text>
+<text x="146.7" y="296" text-anchor="middle" fill="#555">3</text>
+<text x="191.0" y="296" text-anchor="middle" fill="#555">4</text>
+<text x="235.3" y="296" text-anchor="middle" fill="#555">5</text>
+<text x="279.7" y="296" text-anchor="middle" fill="#555">6</text>
+<text x="324.0" y="296" text-anchor="middle" fill="#555">7</text>
+<text x="368.3" y="296" text-anchor="middle" fill="#555">8</text>
+<text x="412.7" y="296" text-anchor="middle" fill="#555">9</text>
+<text x="457.0" y="296" text-anchor="middle" fill="#555">10</text>
+<text x="501.3" y="296" text-anchor="middle" fill="#555">11</text>
+<text x="545.7" y="296" text-anchor="middle" fill="#555">12</text>
+<text x="590.0" y="296" text-anchor="middle" fill="#555">13</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="1.5" points="58.0,46.3 102.3,86.5 146.7,145.2 191.0,80.5 235.3,126.3 279.7,147.4 324.0,152.1 368.3,142.3 412.7,99.6 457.0,137.3 501.3,140.7 545.7,100.2 590.0,121.2"/>
+<circle cx="58.0" cy="46.3" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="102.3" cy="86.5" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="146.7" cy="145.2" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="191.0" cy="80.5" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="235.3" cy="126.3" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="279.7" cy="147.4" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="324.0" cy="152.1" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="368.3" cy="142.3" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="412.7" cy="99.6" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="457.0" cy="137.3" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="501.3" cy="140.7" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="545.7" cy="100.2" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="590.0" cy="121.2" r="3.2" fill="#1f77b4" stroke="#1f77b4" stroke-width="1.5"/>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="1.5" points="58.0,47.5 102.3,162.2 146.7,162.1 191.0,89.0 235.3,73.6 279.7,128.7 324.0,166.4 368.3,110.1 412.7,129.7 457.0,131.9 501.3,142.3 545.7,132.9 590.0,125.3"/>
+<circle cx="58.0" cy="47.5" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="102.3" cy="162.2" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="146.7" cy="162.1" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="191.0" cy="89.0" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="235.3" cy="73.6" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="279.7" cy="128.7" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="324.0" cy="166.4" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="368.3" cy="110.1" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="412.7" cy="129.7" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="457.0" cy="131.9" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="501.3" cy="142.3" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="545.7" cy="132.9" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<circle cx="590.0" cy="125.3" r="3.2" fill="#ff7f0e" stroke="#ff7f0e" stroke-width="1.5"/>
+<rect x="595" y="34" width="10" height="10" fill="#1f77b4"/><text x="609" y="43" fill="#333">green a time</text>
+<rect x="595" y="52" width="10" height="10" fill="#ff7f0e"/><text x="609" y="61" fill="#333">green b time</text>
+</svg>
