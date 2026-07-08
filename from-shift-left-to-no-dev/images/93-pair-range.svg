@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320" font-family="sans-serif" font-size="12">
+<text x="58" y="20" font-size="14" font-weight="bold">Rebuild 93 — green time pair range (XmR)</text>
+<line x1="58" y1="34" x2="58" y2="280" stroke="#888"/>
+<line x1="58" y1="280" x2="590" y2="280" stroke="#888"/>
+<line x1="54" y1="280.0" x2="58" y2="280.0" stroke="#888"/>
+<text x="51" y="284.0" text-anchor="end" fill="#555">0</text>
+<line x1="54" y1="218.5" x2="58" y2="218.5" stroke="#888"/>
+<text x="51" y="222.5" text-anchor="end" fill="#555">20</text>
+<line x1="54" y1="157.0" x2="58" y2="157.0" stroke="#888"/>
+<text x="51" y="161.0" text-anchor="end" fill="#555">40</text>
+<line x1="54" y1="95.5" x2="58" y2="95.5" stroke="#888"/>
+<text x="51" y="99.5" text-anchor="end" fill="#555">60</text>
+<line x1="54" y1="34.0" x2="58" y2="34.0" stroke="#888"/>
+<text x="51" y="38.0" text-anchor="end" fill="#555">80</text>
+<text x="14" y="157" fill="#555" transform="rotate(-90 14 157)" text-anchor="middle">seconds</text>
+<text x="58.0" y="296" text-anchor="middle" fill="#555">1</text>
+<text x="106.4" y="296" text-anchor="middle" fill="#555">2</text>
+<text x="154.7" y="296" text-anchor="middle" fill="#555">3</text>
+<text x="203.1" y="296" text-anchor="middle" fill="#555">4</text>
+<text x="251.5" y="296" text-anchor="middle" fill="#555">5</text>
+<text x="299.8" y="296" text-anchor="middle" fill="#555">6</text>
+<text x="348.2" y="296" text-anchor="middle" fill="#555">7</text>
+<text x="396.5" y="296" text-anchor="middle" fill="#555">8</text>
+<text x="444.9" y="296" text-anchor="middle" fill="#555">9</text>
+<text x="493.3" y="296" text-anchor="middle" fill="#555">10</text>
+<text x="541.6" y="296" text-anchor="middle" fill="#555">11</text>
+<text x="590.0" y="296" text-anchor="middle" fill="#555">12</text>
+<line x1="58" y1="89.9" x2="590" y2="89.9" stroke="#999" stroke-dasharray="5,4"/>
+<text x="595" y="93.9" fill="#999">UCL 62s</text>
+<line x1="58" y1="225.6" x2="590" y2="225.6" stroke="#bbb" stroke-dasharray="5,4"/>
+<text x="595" y="229.6" fill="#bbb">mean 18s</text>
+<polyline fill="none" stroke="#d62728" stroke-width="1.5" points="58.0,108.6 106.4,258.4 154.7,231.0 203.1,181.0 251.5,247.5 299.8,242.0 348.2,244.8 396.5,228.4 444.9,279.7 493.3,199.8 541.6,100.0 590.0,260.2"/>
+<circle cx="58.0" cy="108.6" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="58.0" y="101.6" text-anchor="middle" font-size="10" fill="#d62728">56</text>
+<circle cx="106.4" cy="258.4" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="106.4" y="251.4" text-anchor="middle" font-size="10" fill="#d62728">7</text>
+<circle cx="154.7" cy="231.0" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="154.7" y="224.0" text-anchor="middle" font-size="10" fill="#d62728">16</text>
+<circle cx="203.1" cy="181.0" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="203.1" y="174.0" text-anchor="middle" font-size="10" fill="#d62728">32</text>
+<circle cx="251.5" cy="247.5" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="251.5" y="240.5" text-anchor="middle" font-size="10" fill="#d62728">11</text>
+<circle cx="299.8" cy="242.0" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="299.8" y="235.0" text-anchor="middle" font-size="10" fill="#d62728">12</text>
+<circle cx="348.2" cy="244.8" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="348.2" y="237.8" text-anchor="middle" font-size="10" fill="#d62728">11</text>
+<circle cx="396.5" cy="228.4" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="396.5" y="221.4" text-anchor="middle" font-size="10" fill="#d62728">17</text>
+<circle cx="444.9" cy="279.7" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="444.9" y="272.7" text-anchor="middle" font-size="10" fill="#d62728">0</text>
+<circle cx="493.3" cy="199.8" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="493.3" y="192.8" text-anchor="middle" font-size="10" fill="#d62728">26</text>
+<circle cx="541.6" cy="100.0" r="3.2" fill="white" stroke="#d62728" stroke-width="1.5"/>
+<text x="541.6" y="93.0" text-anchor="middle" font-size="10" fill="#d62728">59</text>
+<circle cx="590.0" cy="260.2" r="3.2" fill="#d62728" stroke="#d62728" stroke-width="1.5"/>
+<text x="590.0" y="253.2" text-anchor="middle" font-size="10" fill="#d62728">6</text>
+<rect x="595" y="34" width="10" height="10" fill="#d62728"/><text x="609" y="43" fill="#333">green time pair range</text>
+<text x="595" y="70" fill="#555" font-size="10">open = excluded</text>
+<text x="595" y="82" fill="#555" font-size="10">(assignable cause)</text>
+</svg>
